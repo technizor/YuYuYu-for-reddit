@@ -56,7 +56,7 @@ a[href="/s"]::after, a[href="#s"]::after,
 }
 a[href="/s"]:hover, a[href="#s"]:hover,
 .md p > a[href="/s"]:hover, a[href="#s"]:hover {
-	color: #fa0 !important;
+	color: #b62e2e !important;
 }
 a[href="/s"]:hover::after, a[href="#s"]:hover::after,
 a[href="/s"]:active::after, a[href="#s"]:active::after,
