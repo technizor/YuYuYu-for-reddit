@@ -37,3 +37,105 @@
 
 
 ==================================================================================================================================*/
+
+/* --- Addon: Header Background Image --- */
+body:before {height: 200px; background: #393D41 url(%%headerimg%%) fixed no-repeat 33% 0}
+    @media only screen and (min-width : 1921px) {body:before {background-size: cover;}}
+
+        /* Add or subtract THE SAME AMOUNT ON EACH OF THESE */
+body>.content                   {margin-top:        126px;} 
+.side                           {margin-top:        230px;} 
+.search-page .side              {margin-top:        178px;} 
+.comments-page .side            {margin-top:        342px;}
+.res .comments-page .side       {margin-top:        356px;}
+.comments-page .side .linkinfo  {margin-top:        30px;} 
+#search, .search-page .morelink {top:               126px;} 
+.morelink                       {top:               178px;}
+#header-bottom-left             {top:               62px;}
+
+#header .tabmenu li a, .pagename a {text-shadow: 0px 1px 8px rgba(0, 0, 0, 0.5);}
+#header .tabmenu li a:hover, .pagename a:hover {background-color: rgba(0, 0, 0, 0.12);}
+
+/* --- End Addon --- */
+/* Addon: Show submit text button */
+
+.sidebox.submit.submit-text {display: block;}
+
+/* This add-on is optimized for the custom header image add-on, if you don't have that installed, subtract 250 from each of the values below.  
+If you have modified the header image add-on, you will need to add / subtract the SAME amount from the values below */
+
+.side                                              {margin-top:    282px;}
+.comments-page .side                               {margin-top:    394px;}
+.search-page .side                                 {margin-top:    230px;} 
+.sidebox.submit.submit-text .morelink              {top:           230px;}
+.search-page .sidebox.submit.submit-text .morelink {top:           178px;}
+.comments-page .side .linkinfo                     {margin-top:    82px;}
+
+.sidebox.submit.submit-text .morelink:after {
+content: "Please remember to read the rules. Thank you!"; /* You can change the hover message for the submit-text button here */
+}
+/* --- End Addon --- */
+/* --- Addon: Header Color (Primary Color) --- */
+body:before {background-color: #c57a75}
+/* --- End Addon --- */
+/* --- Addon: Button color (Secondary Color) --- */
+.morelink, .titlebox .fancy-toggle-button .add, .morelink:after, .content .infobar,
+.submit-page #newlink.submit.content .tabmenu.formtab .selected a, .submit-page .infobar, 
+.submit-page #newlink.submit.content .btn, .drop-choices a.choice:hover, .linkflairlabel, .fancy-toggle-button .remove:active
+.expando-button:hover, .top-page .content .menuarea .dropdown.lightdrop .selected, .expando-button:hover, .side .titlebox .md h3 a,
+.res div.RES-keyNav-activeElement, .res div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed, .btn, button {background-color: #ecc6c3}
+
+    /* Hover color = 10% white overlay color */
+    .morelink:hover, .submit-page #newlink.submit.content .tabmenu.formtab .selected a:hover, .btn:hover, button:hover,
+    .side .titlebox .md h3 a:hover, .titlebox .fancy-toggle-button .add:hover, .titlebox .fancy-toggle-button .add:hover:after
+     {background-color: #fff;}
+
+    /* Active color = 10% black overlay color */
+    .morelink:active, .side .titlebox .md h3 a:active, .btn:active, button:active {background-color: #4059db;}
+/* --- End Addon --- */
+/* --- Addon: Link Color (Tertiary Color) - This color should be either similiar to the primary color, 
+or to the secondary color. Else the page will become too busy.-- */
+a, .link .entry .buttons li a.comments, .md a, .titlebox .tagline a.flairselectbtn, 
+.thing .title.loggedin.click, .thing .title.click, .thing .title.loggedin, .thing .title, 
+body .content .sitetable .link .title a:hover, .link .domain a:hover, .link .entry .buttons li a:hover, 
+.link .entry .buttons li a.flairselectbtn, .comment .flat-list li a[onclick*="reply"], 
+.comment .flat-list li a:hover, .tagline .submitter, .tagline .submitter, .side:after, 
+.usertext .bottom-area a.reddiquette, .side .titlebox .md h6 a, .link .entry .tagline a:hover, .comment .author:hover
+ {color: #b62e2e;}
+/* --- End Addon --- */
+/* --- Addon: Text Strings --- */
+.arrow.down:after {content: "For content that does not contribute to any discussion.";}
+.morelink:after { content: "Please remember to read the rules. Thank you!";}
+.submit-page .infobar:before {content: "Please submit insightful content that allows for discussion!";}
+#mail.havemail:before {content: "You have new messages!";}
+div.titlebox span.number:after {content: " Heroes,";}
+.titlebox .users-online .number:after {content: " here";}
+/* --- End Addon --- */
+
+/* --- Addon: Spoiler Tags --- */
+a[href="/s"], a[href="#s"],
+.md p > a[href="/s"] {
+	text-decoration: none !important;
+	cursor: default;
+	background: #000;
+	color: #fff !important;
+	display: inline-block;
+}
+a[href="/s"]::after, a[href="#s"]::after,
+.md p > a[href="/s"]::after {
+	content: attr(title);
+	color: #000;
+	padding: 0 0.5em;
+	visibility: visible;
+}
+a[href="/s"]:hover, a[href="#s"]:hover,
+.md p > a[href="/s"]:hover, a[href="#s"]:hover {
+	color: #b62e2e !important;
+}
+a[href="/s"]:hover::after, a[href="#s"]:hover::after,
+a[href="/s"]:active::after, a[href="#s"]:active::after,
+.md p > a[href="/s"]:hover::after, a[href="#s"]:hover::after,
+.md p > a[href="/s"]:active::after, a[href="#s"]:active::after {
+	color: #fff;
+}
+/* --- End Addon --- */
