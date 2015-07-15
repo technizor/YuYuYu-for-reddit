@@ -38,7 +38,7 @@
 
 ==================================================================================================================================*/
 
-/* Text Spoilers */
+/* --- Addon: Spoiler Tags --- */
 a[href="/s"], a[href="#s"],
 .md p > a[href="/s"] {
 	text-decoration: none !important;
@@ -64,3 +64,4 @@ a[href="/s"]:active::after, a[href="#s"]:active::after,
 .md p > a[href="/s"]:active::after, a[href="#s"]:active::after {
 	color: #fff;
 }
+/* --- End Addon --- */
