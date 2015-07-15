@@ -75,22 +75,22 @@ content: "Please remember to read the rules. Thank you!"; /* You can change the 
 }
 /* END ADDON */
 /* --- Addon: Header Color (Primary Color) --- */
-body:before {background-color: #383947}
+body:before {background-color: #c57a75}
 /* --- End Addon --- */
 /* --- Addon: Button color (Secondary Color) --- */
 .morelink, .titlebox .fancy-toggle-button .add, .morelink:after, .content .infobar,
 .submit-page #newlink.submit.content .tabmenu.formtab .selected a, .submit-page .infobar, 
 .submit-page #newlink.submit.content .btn, .drop-choices a.choice:hover, .linkflairlabel, .fancy-toggle-button .remove:active
 .expando-button:hover, .top-page .content .menuarea .dropdown.lightdrop .selected, .expando-button:hover, .side .titlebox .md h3 a,
-.res div.RES-keyNav-activeElement, .res div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed, .btn, button {background-color: #ef4949}
+.res div.RES-keyNav-activeElement, .res div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed, .btn, button {background-color: #ecc6c3}
 
     /* Hover color = 10% white overlay color */
     .morelink:hover, .submit-page #newlink.submit.content .tabmenu.formtab .selected a:hover, .btn:hover, button:hover,
     .side .titlebox .md h3 a:hover, .titlebox .fancy-toggle-button .add:hover, .titlebox .fancy-toggle-button .add:hover:after
-     {background-color: #f85d5d;}
+     {background-color: #fff;}
 
     /* Active color = 10% black overlay color */
-    .morelink:active, .side .titlebox .md h3 a:active, .btn:active, button:active {background-color: #bd3b3b;}
+    .morelink:active, .side .titlebox .md h3 a:active, .btn:active, button:active {background-color: #4059db;}
 /* --- End Addon --- */
 /* --- Addon: Link Color (Tertiary Color) - This color should be either similiar to the primary color, 
 or to the secondary color. Else the page will become too busy.-- */
@@ -100,7 +100,7 @@ body .content .sitetable .link .title a:hover, .link .domain a:hover, .link .ent
 .link .entry .buttons li a.flairselectbtn, .comment .flat-list li a[onclick*="reply"], 
 .comment .flat-list li a:hover, .tagline .submitter, .tagline .submitter, .side:after, 
 .usertext .bottom-area a.reddiquette, .side .titlebox .md h6 a, .link .entry .tagline a:hover, .comment .author:hover
- {color: #ef4949;}
+ {color: #b62e2e;}
 /* --- End Addon --- */
 /* --- Addon: Text Strings --- */
 .arrow.down:after {content: "For content that does not contribute to any discussion.";}
