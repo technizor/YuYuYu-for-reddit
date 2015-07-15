@@ -37,7 +37,7 @@
 
 
 ==================================================================================================================================*/
-<<<<<<< HEAD
+
 /* --- Addon: Header Background Image --- */
 body:before {height: 200px; background: #393D41 url(%%headerimg%%) fixed no-repeat 33% 0}
     @media only screen and (min-width : 1921px) {body:before {background-size: cover;}}
@@ -74,7 +74,7 @@ If you have modified the header image add-on, you will need to add / subtract th
 .sidebox.submit.submit-text .morelink:after {
 content: "Please remember to read the rules. Thank you!"; /* You can change the hover message for the submit-text button here */
 }
-/* END ADDON */
+/* --- End Addon --- */
 /* --- Addon: Header Color (Primary Color) --- */
 body:before {background-color: #c57a75}
 /* --- End Addon --- */
@@ -110,7 +110,7 @@ body .content .sitetable .link .title a:hover, .link .domain a:hover, .link .ent
 #mail.havemail:before {content: "You have new messages!";}
 div.titlebox span.number:after {content: " Heroes,";}
 .titlebox .users-online .number:after {content: " here";}
-=======
+/* --- End Addon --- */
 
 /* --- Addon: Spoiler Tags --- */
 a[href="/s"], a[href="#s"],
@@ -138,5 +138,4 @@ a[href="/s"]:active::after, a[href="#s"]:active::after,
 .md p > a[href="/s"]:active::after, a[href="#s"]:active::after {
 	color: #fff;
 }
->>>>>>> origin/dev
 /* --- End Addon --- */
