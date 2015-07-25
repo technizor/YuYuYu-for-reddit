@@ -139,3 +139,44 @@ a[href="/s"]:active::after, a[href="#s"]:active::after,
 	color: #fff;
 }
 /* --- End Addon --- */
+/* --- Addon: User Flairs --- */
+.flair {
+    background: url(%%flairsheet-80px%%) no-repeat -9999px;
+    height: 40px; 
+    width: 40px;
+}
+.flair img.resize {
+    width:50%;
+    height: auto;
+}
+.flair-yuna-0 {
+    background-position: 0 0;
+}
+.flair-yuna-1 {
+    background-position: 0 -80px;
+}
+.flair-mimori-0 {
+    background-position: -80px 0;
+}
+.flair-mimori-1 {
+    background-position: -80px -80px;
+}
+.flair-fu-0 {
+    background-position: -160px 0;
+}
+.flair-fu-1 {
+    background-position: -160px -80px;
+}
+.flair-itsuki-0 {
+    background-position: -240px 0;
+}
+.flair-itsuki-1 {
+    background-position: -240px -80px;
+}
+.flair-karin-0 {
+    background-position: -320px 0;
+}
+.flair-karin-1 {
+    background-position: -320px -80px;
+}
+/* --- End Addon --- */
