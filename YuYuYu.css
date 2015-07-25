@@ -143,3 +143,36 @@ a[href="/s"]:active::after, a[href="#s"]:active::after,
 	color: #fff;
 }
 /* --- End Addon --- */
+/* --- Addon: Post Flairs --- */
+/* Post Flair Labels*/
+.linkflair-spoiler .linkflairlabel {
+    background-color:#ad6b68
+}
+.linkflair-meta .linkflairlabel {
+    background-color:#ffbc5e
+}
+.linkflair-merch .linkflairlabel {
+    background-color:#ce6dff
+}
+/* Spoiler Titles */
+.listing-page .linkflair-spoiler a.title {
+    background-color:#ad6b68;
+    color:#ad6b68;
+    text-shadow:none
+}
+.listing-page .linkflair-spoiler a.title:hover {
+    background-color:#ecf0f1!important
+}
+.listing-page .linkflair-spoiler a.title:visited {
+    background-color:#ecf0f1!important;
+    color:#7d5d8a!important
+}
+
+/* Spoiler Images */
+.linkflair-spoiler img {
+    display:none
+}
+.linkflair-spoiler .thumbnail {
+    
+}
+/* --- End Addon --- */
