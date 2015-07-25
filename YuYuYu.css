@@ -39,8 +39,12 @@
 ==================================================================================================================================*/
 
 /* --- Addon: Header Background Image --- */
-body:before {height: 200px; background: #393D41 url(%%headerimg%%) fixed no-repeat 33% 0}
-    @media only screen and (min-width : 1921px) {body:before {background-size: cover;}}
+body:before {
+    height: 200px; background: #393D41 url(%%headerimg%%) fixed no-repeat 50% 0; background-size: 1920px auto;
+}
+@media only screen and (min-width : 1921px) {
+    body:before {background-size: cover;}
+}
 
         /* Add or subtract THE SAME AMOUNT ON EACH OF THESE */
 body>.content                   {margin-top:        126px;} 
