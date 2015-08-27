@@ -179,6 +179,12 @@
         -ms-transform: scale(0.5, 0.5);
         -webkit-transform: scale(0.5, 0.5);
     }
+    .titlebox .tagline {
+        margin-top:0px!important;
+    }
+    .titlebox .tagline > .flair-graphic:before {
+        left:-20px;
+    }
     .flair-yuna-0:before {
         background-position: 0 0;
     }
