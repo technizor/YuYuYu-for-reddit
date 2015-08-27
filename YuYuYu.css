@@ -40,7 +40,7 @@
 
 /* --- Addon: Header Background Image --- */
 body:before {
-    height: 200px; background: #393D41 url(%%headerimg%%) fixed no-repeat 50% 0; background-size: 1920px auto;
+    height: 200px; background: url(%%headerimg%%) fixed no-repeat 50% 0; background-size: auto 200px;
 }
 @media only screen and (min-width : 1921px) {
     body:before {background-size: cover;}
@@ -80,7 +80,7 @@ content: "Please remember to read the rules. Thank you!"; /* You can change the 
 }
 /* --- End Addon --- */
 /* --- Addon: Header Color (Primary Color) --- */
-body:before {background-color: #c57a75}
+body:before {background-color: #FFD6D3}
 /* --- End Addon --- */
 /* --- Addon: Button color (Secondary Color) --- */
 .morelink, .titlebox .fancy-toggle-button .add, .morelink:after, .content .infobar,
