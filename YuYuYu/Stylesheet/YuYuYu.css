@@ -326,7 +326,7 @@ a[href="#s"]:active::after {
 .titlebox .tagline {
     margin-top: 0px!important;
 }
-.titlebox .tagline > .flair-graphic:before {
+.titlebox .tagline .flair-graphic:before, .sidecontentbox > .content .flair-graphic:before {
     left: -20px;
 }
 .flair-yuna-0:before {
