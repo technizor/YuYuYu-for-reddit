@@ -261,6 +261,9 @@ a[href="#s"]:active::after {
 .linkflair-merch .linkflairlabel {
     background-color: #ce6dff
 }
+.linkflair-discussion .linkflairlabel {
+    background-color: #23B2FF
+}
 /* Spoiler Titles */
 
 .listing-page .linkflair-spoiler-title a.title {
