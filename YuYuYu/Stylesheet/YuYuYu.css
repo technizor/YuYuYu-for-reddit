@@ -252,7 +252,7 @@ a[href="#s"]:active::after {
 /* --- Addon: Post Flairs --- */
 /* Post Flair Labels*/
 
-.linkflair-spoiler .linkflairlabel {
+.linkflair-spoiler .linkflairlabel, .linkflair-spoiler-title .linkflairlabel {
     background-color: #ad6b68
 }
 .linkflair-meta .linkflairlabel {
@@ -261,23 +261,26 @@ a[href="#s"]:active::after {
 .linkflair-merch .linkflairlabel {
     background-color: #ce6dff
 }
+.linkflair-discussion .linkflairlabel {
+    background-color: #23B2FF
+}
 /* Spoiler Titles */
 
-.listing-page .linkflair-spoiler a.title {
+.listing-page .linkflair-spoiler-title a.title {
     background-color: #ad6b68;
     color: #ad6b68;
     text-shadow: none
 }
-.listing-page .linkflair-spoiler a.title:hover {
+.listing-page .linkflair-spoiler-title a.title:hover {
     background-color: #ecf0f1!important
 }
-.listing-page .linkflair-spoiler a.title:visited {
+.listing-page .linkflair-spoiler-title a.title:visited {
     background-color: #ecf0f1!important;
     color: #7d5d8a!important
 }
 /* Spoiler Images */
 
-.linkflair-spoiler img {
+.linkflair-spoiler img, .linkflair-spoiler-title img {
     display: none
 }
 .linkflair-spoiler .thumbnail {}
