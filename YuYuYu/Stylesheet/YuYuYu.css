@@ -363,3 +363,176 @@ a[href="#s"]:active::after {
     background-position: -320px -80px;
 }
 /* --- End Addon --- */
+/* --- Addon: Comment Faces --- */
+.md a[href^="/"]:not([href^="/r/"]):not([href^="/u/"]):not([href="/s"]):not([href^="/message"]),
+.thing .md :not(.RESdupeimg) > a[href^="#"]:not([href="#s"]) {
+    display: inline-block;
+    position: relative;
+
+    border: 2px outset #bbbbbb;
+    overflow:hidden;
+    z-index: 1000;
+
+    padding-top: 2px;
+
+    text-align: center;
+    font-family: verdana,sans-serif;
+    font-size: 14px;
+    color: white !important;
+    text-shadow:
+       0.5px  0.5px 0px #000,
+       0.5px -0.5px 0px #000,
+      -0.5px  0.5px 0px #000,
+      -0.5px -0.5px 0px #000,
+       0.5px  0.5px 1px #000,
+       0.5px -0.5px 1px #000,
+      -0.5px  0.5px 1px #000,
+      -0.5px -0.5px 1px #000;
+
+    cursor: default;
+}
+
+.thing .md a[href^="/"]:not([href^="/r/"]):not([href^="/u/"]):not([href="/s"]):not([href^="/message"]) > strong,
+.thing .md a[href^="#"]:not([href="#s"]) > strong {
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 4px;
+
+    font-weight: normal;
+}
+a[href^="#anim-"]:not(:hover)::before {
+ content: "";
+ display:block;
+ height: 64px;
+ width: 64px;
+ background: url(%%play-animation%%) -0px -0px no-repeat;
+ transform: scale(0.5, 0.5);
+ -ms-transform: scale(0.5, 0.5);
+ -webkit-transform: scale(0.5, 0.5);
+
+ position: absolute;
+ left: 48px;
+ top: 12px;
+ z-index: 1001;
+}
+@-webkit-keyframes itsuki-applause {
+    from { background-position: 0px 0px; }
+    to { background-position: 0px -720px; }
+}
+@keyframes itsuki-applause {
+    from { background-position: 0px 0px; }
+    to { background-position: 0px -720px; }
+}
+a[href^="#"][href$="itsuki-applause"] {
+    display:inline-block;
+    height: 90px;
+    width: 160px;
+    background: url(%%itsuki-applause-frames%%) -0px -0px no-repeat;
+}
+a[href^="#anim-"][href$="itsuki-applause"]:hover {
+    -webkit-animation:itsuki-applause 0.60s steps(8, end) infinite;
+    animation: itsuki-applause 0.60s steps(8, end) infinite;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes fuu-fufufu {
+    from { background-position: 0px 0px; }
+    to { background-position: 0px -1890px; }
+}
+@keyframes fuu-fufufu {
+    from { background-position: 0px 0px; }
+    to { background-position: 0px -1890px; }
+}
+a[href^="#"][href$="fuu-fufufu"] {
+    display:inline-block;
+    height: 90px;
+    width: 160px;
+    background: url(%%fuu-fufufu-frames%%) -0px -0px no-repeat;
+}
+a[href^="#anim-"][href$="fuu-fufufu"]:hover {
+    -webkit-animation:fuu-fufufu 0.60s steps(21, end) infinite;
+    animation: fuu-fufufu 1.575s steps(21, end) infinite;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes mimori-smile {
+    from { background-position: 0px 0px; }
+    to { background-position: 0px -3420px; }
+}
+@keyframes mimori-smile {
+    from { background-position: 0px 0px; }
+    to { background-position: 0px -3420px; }
+}
+a[href^="#"][href$="mimori-smile"] {
+    display:inline-block;
+    height: 90px;
+    width: 160px;
+    background: url(%%mimori-smile-frames%%) -0px -0px no-repeat;
+}
+a[href^="#anim-"][href$="mimori-smile"]:hover {
+    -webkit-animation:mimori-smile 2.85s steps(38, end) infinite;
+    animation: mimori-smile 2.85s steps(38, end) infinite;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes karin-wat {
+    from { background-position: 0px 0px; }
+    to { background-position: 0px -1620px; }
+}
+@keyframes karin-wat {
+    from { background-position: 0px 0px; }
+    to { background-position: 0px -1620px; }
+}
+a[href^="#"][href$="karin-wat"] {
+    display:inline-block;
+    height: 90px;
+    width: 160px;
+    background: url(%%karin-wat-frames%%) -0px -0px no-repeat;
+}
+a[href^="#anim-"][href$="karin-wat"]:hover {
+    -webkit-animation:karin-wat 1.35s steps(18, end) infinite;
+    animation: karin-wat 1.35s steps(18, end) infinite;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes yuuna-soexcited {
+    from { background-position: 0px 0px; }
+    to { background-position: 0px -1440px; }
+}
+@keyframes yuuna-soexcited {
+    from { background-position: 0px 0px; }
+    to { background-position: 0px -1440px; }
+}
+a[href^="#"][href$="yuuna-soexcited"] {
+    display:inline-block;
+    height: 90px;
+    width: 160px;
+    background: url(%%yuuna-soexcited-frames%%) -0px -0px no-repeat;
+}
+a[href^="#anim-"][href$="yuuna-soexcited"]:hover {
+    -webkit-animation:yuuna-soexcited 1.20s steps(16, end) infinite;
+    animation: yuuna-soexcited 1.20s steps(16, end) infinite;
+    animation-fill-mode: forwards;
+}
+@-webkit-keyframes yuuna-victory {
+    from { background-position: 0px 0px; }
+    to { background-position: 0px -2070px; }
+}
+@keyframes yuuna-victory {
+    from { background-position: 0px 0px; }
+    to { background-position: 0px -2070px; }
+}
+a[href^="#"][href$="yuuna-victory"] {
+    display:inline-block;
+    height: 90px;
+    width: 160px;
+    background: url(%%yuuna-victory-frames%%) -0px -0px no-repeat;
+}
+a[href^="#anim-"][href$="yuuna-victory"]:hover {
+    -webkit-animation:yuuna-victory 3.225s steps(23, end) infinite;
+    animation: yuuna-victory 3.225s steps(23, end) infinite;
+    animation-fill-mode: forwards;
+}
+a[href^="#"][href$="yuuna-victory"] {
+    display:inline-block;
+    height: 90px;
+    width: 160px;
+    background: url(%%yuuna-victory-frames%%) -0px -0px no-repeat;
+}
