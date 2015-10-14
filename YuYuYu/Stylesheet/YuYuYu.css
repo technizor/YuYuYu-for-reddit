@@ -536,3 +536,35 @@ a[href^="#"][href$="yuuna-victory"] {
     width: 160px;
     background: url(%%yuuna-victory-frames%%) -0px -0px no-repeat;
 }
+/* --- Static Comment Faces --- */
+a[href^="#"][href$="everything-is-daijoubu"] {
+    display:inline-block;
+    height: 160px;
+    width: 160px;
+    background: url(%%everything-is-daijoubu%%) -0px -0px no-repeat;
+}
+/** --- Custom Itsuki Writing Sign --- */
+a[href^="#"][href$="itsuki-writing"] {
+    display:inline-block;
+    height: 160px!important;
+    width: 160px!important;
+    background: url(%%itsuki-writing%%) -0px -0px no-repeat;
+}
+.thing .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] {
+  padding-top: 90px;
+  padding-right: 31px;
+  padding-left: 34px;
+
+  font-size: 10px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color:black!important;
+  text-shadow: inherit;
+}
+.thing .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] > strong {
+  display: inherit;
+  width: auto;
+  position: inherit;
+  bottom:inherit;
+  text-align:inherit;
+  font-weight:bold;
+}
