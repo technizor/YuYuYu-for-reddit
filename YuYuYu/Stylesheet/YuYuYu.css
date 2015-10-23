@@ -576,3 +576,83 @@ a[href^="#"][href$="itsuki-writing"] {
   width:                auto;
 }
 /* --- End Comment-Face Addon --- */
+@media only screen and (max-width: 840px) {
+  html[lang='ab'] body {
+    min-width: inherit;
+  }
+  html[lang='ab'] body > .content {
+    margin-right: 96px;
+    max-width: 492px;
+    width:calc(100% - 112px);
+  }
+  html[lang='ab'] .side {
+    transition: all 0.25s ease;
+    margin-top: 282px;
+    position: absolute;
+    right: calc(100% - 104px - 492px - 244px);
+    z-index: 100;
+  }
+  html[lang='ab'] .side:hover {
+    transition: all 0.25s ease;
+    right: 0;
+  }
+  html[lang='ab'] #search {
+    top: -156px;
+    right: 0;
+  }
+  html[lang='ab'] .sidebox {
+    position: absolute;
+    top: -282px;
+    right: -16px;
+  }
+  html[lang='ab'] .comments-page .side,
+  html[lang='ab'] .res .comments-page .side {
+    margin-top: 408px;
+  }
+  html[lang='ab'] .comments-page #search,
+  html[lang='ab'] .res .comments-page #search {
+    top: -282px;
+  }
+  html[lang='ab'] .comments-page .sidebox,
+  html[lang='ab'] .res .comments-page .sidebox {
+    top: -408px;
+  }
+  html[lang='ab'] .comments-page .side .linkinfo,
+  html[lang='ab'] .res .comments-page .side .linkinfo {
+    right: 0;
+    top: -208px
+  }/*
+  html[lang='ab'] .link {
+    background: linear-gradient(to right, #fff, #fff, rgba(255,255,255,0.25));
+  }
+  html[lang='ab'] .commentarea > .usertext {
+    background: linear-gradient(to right, #fafafa, #fafafa, rgba(250,250,250,0.25));
+  }
+  html[lang='ab'] .commentarea > .sitetable {
+    background: linear-gradient(to right, #fff, #fff, rgba(255,255,255,0.25));
+  }
+  html[lang='ab'] .commentarea > .sitetable .comment {
+    background-color: transparent;
+  }*/
+  /*
+  html[lang='ab'] .side::before {
+    content: '';
+    display: block;
+    position:absolute;
+    left:0;
+    width:8px;
+    height:100%;
+    background: url(%%sidebar-grippy-hide%%) fixed no-repeat;
+    background-position: 131px center;
+    margin-left: 1px;
+    opacity: .5;
+  }*/
+}
+@media only screen and (max-width: 604px) {
+  html[lang='ab'] .side {
+    right: -236px;
+  }
+
+}
+
+/* --- End Sidebar Layout Addon --- */
