@@ -39,58 +39,69 @@
 /* --- Addon: Header Background Image --- */
 
 body:before {
-    height: 200px;
-    background: url(%%headerimg%%) fixed no-repeat 50% 0;
-    background-size: auto 200px;
+  background:           url(%%headerimg%%) fixed no-repeat 50% 0;
+  background-size:      auto 200px;
+  height:               200px;
+}
+body.res-nightmode:before {
+  background:           linear-gradient(rgba(34, 34, 34, 0.45), rgba(34, 34, 34, 0.45)),
+                        url(%%headerimg%%) fixed no-repeat 50% 0;
+  background-size:      auto 200px;
+  height:               200px;
 }
 @media only screen and (min-width: 1921px) {
-    body:before {
-        background-size: cover;
-    }
+  body:before { background-size: cover }
+}
+.res-nightmode #sr-header-area {
+  background-color:     rgba(0, 0, 0, 0.05);
+}
+.res-nightmode #header-bottom-right {
+  background-color:     transparent;
 }
 /* Add or subtract THE SAME AMOUNT ON EACH OF THESE */
 
-body>.content {
-    margin-top: 126px;
+body > .content {
+  margin-top:           126px;
 }
 .side {
-    margin-top: 230px;
+  margin-top:           230px;
 }
 .search-page .side {
-    margin-top: 178px;
+  margin-top:           178px;
 }
 .comments-page .side {
-    margin-top: 342px;
+  margin-top:           342px;
 }
 .res .comments-page .side {
-    margin-top: 356px;
+  margin-top:           356px;
 }
 .comments-page .side .linkinfo {
-    margin-top: 30px;
+  margin-top:           30px;
 }
 #search,
 .search-page .morelink {
-    top: 126px;
+  top:                  126px;
 }
 .morelink {
-    top: 178px;
+  top:                  178px;
 }
 #header-bottom-left {
-    top: 62px;
+  top:                  62px;
 }
 #header .tabmenu li a,
 .pagename a {
-    text-shadow: 0px 1px 8px rgba(0, 0, 0, 0.5);
+  text-shadow:          0px 1px 8px rgba(0, 0, 0, 0.5);
 }
 #header .tabmenu li a:hover,
 .pagename a:hover {
-    background-color: rgba(0, 0, 0, 0.12);
+  background-color:     rgba(0, 0, 0, 0.12);
 }
 /* --- End Addon --- */
+
 /* Addon: Show submit text button */
 
 .sidebox.submit.submit-text {
-    display: block;
+  display:              block;
 }
 /* This add-on is optimized for the custom header image add-on,
 if you don't have that installed, subtract 250 from each of the values below.
@@ -98,482 +109,598 @@ If you have modified the header image add-on, you will need to add / subtract
 the SAME amount from the values below */
 
 .side {
-    margin-top: 282px;
+  margin-top:           282px;
 }
 .comments-page .side {
-    margin-top: 394px;
+  margin-top:           394px;
 }
 .search-page .side {
-    margin-top: 230px;
+  margin-top:           230px;
 }
 .sidebox.submit.submit-text .morelink {
-    top: 230px;
+  top:                  230px;
 }
 .search-page .sidebox.submit.submit-text .morelink {
-    top: 178px;
+  top:                  178px;
 }
 .comments-page .side .linkinfo {
-    margin-top: 82px;
+  margin-top:           82px;
 }
 .sidebox.submit.submit-text .morelink:after {
-    content: "Please remember to read the rules. Thank you!";
-    /* You can change the hover message for the submit-text button here */
+/* You can change the hover message for the submit-text button here */
+  content:              "Please remember to read the rules. Thank you!";
 }
 /* --- End Addon --- */
+
 /* --- Addon: Header Color (Primary Color) --- */
 
 body:before {
-    background-color: #FFD6D3
+  background-color:     #FFD6D3;
 }
 /* --- End Addon --- */
-/* --- Addon: Button color (Secondary Color) --- */
 
-.morelink,
-.titlebox .fancy-toggle-button .add,
-.morelink:after,
+/* --- Addon: Button color (Secondary Color) --- */
+button,
+.btn,
 .content .infobar,
+.drop-choices a.choice:hover,
+.expando-button:hover,
+.fancy-toggle-button .remove:active .expando-button:hover,
+.linkflairlabel,
+.morelink,
+.morelink:after,
+.res div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed,
+.res div.RES-keyNav-activeElement,
+.side .titlebox .md h3 a,
+.submit-page #newlink.submit.content .btn,
 .submit-page #newlink.submit.content .tabmenu.formtab .selected a,
 .submit-page .infobar,
-.submit-page #newlink.submit.content .btn,
-.drop-choices a.choice:hover,
-.linkflairlabel,
-.fancy-toggle-button .remove:active .expando-button:hover,
-.top-page .content .menuarea .dropdown.lightdrop .selected,
-.expando-button:hover,
-.side .titlebox .md h3 a,
-.res div.RES-keyNav-activeElement,
-.res div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed,
-.btn,
-button {
-    background-color: #ecc6c3
+.titlebox .fancy-toggle-button .add,
+.top-page .content .menuarea .dropdown.lightdrop .selected {
+  background-color:     #ECC6C3;
 }
 /* Hover color = 10% white overlay color */
 
-.morelink:hover,
-.submit-page #newlink.submit.content .tabmenu.formtab .selected a:hover,
-.btn:hover,
 button:hover,
+.btn:hover,
+.morelink:hover,
 .side .titlebox .md h3 a:hover,
+.submit-page #newlink.submit.content .tabmenu.formtab .selected a:hover,
 .titlebox .fancy-toggle-button .add:hover,
 .titlebox .fancy-toggle-button .add:hover:after {
-    background-color: #ffffff;
+  background-color:     #FFF;
 }
 /* Active color = 10% black overlay color */
 
-.morelink:active,
-.side .titlebox .md h3 a:active,
+
+button:active,
 .btn:active,
-button:active {
-    background-color: #4059db;
+.morelink:active,
+.side .titlebox .md h3 a:active {
+  background-color:     #4059DB;
 }
 /* --- End Addon --- */
+
 /* --- Addon: Link Color (Tertiary Color) - This color should be either
 similiar to the primary color, or to the secondary color.
 Else the page will become too busy.-- */
 
 a,
-.link .entry .buttons li a.comments,
+body .content .sitetable .link .title a:hover,
+.comment .author:hover ,
+.comment .flat-list li a[onclick*="reply"],
+.comment .flat-list li a:hover,
 .md a,
 .titlebox .tagline a.flairselectbtn,
 .thing .title.loggedin.click,
 .thing .title.click,
 .thing .title.loggedin,
 .thing .title,
-body .content .sitetable .link .title a:hover,
 .link .domain a:hover,
 .link .entry .buttons li a:hover,
+.link .entry .buttons li a.comments,
 .link .entry .buttons li a.flairselectbtn,
-.comment .flat-list li a[onclick*="reply"],
-.comment .flat-list li a:hover,
+.link .entry .tagline a:hover,
 .tagline .submitter,
 .tagline .submitter,
 .side:after,
-.usertext .bottom-area a.reddiquette,
 .side .titlebox .md h6 a,
-.link .entry .tagline a:hover,
-.comment .author:hover {
-    color: #b62e2e;
+.usertext .bottom-area a.reddiquette {
+  color:                #B62E2E;
 }
 /* --- End Addon --- */
+
 /* --- Addon: Text Strings --- */
 
 .arrow.down:after {
-    content: "For content that does not contribute to any discussion.";
+  content:              "For content that does not contribute to any discussion."
 }
 .morelink:after {
-    content: "Please remember to read the rules. Thank you!";
+  content:              "Please remember to read the rules. Thank you!"
 }
 .submit-page .infobar:before {
-    content: "Please submit insightful content that allows for discussion!";
+  content:              "Please submit insightful content that allows for discussion!"
 }
 #mail.havemail:before {
-    content: "You have new messages!";
+  content:              "You have new messages!"
 }
 div.titlebox span.number:after {
-    content: " Heroes,";
+  content:              " Heroes,"
 }
 .titlebox .users-online .number:after {
-    content: " participating";
+  content:              " participating"
 }
 /* --- End Addon --- */
+
 /* --- Addon: Spoiler Tags --- */
 
 a[href="/s"],
-a[href="#s"],
-.md p > a[href="/s"] {
-    text-decoration: none !important;
-    cursor: default;
-    background: #000000;
-    color: #ffffff !important;
-    display: inline-block;
+.md p > a[href="/s"],
+a[href="#s"] {
+  background:           #000;
+  color:                #FFF !important;
+  cursor:               default;
+  display:              inline-block;
+  text-decoration:      none !important;
 }
 a[href="/s"]::after,
-a[href="#s"]::after,
-.md p > a[href="/s"]::after {
-    content: attr(title);
-    color: #000000;
-    padding: 0 0.5em;
-    visibility: visible;
+.md p > a[href="/s"]::after,
+a[href="#s"]::after {
+  content:              attr(title);
+  color:                #000;
+  padding:              0 0.5em;
+  visibility:           visible;
 }
 a[href="/s"]:hover,
-a[href="#s"]:hover,
 .md p > a[href="/s"]:hover,
 a[href="#s"]:hover {
-    color: #b62e2e !important;
+  color:                #B62E2E !important;
 }
 a[href="/s"]:hover::after,
-a[href="#s"]:hover::after,
 a[href="/s"]:active::after,
-a[href="#s"]:active::after,
 .md p > a[href="/s"]:hover::after,
-a[href="#s"]:hover::after,
 .md p > a[href="/s"]:active::after,
+a[href="#s"]:hover::after,
+a[href="#s"]:active::after,
+a[href="#s"]:hover::after,
 a[href="#s"]:active::after {
-    color: #ffffff;
+  color:                #FFF;
 }
 /* --- End Addon --- */
+
 /* --- Addon: Post Flairs --- */
 /* Post Flair Labels*/
 
-.linkflair-spoiler .linkflairlabel, .linkflair-spoiler-title .linkflairlabel {
-    background-color: #ad6b68
+.linkflair-spoiler .linkflairlabel,
+.linkflair-spoiler-title .linkflairlabel {
+  background-color:     #AD6B68;
 }
 .linkflair-meta .linkflairlabel {
-    background-color: #ffbc5e
+  background-color:     #FFBC5E;
 }
 .linkflair-merch .linkflairlabel {
-    background-color: #ce6dff
+  background-color:     #CE6DFF;
 }
 .linkflair-discussion .linkflairlabel {
-    background-color: #23B2FF
+  background-color:     #23B2FF;
 }
 /* Spoiler Titles */
 
-.listing-page .linkflair-spoiler-title a.title {
-    background-color: #ad6b68;
-    color: #ad6b68;
-    text-shadow: none
+.listing-page #siteTable .thing.linkflair-spoiler-title a.title {
+  background-color:     #AD6B68;
+  color:                #AD6B68;
+  text-shadow:          none;
 }
-.listing-page .linkflair-spoiler-title a.title:hover {
-    background-color: #ecf0f1!important
+.listing-page #siteTable .thing.linkflair-spoiler-title a.title:hover {
+  background-color:     #ECF0F1 !important;
 }
-.listing-page .linkflair-spoiler-title a.title:visited {
-    background-color: #ecf0f1!important;
-    color: #7d5d8a!important
+.listing-page #siteTable .thing.linkflair-spoiler-title a.title:visited {
+  background-color:     #ECF0F1 !important;
+  color:                #7D5D8A !important;
+}
+.res-nightmode .listing-page #siteTable .thing.linkflair-spoiler-title a.title:hover,
+.res-nightmode .listing-page #siteTable .thing.linkflair-spoiler-title a.title:visited {
+  background-color:     rgb(22,22,22)!important;
 }
 /* Spoiler Images */
 
-.linkflair-spoiler img, .linkflair-spoiler-title img {
-    display: none
+.linkflair-spoiler img,
+.linkflair-spoiler-title img {
+  display:              none;
 }
 .linkflair-spoiler .thumbnail {}
 /* --- End Addon --- */
+
 /* --- Addon: User Flairs --- */
 
 .flair {
-    display: inline-block;
-    vertical-align: middle;
-    border: 0;
-    padding: 0;
-    text-align: center;
-    overflow: hidden;
-    position: relative;
+  border:               0;
+  display:              inline-block;
+  overflow:             hidden;
+  padding:              0;
+  position:             relative;
+  text-align:           center;
+  vertical-align:       middle;
 }
 .flair-graphic {
-    padding-left: 40px;
-    height: 40px;
-    max-height: 40px;
-    min-height: 40px;
-    line-height: 35.5px;
-    min-width: 80px;
-    border: 2px ridge;
+  border:               2px ridge;
+  height:               40px;
+  line-height:          35.5px;
+  max-height:           40px;
+  min-height:           40px;
+  min-width:            80px;
+  padding-left:         40px;
 }
 .flair-graphic.flair-mod {
-    border-color: #65B354;
-    background-color: #C7F7BB;
+  border-color:         #65B354;
+  background-color:     #C7F7BB;
 }
 .flair-graphic::before {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    background: url(%%flairsheet-80px%%) no-repeat -9999px;
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    height: 80px;
-    width: 80px;
-    margin-top: -20px;
-    margin-bottom: -20px;
-    margin-left: -20px;
-    margin-right: -20px;
-    transform: scale(0.5, 0.5);
-    -ms-transform: scale(0.5, 0.5);
-    -webkit-transform: scale(0.5, 0.5);
+  background:           url(%%flairsheet-80px%%) no-repeat -9999px;
+  border:               0;
+  content:              "";
+  display:              inline-block;
+  height:               80px;
+  left:                 0px;
+  margin-bottom:        -20px;
+  margin-left:          -20px;
+  margin-right:         -20px;
+  margin-top:           -20px;
+  overflow:             hidden;
+  padding:              0;
+  position:             absolute;
+  top:                  0px;
+  transform:            scale(0.5, 0.5);
+  -ms-transform:        scale(0.5, 0.5);
+  -webkit-transform:    scale(0.5, 0.5);
+  vertical-align:       middle;
+  width:                80px;
 }
 .titlebox .tagline {
-    margin-top: 0px!important;
+  margin-top:           0px !important;
 }
-.titlebox .tagline .flair-graphic::before, .sidecontentbox > .content .flair-graphic::before, .flairselector > .flairoptionpane .flair-graphic:before {
-    left: -20px;
+.titlebox .tagline .flair-graphic::before,
+.sidecontentbox > .content .flair-graphic::before,
+.flairselector > .flairoptionpane .flair-graphic:before {
+  left:                 -20px;
 }
 .flair-yuna-0::before {
-    background-position: 0 0;
+  background-position:  0 0;
 }
 .flair-yuna-1::before {
-    background-position: 0 -80px;
+  background-position:  0 -80px;
 }
 .flair-mimori-0::before {
-    background-position: -80px 0;
+  background-position:  -80px 0;
 }
 .flair-mimori-1::before {
-    background-position: -80px -80px;
+  background-position:  -80px -80px;
 }
 .flair-fu-0::before {
-    background-position: -160px 0;
+  background-position:  -160px 0;
 }
 .flair-fu-1::before {
-    background-position: -160px -80px;
+  background-position:  -160px -80px;
 }
 .flair-itsuki-0::before {
-    background-position: -240px 0;
+  background-position:  -240px 0;
 }
 .flair-itsuki-1::before {
-    background-position: -240px -80px;
+  background-position:  -240px -80px;
 }
 .flair-karin-0::before {
-    background-position: -320px 0;
+  background-position:  -320px 0;
 }
 .flair-karin-1::before {
-    background-position: -320px -80px;
+  background-position:  -320px -80px;
 }
 /* --- End Addon --- */
+
 /* --- Addon: Comment Faces --- */
 .md a[href^="/"]:not([href^="/r/"]):not([href^="/u/"]):not([href="/s"]):not([href^="/message"]),
 .thing .md :not(.RESdupeimg) > a[href^="#"]:not([href="#s"]) {
-    display: inline-block;
-    position: relative;
+  border:               2px outset #BBB;
+  color:                white !important;
+  display:              inline-block;
+  font-family:          verdana,sans-serif;
+  font-size:            14px;
+  overflow:             hidden;
+  padding-top:          2px;
+  position:             relative;
+  text-align:           center;
+  text-shadow:
+     0.5px  0.5px 0px #000,
+     0.5px -0.5px 0px #000,
+    -0.5px  0.5px 0px #000,
+    -0.5px -0.5px 0px #000,
+     0.5px  0.5px 1px #000,
+     0.5px -0.5px 1px #000,
+    -0.5px  0.5px 1px #000,
+    -0.5px -0.5px 1px #000;
+  z-index:              1000;
 
-    border: 2px outset #bbbbbb;
-    overflow:hidden;
-    z-index: 1000;
-
-    padding-top: 2px;
-
-    text-align: center;
-    font-family: verdana,sans-serif;
-    font-size: 14px;
-    color: white !important;
-    text-shadow:
-       0.5px  0.5px 0px #000,
-       0.5px -0.5px 0px #000,
-      -0.5px  0.5px 0px #000,
-      -0.5px -0.5px 0px #000,
-       0.5px  0.5px 1px #000,
-       0.5px -0.5px 1px #000,
-      -0.5px  0.5px 1px #000,
-      -0.5px -0.5px 1px #000;
-
-    cursor: default;
+  cursor:               default;
 }
-
 .thing .md a[href^="/"]:not([href^="/r/"]):not([href^="/u/"]):not([href="/s"]):not([href^="/message"]) > strong,
 .thing .md a[href^="#"]:not([href="#s"]) > strong {
-    display: block;
-    width: 100%;
-    position: absolute;
-    bottom: 4px;
-
-    font-weight: normal;
+  bottom:               4px;
+  display:              block;
+  font-weight:          normal;
+  position:             absolute;
+  width:                100%;
 }
 a[href^="#anim-"]:not(:hover)::before {
- content: "";
- display:block;
- height: 64px;
- width: 64px;
- background: url(%%play-animation%%) -0px -0px no-repeat;
- transform: scale(0.5, 0.5);
- -ms-transform: scale(0.5, 0.5);
- -webkit-transform: scale(0.5, 0.5);
-
- position: absolute;
- left: 48px;
- top: 12px;
- z-index: 1001;
+background:             url(%%play-animation%%) -0px -0px no-repeat;
+  content:              "";
+  display:              block;
+  height:               64px;
+  left:                 48px;
+  position:             absolute;
+  top:                  12px;
+  transform:            scale(0.5, 0.5);
+  -ms-transform:        scale(0.5, 0.5);
+  -webkit-transform:    scale(0.5, 0.5);
+  width:                64px;
+  z-index:              1001;
 }
 @-webkit-keyframes itsuki-applause {
-    from { background-position: 0px 0px; }
-    to { background-position: 0px -720px; }
+  from  { background-position: 0px 0px; }
+  to    { background-position: 0px -720px; }
 }
 @keyframes itsuki-applause {
-    from { background-position: 0px 0px; }
-    to { background-position: 0px -720px; }
+  from  { background-position: 0px 0px; }
+  to    { background-position: 0px -720px; }
 }
 a[href^="#"][href$="itsuki-applause"] {
-    display:inline-block;
-    height: 90px;
-    width: 160px;
-    background: url(%%itsuki-applause-frames%%) -0px -0px no-repeat;
+  background:           url(%%itsuki-applause-frames%%) -0px -0px no-repeat;
+  display:              inline-block;
+  height:               90px;
+  width:                160px;
 }
 a[href^="#anim-"][href$="itsuki-applause"]:hover {
-    -webkit-animation:itsuki-applause 0.60s steps(8, end) infinite;
-    animation: itsuki-applause 0.60s steps(8, end) infinite;
-    animation-fill-mode: forwards;
+  animation:            itsuki-applause 0.60s steps(8, end) infinite;
+  -webkit-animation:    itsuki-applause 0.60s steps(8, end) infinite;
+  animation-fill-mode:  forwards;
 }
 @-webkit-keyframes fuu-fufufu {
-    from { background-position: 0px 0px; }
-    to { background-position: 0px -1890px; }
+  from  { background-position: 0px 0px; }
+  to    { background-position: 0px -1890px; }
 }
 @keyframes fuu-fufufu {
-    from { background-position: 0px 0px; }
-    to { background-position: 0px -1890px; }
+  from  { background-position: 0px 0px; }
+  to    { background-position: 0px -1890px; }
 }
 a[href^="#"][href$="fuu-fufufu"] {
-    display:inline-block;
-    height: 90px;
-    width: 160px;
-    background: url(%%fuu-fufufu-frames%%) -0px -0px no-repeat;
+  background:           url(%%fuu-fufufu-frames%%) -0px -0px no-repeat;
+  display:              inline-block;
+  height:               90px;
+  width:                160px;
 }
 a[href^="#anim-"][href$="fuu-fufufu"]:hover {
-    -webkit-animation:fuu-fufufu 0.60s steps(21, end) infinite;
-    animation: fuu-fufufu 1.575s steps(21, end) infinite;
-    animation-fill-mode: forwards;
+  animation:            fuu-fufufu 1.575s steps(21, end) infinite;
+  -webkit-animation:    fuu-fufufu 1.575s steps(21, end) infinite;
+  animation-fill-mode:  forwards;
 }
 @-webkit-keyframes mimori-smile {
-    from { background-position: 0px 0px; }
-    to { background-position: 0px -3420px; }
+  from  { background-position: 0px 0px; }
+  to    { background-position: 0px -3420px; }
 }
 @keyframes mimori-smile {
-    from { background-position: 0px 0px; }
-    to { background-position: 0px -3420px; }
+  from  { background-position: 0px 0px; }
+  to    { background-position: 0px -3420px; }
 }
 a[href^="#"][href$="mimori-smile"] {
-    display:inline-block;
-    height: 90px;
-    width: 160px;
-    background: url(%%mimori-smile-frames%%) -0px -0px no-repeat;
+  background:           url(%%mimori-smile-frames%%) -0px -0px no-repeat;
+  display:              inline-block;
+  height:               90px;
+  width:                160px;
 }
 a[href^="#anim-"][href$="mimori-smile"]:hover {
-    -webkit-animation:mimori-smile 2.85s steps(38, end) infinite;
-    animation: mimori-smile 2.85s steps(38, end) infinite;
-    animation-fill-mode: forwards;
+  animation:            mimori-smile 2.85s steps(38, end) infinite;
+  -webkit-animation:    mimori-smile 2.85s steps(38, end) infinite;
+  animation-fill-mode:  forwards;
 }
 @-webkit-keyframes karin-wat {
-    from { background-position: 0px 0px; }
-    to { background-position: 0px -1620px; }
+  from  { background-position: 0px 0px; }
+  to    { background-position: 0px -1620px; }
 }
 @keyframes karin-wat {
-    from { background-position: 0px 0px; }
-    to { background-position: 0px -1620px; }
+  from  { background-position: 0px 0px; }
+  to    { background-position: 0px -1620px; }
 }
 a[href^="#"][href$="karin-wat"] {
-    display:inline-block;
-    height: 90px;
-    width: 160px;
-    background: url(%%karin-wat-frames%%) -0px -0px no-repeat;
+  background:           url(%%karin-wat-frames%%) -0px -0px no-repeat;
+  display:              inline-block;
+  height:               90px;
+  width:                160px;
 }
 a[href^="#anim-"][href$="karin-wat"]:hover {
-    -webkit-animation:karin-wat 1.35s steps(18, end) infinite;
-    animation: karin-wat 1.35s steps(18, end) infinite;
-    animation-fill-mode: forwards;
+  animation:            karin-wat 1.35s steps(18, end) infinite;
+  -webkit-animation:    karin-wat 1.35s steps(18, end) infinite;
+  animation-fill-mode:  forwards;
 }
 @-webkit-keyframes yuuna-soexcited {
-    from { background-position: 0px 0px; }
-    to { background-position: 0px -1440px; }
+  from  { background-position: 0px 0px; }
+  to    { background-position: 0px -1440px; }
 }
 @keyframes yuuna-soexcited {
-    from { background-position: 0px 0px; }
-    to { background-position: 0px -1440px; }
+  from  { background-position: 0px 0px; }
+  to    { background-position: 0px -1440px; }
 }
 a[href^="#"][href$="yuuna-soexcited"] {
-    display:inline-block;
-    height: 90px;
-    width: 160px;
-    background: url(%%yuuna-soexcited-frames%%) -0px -0px no-repeat;
+  background:           url(%%yuuna-soexcited-frames%%) -0px -0px no-repeat;
+  display:              inline-block;
+  height:               90px;
+  width:                160px;
 }
 a[href^="#anim-"][href$="yuuna-soexcited"]:hover {
-    -webkit-animation:yuuna-soexcited 1.20s steps(16, end) infinite;
-    animation: yuuna-soexcited 1.20s steps(16, end) infinite;
-    animation-fill-mode: forwards;
+  animation:            yuuna-soexcited 1.20s steps(16, end) infinite;
+  -webkit-animation:    yuuna-soexcited 1.20s steps(16, end) infinite;
+  animation-fill-mode:  forwards;
 }
 @-webkit-keyframes yuuna-victory {
-    from { background-position: 0px 0px; }
-    to { background-position: 0px -2070px; }
+  from  { background-position: 0px 0px; }
+  to    { background-position: 0px -2070px; }
 }
 @keyframes yuuna-victory {
-    from { background-position: 0px 0px; }
-    to { background-position: 0px -2070px; }
+  from  { background-position: 0px 0px; }
+  to    { background-position: 0px -2070px; }
 }
 a[href^="#"][href$="yuuna-victory"] {
-    display:inline-block;
-    height: 90px;
-    width: 160px;
-    background: url(%%yuuna-victory-frames%%) -0px -0px no-repeat;
+  background:           url(%%yuuna-victory-frames%%) -0px -0px no-repeat;
+  display:              inline-block;
+  height:               90px;
+  width:                160px;
 }
 a[href^="#anim-"][href$="yuuna-victory"]:hover {
-    -webkit-animation:yuuna-victory 3.225s steps(23, end) infinite;
-    animation: yuuna-victory 3.225s steps(23, end) infinite;
-    animation-fill-mode: forwards;
+  animation:            yuuna-victory 3.225s steps(23, end) infinite;
+  -webkit-animation:    yuuna-victory 3.225s steps(23, end) infinite;
+  animation-fill-mode:  forwards;
 }
 a[href^="#"][href$="yuuna-victory"] {
-    display:inline-block;
-    height: 90px;
-    width: 160px;
-    background: url(%%yuuna-victory-frames%%) -0px -0px no-repeat;
+  background:           url(%%yuuna-victory-frames%%) -0px -0px no-repeat;
+  display:              inline-block;
+  height:               90px;
+  width:                160px;
 }
 /* --- Static Comment Faces --- */
 a[href^="#"][href$="everything-is-daijoubu"] {
-    display:inline-block;
-    height: 160px;
-    width: 160px;
-    background: url(%%everything-is-daijoubu%%) -0px -0px no-repeat;
+  background:           url(%%everything-is-daijoubu%%) -0px -0px no-repeat;
+  display:              inline-block;
+  height:               160px;
+  width:                160px;
 }
 /** --- Custom Itsuki Writing Sign --- */
 a[href^="#"][href$="itsuki-writing"] {
-    display:inline-block;
-    height: 160px!important;
-    width: 160px!important;
-    background: url(%%itsuki-writing%%) -0px -0px no-repeat;
+  background:           url(%%itsuki-writing%%) -0px -0px no-repeat;
+  display:              inline-block;
+  height:               160px;
+  width:                160px;
 }
 .thing .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] {
-  padding-top: 90px;
-  padding-right: 31px;
-  padding-left: 34px;
-
-  font-size: 10px;
-  font-family: "Comic Sans MS", cursive, sans-serif;
-  color:black!important;
-  text-shadow: inherit;
+  color:                black!important;
+  font-family:          "Comic Sans MS", cursive, sans-serif;
+  font-size:            10px;
+  padding-left:         34px;
+  padding-right:        31px;
+  padding-top:          90px;
+  text-shadow:          inherit;
 }
 .thing .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] > strong {
-  display: inherit;
-  width: auto;
-  position: inherit;
-  bottom:inherit;
-  text-align:inherit;
-  font-weight:bold;
+  bottom:               inherit;
+  display:              inherit;
+  font-weight:          bold;
+  position:             inherit;
+  text-align:           inherit;
+  width:                auto;
 }
-
 /* --- End Comment-Face Addon --- */
+/* --- Addon: Layout Adjustments --- */
+/* --- Header button overflow --- */
+#header-bottom-left {
+  white-space:          nowrap;
+}
+/* --- Stylesheet Image Preview List --- */
+#images {
+  height: auto;
+}
+ul#image-preview-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 20px;
+}
+ul#image-preview-list li {
+  flex: 1 0 50%;
+}
+/* --- Sidebar Layout --- */
+.side {
+  margin-top:           282px;
+  position:             absolute;
+  right:                0;
+  z-index:              100;
+}
+.side::after {
+  content:              "";
+}
+#search {
+  right:                0;
+  top:                  -156px;
+}
+.sidebox {
+  position:             absolute;
+  right:                -16px;
+  top:                  -282px;
+}
+.comments-page .side,
+.res .comments-page .side {
+  margin-top:           408px;
+}
+.comments-page #search,
+.res .comments-page #search {
+  top:                  -282px;
+}
+.comments-page .sidebox,
+.res .comments-page .sidebox {
+  top:                  -408px;
+}
+.comments-page .side .linkinfo,
+.res .comments-page .side .linkinfo {
+  right:                0;
+  top:                  -208px
+}
+body {
+  min-width:            inherit;
+}
+body > .debuginfo,
+body > .footer-parent {
+  margin:               -16px 332px 16px 16px;
+}
+@media only screen and (max-width: 840px) {
+  body > .content,
+  body > .debuginfo,
+  body > .footer-parent {
+    margin-right:         96px;
+    max-width:            492px;
+    width:                calc(100% - 112px);
+  }
+  .side {
+    right:                calc(100% - 104px - 492px - 244px);
+    transition:           all 0.25s ease;
+  }
+  .side:hover {
+    right:                0;
+    transition:           all 0.25s ease;
+  }
+}
+@media only screen and (max-width: 604px) {
+  .side {
+    right:                -236px;
+  }
+}
+/* --- End Layout Addon --- */
+/* --- Addon: Nightmode Fix --- */
+.res-nightmode #images,
+.res-nightmode .commentarea > .usertext,
+.res-nightmode .link,
+.res-nightmode .stylesheet-customize-container .pretty-form,
+.res-nightmode .wiki-page .pageactions,
+.res-nightmode .wiki-page .wiki-page-content,
+.res-nightmode .wiki-page .wikititle {
+  background-color:       #161616;
+}
+.res-nightmode .stylesheet-customize-container textarea,
+.res-nightmode .wiki-page .wiki-page-content textarea {
+  color:                  rgb(221, 221, 221);
+  background-color:       rgb(34, 34, 34);
+}
+.res-nightmode .arrow {
+  margin-left:            10px;
+}
+.res-nightmode .comments-page .side .linkinfo {
+  background-color:       #222222;
+}
+.res-nightmode input[type="file"],
+.res-nightmode input[type="text"] {
+  background-color:       #AAAAAA;
+}
+/* --- End Nightmode Addon --- */
