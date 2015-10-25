@@ -578,7 +578,7 @@ a[href^="#"][href$="itsuki-writing"] {
   width:                160px;
 }
 .thing .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] {
-  color:                black;
+  color:                black!important;
   font-family:          "Comic Sans MS", cursive, sans-serif;
   font-size:            10px;
   padding-left:         34px;
