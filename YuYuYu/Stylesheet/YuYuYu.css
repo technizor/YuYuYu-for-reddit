@@ -570,89 +570,92 @@ a[href^="#"][href$="itsuki-writing"] {
 .thing .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] > strong {
   bottom:               inherit;
   display:              inherit;
-  position:             inherit;
   font-weight:          bold;
+  position:             inherit;
   text-align:           inherit;
   width:                auto;
 }
 /* --- End Comment-Face Addon --- */
+/* --- Addon: Layout Adjustments --- */
+/* --- Header button overflow --- */
+html[lang='ab'] #header-bottom-left {
+  white-space:          nowrap;
+}
+/* --- Stylesheet Image Preview List --- */
+html[lang='ab'] #images {
+  height: auto;
+}
+html[lang='ab'] ul#image-preview-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 20px;
+}
+html[lang='ab'] ul#image-preview-list li {
+  flex: 1 0 50%;
+}
+/* --- Sidebar Layout --- */
+html[lang='ab'] .side {
+  margin-top:           282px;
+  position:             absolute;
+  right:                0;
+  z-index:              100;
+}
+html[lang='ab'] .side::after {
+  content:              "";
+}
+html[lang='ab'] #search {
+  right:                0;
+  top:                  -156px;
+}
+html[lang='ab'] .sidebox {
+  position:             absolute;
+  right:                -16px;
+  top:                  -282px;
+}
+html[lang='ab'] .comments-page .side,
+html[lang='ab'] .res .comments-page .side {
+  margin-top:           408px;
+}
+html[lang='ab'] .comments-page #search,
+html[lang='ab'] .res .comments-page #search {
+  top:                  -282px;
+}
+html[lang='ab'] .comments-page .sidebox,
+html[lang='ab'] .res .comments-page .sidebox {
+  top:                  -408px;
+}
+html[lang='ab'] .comments-page .side .linkinfo,
+html[lang='ab'] .res .comments-page .side .linkinfo {
+  right:                0;
+  top:                  -208px
+}
+html[lang='ab'] body {
+  min-width:            inherit;
+}
+html[lang='ab'] body > .footer-parent,
+html[lang='ab'] body > .debuginfo {
+  margin:               -16px 332px 16px 16px;
+}
 @media only screen and (max-width: 840px) {
-  html[lang='ab'] body {
-    min-width: inherit;
-  }
-  html[lang='ab'] body > .content {
-    margin-right: 96px;
-    max-width: 492px;
-    width:calc(100% - 112px);
+  html[lang='ab'] body > .content,
+  html[lang='ab'] body > .footer-parent,
+  html[lang='ab'] body > .debuginfo {
+    margin-right:         96px;
+    max-width:            492px;
+    width:                calc(100% - 112px);
   }
   html[lang='ab'] .side {
-    transition: all 0.25s ease;
-    margin-top: 282px;
-    position: absolute;
-    right: calc(100% - 104px - 492px - 244px);
-    z-index: 100;
+    right:                calc(100% - 104px - 492px - 244px);
+    transition:           all 0.25s ease;
   }
   html[lang='ab'] .side:hover {
-    transition: all 0.25s ease;
-    right: 0;
+    right:                0;
+    transition:           all 0.25s ease;
   }
-  html[lang='ab'] #search {
-    top: -156px;
-    right: 0;
-  }
-  html[lang='ab'] .sidebox {
-    position: absolute;
-    top: -282px;
-    right: -16px;
-  }
-  html[lang='ab'] .comments-page .side,
-  html[lang='ab'] .res .comments-page .side {
-    margin-top: 408px;
-  }
-  html[lang='ab'] .comments-page #search,
-  html[lang='ab'] .res .comments-page #search {
-    top: -282px;
-  }
-  html[lang='ab'] .comments-page .sidebox,
-  html[lang='ab'] .res .comments-page .sidebox {
-    top: -408px;
-  }
-  html[lang='ab'] .comments-page .side .linkinfo,
-  html[lang='ab'] .res .comments-page .side .linkinfo {
-    right: 0;
-    top: -208px
-  }/*
-  html[lang='ab'] .link {
-    background: linear-gradient(to right, #fff, #fff, rgba(255,255,255,0.25));
-  }
-  html[lang='ab'] .commentarea > .usertext {
-    background: linear-gradient(to right, #fafafa, #fafafa, rgba(250,250,250,0.25));
-  }
-  html[lang='ab'] .commentarea > .sitetable {
-    background: linear-gradient(to right, #fff, #fff, rgba(255,255,255,0.25));
-  }
-  html[lang='ab'] .commentarea > .sitetable .comment {
-    background-color: transparent;
-  }*/
-  /*
-  html[lang='ab'] .side::before {
-    content: '';
-    display: block;
-    position:absolute;
-    left:0;
-    width:8px;
-    height:100%;
-    background: url(%%sidebar-grippy-hide%%) fixed no-repeat;
-    background-position: 131px center;
-    margin-left: 1px;
-    opacity: .5;
-  }*/
 }
 @media only screen and (max-width: 604px) {
   html[lang='ab'] .side {
-    right: -236px;
+    right:                -236px;
   }
-
 }
-
-/* --- End Sidebar Layout Addon --- */
+/* --- End Layout Addon --- */
