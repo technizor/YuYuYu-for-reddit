@@ -43,8 +43,20 @@ body:before {
   background-size:      auto 200px;
   height:               200px;
 }
+body.res-nightmode:before {
+  background:           linear-gradient(rgba(34, 34, 34, 0.45), rgba(34, 34, 34, 0.45)),
+                        url(%%headerimg%%) fixed no-repeat 50% 0;
+  background-size:      auto 200px;
+  height:               200px;
+}
 @media only screen and (min-width: 1921px) {
   body:before { background-size: cover }
+}
+.res-nightmode #sr-header-area {
+  background-color:     rgba(0, 0, 0, 0.05);
+}
+.res-nightmode #header-bottom-right {
+  background-color:     transparent;
 }
 /* Add or subtract THE SAME AMOUNT ON EACH OF THESE */
 
@@ -128,43 +140,43 @@ body:before {
 /* --- End Addon --- */
 
 /* --- Addon: Button color (Secondary Color) --- */
-
-.morelink,
-.titlebox .fancy-toggle-button .add,
-.morelink:after,
+button,
+.btn,
 .content .infobar,
+.drop-choices a.choice:hover,
+.expando-button:hover,
+.fancy-toggle-button .remove:active .expando-button:hover,
+.linkflairlabel,
+.morelink,
+.morelink:after,
+.res div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed,
+.res div.RES-keyNav-activeElement,
+.side .titlebox .md h3 a,
+.submit-page #newlink.submit.content .btn,
 .submit-page #newlink.submit.content .tabmenu.formtab .selected a,
 .submit-page .infobar,
-.submit-page #newlink.submit.content .btn,
-.drop-choices a.choice:hover,
-.linkflairlabel,
-.fancy-toggle-button .remove:active .expando-button:hover,
-.top-page .content .menuarea .dropdown.lightdrop .selected,
-.expando-button:hover,
-.side .titlebox .md h3 a,
-.res div.RES-keyNav-activeElement,
-.res div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed,
-.btn,
-button {
+.titlebox .fancy-toggle-button .add,
+.top-page .content .menuarea .dropdown.lightdrop .selected {
   background-color:     #ECC6C3;
 }
 /* Hover color = 10% white overlay color */
 
-.morelink:hover,
-.submit-page #newlink.submit.content .tabmenu.formtab .selected a:hover,
-.btn:hover,
 button:hover,
+.btn:hover,
+.morelink:hover,
 .side .titlebox .md h3 a:hover,
+.submit-page #newlink.submit.content .tabmenu.formtab .selected a:hover,
 .titlebox .fancy-toggle-button .add:hover,
 .titlebox .fancy-toggle-button .add:hover:after {
   background-color:     #FFF;
 }
 /* Active color = 10% black overlay color */
 
-.morelink:active,
-.side .titlebox .md h3 a:active,
+
+button:active,
 .btn:active,
-button:active {
+.morelink:active,
+.side .titlebox .md h3 a:active {
   background-color:     #4059DB;
 }
 /* --- End Addon --- */
@@ -174,26 +186,26 @@ similiar to the primary color, or to the secondary color.
 Else the page will become too busy.-- */
 
 a,
-.link .entry .buttons li a.comments,
+body .content .sitetable .link .title a:hover,
+.comment .author:hover ,
+.comment .flat-list li a[onclick*="reply"],
+.comment .flat-list li a:hover,
 .md a,
 .titlebox .tagline a.flairselectbtn,
 .thing .title.loggedin.click,
 .thing .title.click,
 .thing .title.loggedin,
 .thing .title,
-body .content .sitetable .link .title a:hover,
 .link .domain a:hover,
 .link .entry .buttons li a:hover,
+.link .entry .buttons li a.comments,
 .link .entry .buttons li a.flairselectbtn,
-.comment .flat-list li a[onclick*="reply"],
-.comment .flat-list li a:hover,
+.link .entry .tagline a:hover,
 .tagline .submitter,
 .tagline .submitter,
 .side:after,
-.usertext .bottom-area a.reddiquette,
 .side .titlebox .md h6 a,
-.link .entry .tagline a:hover,
-.comment .author:hover {
+.usertext .bottom-area a.reddiquette {
   color:                #B62E2E;
 }
 /* --- End Addon --- */
@@ -223,8 +235,8 @@ div.titlebox span.number:after {
 /* --- Addon: Spoiler Tags --- */
 
 a[href="/s"],
-a[href="#s"],
-.md p > a[href="/s"] {
+.md p > a[href="/s"],
+a[href="#s"] {
   background:           #000;
   color:                #FFF !important;
   cursor:               default;
@@ -232,26 +244,25 @@ a[href="#s"],
   text-decoration:      none !important;
 }
 a[href="/s"]::after,
-a[href="#s"]::after,
-.md p > a[href="/s"]::after {
+.md p > a[href="/s"]::after,
+a[href="#s"]::after {
   content:              attr(title);
   color:                #000;
   padding:              0 0.5em;
   visibility:           visible;
 }
 a[href="/s"]:hover,
-a[href="#s"]:hover,
 .md p > a[href="/s"]:hover,
 a[href="#s"]:hover {
   color:                #B62E2E !important;
 }
 a[href="/s"]:hover::after,
-a[href="#s"]:hover::after,
 a[href="/s"]:active::after,
-a[href="#s"]:active::after,
 .md p > a[href="/s"]:hover::after,
-a[href="#s"]:hover::after,
 .md p > a[href="/s"]:active::after,
+a[href="#s"]:hover::after,
+a[href="#s"]:active::after,
+a[href="#s"]:hover::after,
 a[href="#s"]:active::after {
   color:                #FFF;
 }
@@ -260,7 +271,8 @@ a[href="#s"]:active::after {
 /* --- Addon: Post Flairs --- */
 /* Post Flair Labels*/
 
-.linkflair-spoiler .linkflairlabel, .linkflair-spoiler-title .linkflairlabel {
+.linkflair-spoiler .linkflairlabel,
+.linkflair-spoiler-title .linkflairlabel {
   background-color:     #AD6B68;
 }
 .linkflair-meta .linkflairlabel {
@@ -274,21 +286,26 @@ a[href="#s"]:active::after {
 }
 /* Spoiler Titles */
 
-.listing-page .linkflair-spoiler-title a.title {
+.listing-page #siteTable .thing.linkflair-spoiler-title a.title {
   background-color:     #AD6B68;
   color:                #AD6B68;
   text-shadow:          none;
 }
-.listing-page .linkflair-spoiler-title a.title:hover {
+.listing-page #siteTable .thing.linkflair-spoiler-title a.title:hover {
   background-color:     #ECF0F1 !important;
 }
-.listing-page .linkflair-spoiler-title a.title:visited {
+.listing-page #siteTable .thing.linkflair-spoiler-title a.title:visited {
   background-color:     #ECF0F1 !important;
   color:                #7D5D8A !important;
 }
+.res-nightmode .listing-page #siteTable .thing.linkflair-spoiler-title a.title:hover,
+.res-nightmode .listing-page #siteTable .thing.linkflair-spoiler-title a.title:visited {
+  background-color:     rgb(22,22,22)!important;
+}
 /* Spoiler Images */
 
-.linkflair-spoiler img, .linkflair-spoiler-title img {
+.linkflair-spoiler img,
+.linkflair-spoiler-title img {
   display:              none;
 }
 .linkflair-spoiler .thumbnail {}
@@ -342,7 +359,9 @@ a[href="#s"]:active::after {
 .titlebox .tagline {
   margin-top:           0px !important;
 }
-.titlebox .tagline .flair-graphic::before, .sidecontentbox > .content .flair-graphic::before, .flairselector > .flairoptionpane .flair-graphic:before {
+.titlebox .tagline .flair-graphic::before,
+.sidecontentbox > .content .flair-graphic::before,
+.flairselector > .flairoptionpane .flair-graphic:before {
   left:                 -20px;
 }
 .flair-yuna-0::before {
@@ -559,7 +578,7 @@ a[href^="#"][href$="itsuki-writing"] {
   width:                160px;
 }
 .thing .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] {
-  color:                black;
+  color:                black!important;
   font-family:          "Comic Sans MS", cursive, sans-serif;
   font-size:            10px;
   padding-left:         34px;
@@ -632,14 +651,14 @@ ul#image-preview-list li {
 body {
   min-width:            inherit;
 }
-body > .footer-parent,
-body > .debuginfo {
+body > .debuginfo,
+body > .footer-parent {
   margin:               -16px 332px 16px 16px;
 }
 @media only screen and (max-width: 840px) {
   body > .content,
-  body > .footer-parent,
-  body > .debuginfo {
+  body > .debuginfo,
+  body > .footer-parent {
     margin-right:         96px;
     max-width:            492px;
     width:                calc(100% - 112px);
@@ -659,3 +678,29 @@ body > .debuginfo {
   }
 }
 /* --- End Layout Addon --- */
+/* --- Addon: Nightmode Fix --- */
+.res-nightmode #images,
+.res-nightmode .commentarea > .usertext,
+.res-nightmode .link,
+.res-nightmode .stylesheet-customize-container .pretty-form,
+.res-nightmode .wiki-page .pageactions,
+.res-nightmode .wiki-page .wiki-page-content,
+.res-nightmode .wiki-page .wikititle {
+  background-color:       #161616;
+}
+.res-nightmode .stylesheet-customize-container textarea,
+.res-nightmode .wiki-page .wiki-page-content textarea {
+  color:                  rgb(221, 221, 221);
+  background-color:       rgb(34, 34, 34);
+}
+.res-nightmode .arrow {
+  margin-left:            10px;
+}
+.res-nightmode .comments-page .side .linkinfo {
+  background-color:       #222222;
+}
+.res-nightmode input[type="file"],
+.res-nightmode input[type="text"] {
+  background-color:       #AAAAAA;
+}
+/* --- End Nightmode Addon --- */
