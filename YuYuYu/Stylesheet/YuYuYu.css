@@ -274,17 +274,21 @@ a[href="#s"]:active::after {
 }
 /* Spoiler Titles */
 
-.listing-page .linkflair-spoiler-title a.title {
+.listing-page #siteTable .thing.linkflair-spoiler-title a.title {
   background-color:     #AD6B68;
   color:                #AD6B68;
   text-shadow:          none;
 }
-.listing-page .linkflair-spoiler-title a.title:hover {
+.listing-page #siteTable .thing.linkflair-spoiler-title a.title:hover {
   background-color:     #ECF0F1 !important;
 }
-.listing-page .linkflair-spoiler-title a.title:visited {
+.listing-page #siteTable .thing.linkflair-spoiler-title a.title:visited {
   background-color:     #ECF0F1 !important;
   color:                #7D5D8A !important;
+}
+.res-nightmode .listing-page #siteTable .thing.linkflair-spoiler-title a.title:visited,
+.res-nightmode .listing-page #siteTable .thing.linkflair-spoiler-title a.title:hover {
+  background-color:     rgb(22,22,22)!important;
 }
 /* Spoiler Images */
 
@@ -659,3 +663,29 @@ body > .debuginfo {
   }
 }
 /* --- End Layout Addon --- */
+/* --- Addon: Nightmode Fix --- */
+.res-nightmode .link,
+.res-nightmode .stylesheet-customize-container .pretty-form,
+.res-nightmode #images,
+.res-nightmode .commentarea > .usertext,
+.res-nightmode .wiki-page .wiki-page-content,
+.res-nightmode .wiki-page .wikititle,
+.res-nightmode .wiki-page .pageactions {
+  background-color:       #161616;
+}
+.res-nightmode .stylesheet-customize-container textarea,
+.res-nightmode .wiki-page .wiki-page-content textarea {
+  background-color: rgb(34, 34, 34);
+  color: rgb(221, 221, 221);
+}
+.res-nightmode .arrow {
+  margin-left:            10px;
+}
+.res-nightmode .comments-page .side .linkinfo {
+  background-color:       #222222;
+}
+.res-nightmode input[type="text"],
+.res-nightmode input[type="file"] {
+  background-color:       #AAAAAA;
+}
+/* --- End Nightmode Addon --- */
