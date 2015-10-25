@@ -578,83 +578,83 @@ a[href^="#"][href$="itsuki-writing"] {
 /* --- End Comment-Face Addon --- */
 /* --- Addon: Layout Adjustments --- */
 /* --- Header button overflow --- */
-html[lang='ab'] #header-bottom-left {
+#header-bottom-left {
   white-space:          nowrap;
 }
 /* --- Stylesheet Image Preview List --- */
-html[lang='ab'] #images {
+#images {
   height: auto;
 }
-html[lang='ab'] ul#image-preview-list {
+ul#image-preview-list {
   display: flex;
   flex-wrap: wrap;
   margin-right: 20px;
 }
-html[lang='ab'] ul#image-preview-list li {
+ul#image-preview-list li {
   flex: 1 0 50%;
 }
 /* --- Sidebar Layout --- */
-html[lang='ab'] .side {
+.side {
   margin-top:           282px;
   position:             absolute;
   right:                0;
   z-index:              100;
 }
-html[lang='ab'] .side::after {
+.side::after {
   content:              "";
 }
-html[lang='ab'] #search {
+#search {
   right:                0;
   top:                  -156px;
 }
-html[lang='ab'] .sidebox {
+.sidebox {
   position:             absolute;
   right:                -16px;
   top:                  -282px;
 }
-html[lang='ab'] .comments-page .side,
-html[lang='ab'] .res .comments-page .side {
+.comments-page .side,
+.res .comments-page .side {
   margin-top:           408px;
 }
-html[lang='ab'] .comments-page #search,
-html[lang='ab'] .res .comments-page #search {
+.comments-page #search,
+.res .comments-page #search {
   top:                  -282px;
 }
-html[lang='ab'] .comments-page .sidebox,
-html[lang='ab'] .res .comments-page .sidebox {
+.comments-page .sidebox,
+.res .comments-page .sidebox {
   top:                  -408px;
 }
-html[lang='ab'] .comments-page .side .linkinfo,
-html[lang='ab'] .res .comments-page .side .linkinfo {
+.comments-page .side .linkinfo,
+.res .comments-page .side .linkinfo {
   right:                0;
   top:                  -208px
 }
-html[lang='ab'] body {
+body {
   min-width:            inherit;
 }
-html[lang='ab'] body > .footer-parent,
-html[lang='ab'] body > .debuginfo {
+body > .footer-parent,
+body > .debuginfo {
   margin:               -16px 332px 16px 16px;
 }
 @media only screen and (max-width: 840px) {
-  html[lang='ab'] body > .content,
-  html[lang='ab'] body > .footer-parent,
-  html[lang='ab'] body > .debuginfo {
+  body > .content,
+  body > .footer-parent,
+  body > .debuginfo {
     margin-right:         96px;
     max-width:            492px;
     width:                calc(100% - 112px);
   }
-  html[lang='ab'] .side {
+  .side {
     right:                calc(100% - 104px - 492px - 244px);
     transition:           all 0.25s ease;
   }
-  html[lang='ab'] .side:hover {
+  .side:hover {
     right:                0;
     transition:           all 0.25s ease;
   }
 }
 @media only screen and (max-width: 604px) {
-  html[lang='ab'] .side {
+  .side {
     right:                -236px;
   }
 }
