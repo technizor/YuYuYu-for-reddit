@@ -265,6 +265,7 @@ a[href="#s"]:active::after,
 a[href="#s"]:hover::after,
 a[href="#s"]:active::after {
   color:                #FFF;
+  transition:           color 1s ease-in;
 }
 /* --- End Addon --- */
 
@@ -293,6 +294,7 @@ a[href="#s"]:active::after {
 }
 .listing-page #siteTable .thing.linkflair-spoiler-title a.title:hover {
   background-color:     #ECF0F1 !important;
+  transition:           color 1s ease-in;
 }
 .listing-page #siteTable .thing.linkflair-spoiler-title a.title:visited {
   background-color:     #ECF0F1 !important;
@@ -398,7 +400,8 @@ a[href="#s"]:active::after {
 
 /* --- Addon: Comment Faces --- */
 .md a[href^="/"]:not([href^="/r/"]):not([href^="/u/"]):not([href="/s"]):not([href^="/message"]),
-.thing .md :not(.RESdupeimg) > a[href^="#"]:not([href="#s"]) {
+.thing .md :not(.RESdupeimg) > a[href^="#"]:not([href="#s"]),
+.wiki-page-content .md :not(.RESdupeimg) > a[href^="#"]:not([href="#s"]) {
   border:               2px outset #BBB;
   color:                white !important;
   display:              inline-block;
@@ -422,7 +425,9 @@ a[href="#s"]:active::after {
   cursor:               default;
 }
 .thing .md a[href^="/"]:not([href^="/r/"]):not([href^="/u/"]):not([href="/s"]):not([href^="/message"]) > strong,
-.thing .md a[href^="#"]:not([href="#s"]) > strong {
+.thing .md a[href^="#"]:not([href="#s"]) > strong,
+.wiki-page-content .md a[href^="/"]:not([href^="/r/"]):not([href^="/u/"]):not([href="/s"]):not([href^="/message"]) > strong,
+.wiki-page-content .md a[href^="#"]:not([href="#s"]) > strong  {
   bottom:               4px;
   display:              block;
   font-weight:          normal;
@@ -577,7 +582,8 @@ a[href^="#"][href$="itsuki-writing"] {
   height:               160px;
   width:                160px;
 }
-.thing .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] {
+.thing .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"],
+.wiki-page-content .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] {
   color:                black!important;
   font-family:          "Comic Sans MS", cursive, sans-serif;
   font-size:            10px;
@@ -586,13 +592,18 @@ a[href^="#"][href$="itsuki-writing"] {
   padding-top:          90px;
   text-shadow:          inherit;
 }
-.thing .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] > strong {
+.thing .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] > strong,
+.wiki-page-content .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] > strong {
   bottom:               inherit;
   display:              inherit;
   font-weight:          bold;
   position:             inherit;
   text-align:           inherit;
   width:                auto;
+}
+.thing .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] > em,
+.wiki-page-content .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] > em {
+  color:                black!important;
 }
 /* --- End Comment-Face Addon --- */
 /* --- Addon: Layout Adjustments --- */
