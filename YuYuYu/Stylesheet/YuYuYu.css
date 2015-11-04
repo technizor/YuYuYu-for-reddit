@@ -61,29 +61,7 @@ body.res-nightmode:before {
 /* Add or subtract THE SAME AMOUNT ON EACH OF THESE */
 
 body > .content {
-  margin-top:           126px;
-}
-.side {
-  margin-top:           230px;
-}
-.search-page .side {
-  margin-top:           178px;
-}
-.comments-page .side {
-  margin-top:           342px;
-}
-.res .comments-page .side {
-  margin-top:           356px;
-}
-.comments-page .side .linkinfo {
-  margin-top:           30px;
-}
-#search,
-.search-page .morelink {
-  top:                  126px;
-}
-.morelink {
-  top:                  178px;
+  margin-top:           184px;
 }
 #header-bottom-left {
   top:                  62px;
@@ -99,32 +77,8 @@ body > .content {
 /* --- End Addon --- */
 
 /* Addon: Show submit text button */
-
 .sidebox.submit.submit-text {
   display:              block;
-}
-/* This add-on is optimized for the custom header image add-on,
-if you don't have that installed, subtract 250 from each of the values below.
-If you have modified the header image add-on, you will need to add / subtract
-the SAME amount from the values below */
-
-.side {
-  margin-top:           282px;
-}
-.comments-page .side {
-  margin-top:           394px;
-}
-.search-page .side {
-  margin-top:           230px;
-}
-.sidebox.submit.submit-text .morelink {
-  top:                  230px;
-}
-.search-page .sidebox.submit.submit-text .morelink {
-  top:                  178px;
-}
-.comments-page .side .linkinfo {
-  margin-top:           82px;
 }
 .sidebox.submit.submit-text .morelink:after {
 /* You can change the hover message for the submit-text button here */
@@ -614,7 +568,7 @@ ul#image-preview-list li {
 }
 /* --- Sidebar Layout --- */
 .side {
-  margin-top:           282px;
+  margin-top:           340px;
   position:             absolute;
   right:                0;
   z-index:              100;
@@ -629,11 +583,11 @@ ul#image-preview-list li {
 .sidebox {
   position:             absolute;
   right:                -16px;
-  top:                  -282px;
+  top:                  -340px;
 }
 .comments-page .side,
 .res .comments-page .side {
-  margin-top:           408px;
+  margin-top:           466px;
 }
 .comments-page #search,
 .res .comments-page #search {
@@ -641,12 +595,26 @@ ul#image-preview-list li {
 }
 .comments-page .sidebox,
 .res .comments-page .sidebox {
-  top:                  -408px;
+  top:                  -466px;
 }
 .comments-page .side .linkinfo,
 .res .comments-page .side .linkinfo {
   right:                0;
-  top:                  -208px
+  top:                  -126px
+}
+.morelink {
+  top:                  226px;
+  margin-top:           10px;
+}
+.search-page .morelink {
+  top:                  226px;
+  margin-top:           10px;
+}
+.sidebox.submit.submit-text .morelink {
+  top:                  278px;
+}
+.search-page .side {
+  margin-top:           288px;
 }
 body {
   min-width:            inherit;
@@ -678,6 +646,80 @@ body > .footer-parent {
   }
 }
 /* --- End Layout Addon --- */
+/* --- Addon: Floating Navigation Bar --- */
+/* Enable positioning of titlebox children */
+.titlebox form {
+  position:             static
+}
+/* Float first blockquote child */
+.titlebox blockquote:first-child {
+  border-left:          none;
+  margin-left:          -494px;
+  position:             absolute;
+  right:                -8px;
+  top:                  -214px;
+  z-index:              10;
+}
+.comments-page .titlebox blockquote:first-child {
+  top:                  -340px;
+}
+.search-page .titlebox blockquote:first-child {
+  top:                  -162px;
+}
+/* Float first blockquote paragraph as Menu Title */
+.titlebox blockquote:first-child p:first-child {
+  background:           #ECC6C3;
+  border-left:          1px solid #C9A9A7;
+  border-right:         1px solid #C9A9A7;
+  box-shadow:           0 1px 5px rgba(0,0,0,0.24);
+  color:                #555;
+  cursor:               default;
+  float:                left;
+  font-size:            12pt;
+  font-weight:          bold;
+  margin-top:           5.5px;
+  padding:              4px 20px 5px;
+}
+/* Float each list as a Drop-down Menu */
+.titlebox blockquote ul {
+  background:           #ECC6C3;
+  border-left:          1px solid #C9A9A7;
+  border-right:         1px solid #C9A9A7;
+  box-shadow:           0 1px 5px rgba(0,0,0,0.24);
+  float:                left;
+  margin:               0px;
+  padding:              1px 20px;
+}
+/*hide and styles lists*/
+.titlebox blockquote ul li {
+  display:              none;
+  padding:              2px;
+  text-align:           center;
+}
+/* Block display items */
+.titlebox blockquote li a,
+.titlebox blockquote ul:hover li,
+.titlebox blockquote ul li:first-child {
+  display:              block;
+}
+
+/* Use first item of lists as Headers */
+.titlebox blockquote li:first-child {
+  cursor:               default;
+  font-size:            12pt;
+  padding:              4px;
+}
+/* Menu Item Style */
+.titlebox blockquote:first-child ul li:hover {
+  background:           #ffffff;
+}
+.titlebox blockquote li a:hover {
+  color:                orangered;
+}
+/*custom size for menu sections*//*
+.titlebox blockquote ul:nth-of-type(1) {width:100px;}
+.titlebox blockquote ul:nth-of-type(2) {width:100px;}
+/* --- End Addon --- */
 /* --- Addon: Nightmode Fix --- */
 .res-nightmode #images,
 .res-nightmode .commentarea > .usertext,
