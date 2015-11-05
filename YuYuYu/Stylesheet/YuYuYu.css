@@ -41,13 +41,13 @@
 body:before {
   background:           url(%%headerimg%%) fixed no-repeat 50% 0;
   background-size:      auto 200px;
-  height:               200px;
+  height:               142px;
 }
 body.res-nightmode:before {
   background:           linear-gradient(rgba(34, 34, 34, 0.45), rgba(34, 34, 34, 0.45)),
                         url(%%headerimg%%) fixed no-repeat 50% 0;
   background-size:      auto 200px;
-  height:               200px;
+  height:               142px;
 }
 @media only screen and (min-width: 1921px) {
   body:before { background-size: cover }
@@ -61,10 +61,20 @@ body.res-nightmode:before {
 /* Add or subtract THE SAME AMOUNT ON EACH OF THESE */
 
 body > .content {
-  margin-top:           184px;
+  margin-top:           126px;
 }
 #header-bottom-left {
-  top:                  62px;
+  top:                  42px;
+}
+#header .tabmenu {
+  background-color:     rgba(0, 0, 0, 0.1);
+  display:              block
+}
+#header .tabmenu li a {
+  padding:              8px;
+}
+#header .tabmenu li.selected a {
+  padding:              8px 8px 6px;
 }
 #header .tabmenu li a,
 .pagename a {
@@ -374,7 +384,7 @@ a[href="#s"]:active::after {
      0.5px -0.5px 1px #000,
     -0.5px  0.5px 1px #000,
     -0.5px -0.5px 1px #000;
-  z-index:              1000;
+  z-index:              900;
 
   cursor:               default;
 }
@@ -400,7 +410,7 @@ background:             url(%%play-animation%%) -0px -0px no-repeat;
   -ms-transform:        scale(0.5, 0.5);
   -webkit-transform:    scale(0.5, 0.5);
   width:                64px;
-  z-index:              1001;
+  z-index:              901;
 }
 @-webkit-keyframes itsuki-applause {
   from  { background-position: 0px 0px; }
@@ -579,10 +589,10 @@ ul#image-preview-list li {
 }
 /* --- Sidebar Layout --- */
 .side {
-  margin-top:           340px;
+  margin-top:           282px;
   position:             absolute;
   right:                0;
-  z-index:              100;
+  z-index:              1000;
 }
 .side::after {
   content:              "";
@@ -598,7 +608,7 @@ ul#image-preview-list li {
 }
 .comments-page .side,
 .res .comments-page .side {
-  margin-top:           466px;
+  margin-top:           408px;
 }
 .comments-page #search,
 .res .comments-page #search {
@@ -625,7 +635,7 @@ ul#image-preview-list li {
   top:                  278px;
 }
 .search-page .side {
-  margin-top:           288px;
+  margin-top:           230px;
 }
 body {
   min-width:            inherit;
@@ -665,15 +675,13 @@ body > .footer-parent {
 }
 /* Float first blockquote child */
 .titlebox blockquote:first-child {
+  background-color:     transparent;
   border-left:          none;
-  margin-left:          -1080px;
+  margin-left:          -8px;
   position:             fixed;
   right:                -8px;
   top:                  16px;
-  z-index:              1000;
-}
-.titlebox blockquote:first-child:hover {
-  right:                -8px;
+  z-index:              1100;
 }
 /* Float first blockquote paragraph as Menu Title */
 .titlebox blockquote:first-child p:first-child {
@@ -687,8 +695,10 @@ body > .footer-parent {
   font-size:            12pt;
   font-weight:          bold;
   margin-top:           5.5px;
+  margin-bottom:        -5.5px;
   padding:              4px 20px 5px;
 }
+
 .titlebox blockquote:first-child:hover p:first-child {
   float:                right;
 }
@@ -704,25 +714,26 @@ body > .footer-parent {
   border-left:          1px solid #C9A9A7;
   border-right:         1px solid #C9A9A7;
   box-shadow:           0 1px 5px rgba(0,0,0,0.24);
-  float:                left;
-  margin:               5.5px 0px;
-  padding:              1px 20px;
   display:              none;
+  float:                left;
+  margin:               5.5px 0px -5.5px;
+  padding:              0;
+}
+.res-nightmode .titlebox blockquote:first-child p:first-child,
+.res-nightmode .titlebox blockquote:first-child ul {
+  background-color:     rgb(68, 68, 68);
 }
 /*hide and styles lists*/
 .titlebox blockquote:first-child ul li {
   display:              none;
-  padding:              2px;
+  padding:              3px 22px;
   text-align:           center;
 }
 /* Block display items */
 .titlebox blockquote:first-child li a,
 .titlebox blockquote:first-child ul li:first-child,
+.titlebox blockquote:first-child ul:hover li,
 .titlebox blockquote:first-child:hover ul {
-  display:              block;
-}
-
-.titlebox blockquote:first-child ul:hover li:not(:first-child) {
   display:              block;
 }
 
@@ -730,14 +741,22 @@ body > .footer-parent {
 .titlebox blockquote:first-child li:first-child {
   cursor:               default;
   font-size:            12pt;
-  padding:              4px;
+  padding:              5px 24px;
 }
 /* Menu Item Style */
-.titlebox blockquote:first-child ul li:hover {
+.titlebox blockquote:first-child ul li:hover,
+.titlebox blockquote:first-child p:first-child:hover  {
   background:           #ffffff;
 }
 .titlebox blockquote:first-child li a:hover {
   color:                orangered;
+}
+.res-nightmode .titlebox blockquote:first-child ul li:hover,
+.res-nightmode .titlebox blockquote:first-child p:first-child:hover {
+  background:           rgb(51, 51, 51);
+}
+.res-nightmode .titlebox blockquote:first-child li a:hover {
+  color:                rgba(20, 150, 220, 0.8);
 }
 /*custom size for menu sections*//*
 .titlebox blockquote ul:nth-of-type(1) {width:100px;}
@@ -760,6 +779,9 @@ body > .footer-parent {
 }
 .res-nightmode .arrow {
   margin-left:            10px;
+}
+.res-nightmode .morelink:after {
+  background-color:       rgb(51,51,51);
 }
 .res-nightmode .comments-page .side .linkinfo {
   background-color:       #222222;
