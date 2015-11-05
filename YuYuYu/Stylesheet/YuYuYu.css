@@ -645,6 +645,7 @@ body > .footer-parent {
   .side {
     right:                calc(100% - 104px - 492px - 244px);
     transition:           all 0.25s ease;
+    transition-delay:     0.5s;
   }
   .side:hover {
     right:                0;
@@ -665,17 +666,14 @@ body > .footer-parent {
 /* Float first blockquote child */
 .titlebox blockquote:first-child {
   border-left:          none;
-  margin-left:          -494px;
-  position:             absolute;
+  margin-left:          -1080px;
+  position:             fixed;
   right:                -8px;
-  top:                  -214px;
-  z-index:              10;
+  top:                  16px;
+  z-index:              1000;
 }
-.comments-page .titlebox blockquote:first-child {
-  top:                  -340px;
-}
-.search-page .titlebox blockquote:first-child {
-  top:                  -162px;
+.titlebox blockquote:first-child:hover {
+  right:                -8px;
 }
 /* Float first blockquote paragraph as Menu Title */
 .titlebox blockquote:first-child p:first-child {
@@ -691,31 +689,45 @@ body > .footer-parent {
   margin-top:           5.5px;
   padding:              4px 20px 5px;
 }
+.titlebox blockquote:first-child:hover p:first-child {
+  float:                right;
+}
+.titlebox blockquote:first-child p:first-child:after {
+  content:              " <<";
+}
+.titlebox blockquote:first-child:hover p:first-child:after {
+  content:              " >>";
+}
 /* Float each list as a Drop-down Menu */
-.titlebox blockquote ul {
+.titlebox blockquote:first-child ul {
   background:           #ECC6C3;
   border-left:          1px solid #C9A9A7;
   border-right:         1px solid #C9A9A7;
   box-shadow:           0 1px 5px rgba(0,0,0,0.24);
   float:                left;
-  margin:               0px;
+  margin:               5.5px 0px;
   padding:              1px 20px;
+  display:              none;
 }
 /*hide and styles lists*/
-.titlebox blockquote ul li {
+.titlebox blockquote:first-child ul li {
   display:              none;
   padding:              2px;
   text-align:           center;
 }
 /* Block display items */
-.titlebox blockquote li a,
-.titlebox blockquote ul:hover li,
-.titlebox blockquote ul li:first-child {
+.titlebox blockquote:first-child li a,
+.titlebox blockquote:first-child ul li:first-child,
+.titlebox blockquote:first-child:hover ul {
+  display:              block;
+}
+
+.titlebox blockquote:first-child ul:hover li:not(:first-child) {
   display:              block;
 }
 
 /* Use first item of lists as Headers */
-.titlebox blockquote li:first-child {
+.titlebox blockquote:first-child li:first-child {
   cursor:               default;
   font-size:            12pt;
   padding:              4px;
@@ -724,7 +736,7 @@ body > .footer-parent {
 .titlebox blockquote:first-child ul li:hover {
   background:           #ffffff;
 }
-.titlebox blockquote li a:hover {
+.titlebox blockquote:first-child li a:hover {
   color:                orangered;
 }
 /*custom size for menu sections*//*
