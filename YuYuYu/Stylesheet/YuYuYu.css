@@ -37,7 +37,9 @@
 
 ==================================================================================================================================*/
 /* --- Addon: Header Background Image --- */
-
+body {
+  background-color:     #555;
+}
 body:before {
   background:           url(%%headerimg%%) fixed no-repeat 50% 0;
   background-size:      auto 200px;
@@ -664,6 +666,69 @@ body > .footer-parent {
     right:                -236px;
   }
 }
+/* Colouring */
+.comments-page .side .linkinfo,
+.footer-parent .footer,
+.side {
+  background-color:     #444;
+}
+.side .md .-blocks,
+.side .md .-lists,
+.side .md pre,
+.side .md blockquote,
+.side .md table,
+.side .md p,
+.side .md ul,
+.side .md ol
+{
+  color:                #CCC;
+}
+.footer-parent .footer a:not(.buygold),
+.footer-parent .footer a:visited:not(.buygold),
+.side a,
+.side a:visited {
+  color:                rgba(20, 150, 220, 0.8);
+}
+.side .morelink a,
+.side .morelink:hover a {
+  color:                #FFF;
+}
+.comments-page .side .linkinfo .date,
+.comments-page .side .linkinfo .score {
+  color: #B3B3B3;
+}
+.comments-page .side .linkinfo .score .point,
+.comments-page .side .linkinfo .score .word,
+.comments-page .side .linkinfo .totalvotes,
+.comments-page .side .linkinfo .shortlink {
+  color: #CCC;
+}
+.res .RESshortcutside, .res .RESDashboardToggle {
+  color:                gray;
+}
+.side .redditname a,
+.side .redditname a, .side h1,
+.side .usertext-body ol,
+.side .usertext-body .md blockquote p,
+.side h2,
+.side h3,
+.side h4,
+.side h5,
+.side h6 {
+  color:                #EEE;
+}
+.side #moderation_tools .title h1 {
+  color:                gray;
+}
+.titlebox form.toggle, .leavemoderator {
+  background-color:     transparent;
+}
+.titlebox .fancy-toggle-button .remove {
+  background-color:     rgba(0, 0, 0, 0.05);
+}
+.titlebox .fancy-toggle-button .remove:hover {
+  background-color:     #FFF;
+}
 /* --- End Layout Addon --- */
 /* --- Addon: Floating Navigation Bar --- */
 /* Enable positioning of titlebox children */
@@ -812,6 +877,6 @@ body > .footer-parent {
 }
 .res-nightmode input[type="file"],
 .res-nightmode input[type="text"] {
-  background-color:       #AAAAAA;
+  background-color:       #AAA;
 }
 /* --- End Nightmode Addon --- */
