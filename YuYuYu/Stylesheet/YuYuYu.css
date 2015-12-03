@@ -867,6 +867,175 @@ div.titlebox span.number:after {
   content:              " participating"
 }
 /* --- End Addon --- */
+/* --- Sidebar Layout --- */
+.side {
+  margin-top:           282px;
+  position:             absolute;
+  right:                0;
+  z-index:              1000;
+}
+.side::after {
+  content:              "";
+}
+#search {
+  right:                0;
+  top:                  -156px;
+}
+.sidebox {
+  position:             absolute;
+  right:                -16px;
+  top:                  -340px;
+}
+.comments-page .side,
+.res .comments-page .side {
+  margin-top:           408px;
+}
+.comments-page #search,
+.res .comments-page #search {
+  top:                  -282px;
+}
+.comments-page .sidebox,
+.res .comments-page .sidebox {
+  top:                  -466px;
+}
+.comments-page .side .linkinfo,
+.res .comments-page .side .linkinfo {
+  right:                0;
+  top:                  -126px
+}
+.morelink,
+.search-page .morelink {
+  top:                  226px;
+  margin-top:           10px;
+}
+.sidebox.submit.submit-text .morelink {
+  top:                  278px;
+}
+.search-page .side {
+  margin-top:           230px;
+}
+/* Content Formatting */
+body {
+  min-width:            inherit;
+}
+body > .debuginfo,
+body > .footer-parent {
+  margin:               -16px 332px 16px 16px;
+}
+@media only screen and (max-width: 840px) {
+  body > .content,
+  body > .debuginfo,
+  body > .footer-parent {
+    margin-right:         96px;
+    max-width:            492px;
+    width:                calc(100% - 112px);
+  }
+  .side {
+    right:                calc(100% - 840px);
+    transition:           all 0.25s ease;
+    transition-delay:     0.5s;
+  }
+  .side:hover {
+    right:                0;
+  }
+}
+@media only screen and (max-width: 604px) {
+  .side {
+    right:                -236px;
+  }
+}
+
+/* --- End Layout Addon --- */
+/* --- Addon: Floating Navigation Bar --- */
+/* Enable positioning of titlebox children */
+.titlebox form {
+  position:             static;
+}
+/* Float first blockquote child */
+.titlebox blockquote:first-child {
+  background:           transparent;
+  border-left:          none;
+  margin:               0 8px 0 0;
+  padding:              0;
+  position:             fixed;
+  right:                -8px;
+  top:                  24px;
+  z-index:              2;
+}
+/* Float first blockquote paragraph as Menu Title */
+.titlebox blockquote:first-child p:first-child {
+  border-left:          solid 1px;
+  border-right:         solid 1px;
+  box-shadow:           0 1px 5px rgba(0,0,0,0.24);
+  cursor:               default;
+  float:                left;
+  font-size:            12pt;
+  font-weight:          bold;
+  margin:               0;
+  padding:              4px 10px 5px;
+}
+.titlebox blockquote:first-child:hover p:first-child {
+  float:                right;
+}
+.titlebox blockquote:first-child:not(:hover) p:first-child::after {
+  content:              " <<";
+}
+.titlebox blockquote:first-child:hover p:first-child::after {
+  content:              " >>";
+}
+/* General Formatting */
+.titlebox blockquote:first-child > blockquote {
+  clear:                left;
+  border-left:          none;
+  float:                left;
+  margin:               0;
+  max-height:           30px;
+  padding:              0;
+}
+.titlebox blockquote:first-child > blockquote > ul {
+  box-shadow:           0 1px 5px rgba(0,0,0,0.24);
+  float:                right;
+  margin:               0;
+  padding:              0;
+}
+.titlebox blockquote:first-child > blockquote > ul li {
+  border:               solid 1px;
+  border-bottom:        none;
+  padding:              3px 22px;
+  text-align:           center;
+}
+.titlebox blockquote:first-child li:first-child {
+  border-top:           none;
+  cursor:               default;
+  font-size:            12pt;
+  padding:              5px 24px;
+  z-index:              5;
+}
+.titlebox blockquote:first-child li:not(:first-child) {
+  padding:              3px 12px;
+  position:             relative;
+  z-index:              6;
+}
+/* Hide/Display Functionality */
+.titlebox blockquote:first-child > p:not(:first-child),
+.titlebox blockquote:first-child > ul {
+  display:              none;
+}
+.titlebox blockquote:first-child > blockquote li a,
+.titlebox blockquote:first-child > blockquote > ul li:first-child,
+.titlebox blockquote:first-child > blockquote > ul:hover li:not(:first-child),
+.titlebox blockquote:first-child:hover > blockquote {
+  display:              block;
+}
+.titlebox blockquote:first-child > blockquote,
+.titlebox blockquote:first-child > blockquote > ul:not(:hover) li:not(:first-child) {
+  display:              none;
+}
+
+/*custom size for menu sections*//*
+.titlebox blockquote ul:nth-of-type(1) {width:100px;}
+.titlebox blockquote ul:nth-of-type(2) {width:100px;}
+/* --- End Addon --- */
 /* --- Addon: Nightmode Fix --- */
 .res-nightmode .arrow {
   margin-left:          10px;
@@ -1215,168 +1384,7 @@ ul#image-preview-list {
 ul#image-preview-list li {
   flex: 1 0 50%;
 }
-/* --- Sidebar Layout --- */
-.side {
-  margin-top:           282px;
-  position:             absolute;
-  right:                0;
-  z-index:              1000;
 }
-.side::after {
-  content:              "";
-}
-#search {
-  right:                0;
-  top:                  -156px;
-}
-.sidebox {
-  position:             absolute;
-  right:                -16px;
-  top:                  -340px;
-}
-.comments-page .side,
-.res .comments-page .side {
-  margin-top:           408px;
-}
-.comments-page #search,
-.res .comments-page #search {
-  top:                  -282px;
-}
-.comments-page .sidebox,
-.res .comments-page .sidebox {
-  top:                  -466px;
-}
-.comments-page .side .linkinfo,
-.res .comments-page .side .linkinfo {
-  right:                0;
-  top:                  -126px
-}
-.morelink {
-  top:                  226px;
-  margin-top:           10px;
-}
-.search-page .morelink {
-  top:                  226px;
-  margin-top:           10px;
-}
-.sidebox.submit.submit-text .morelink {
-  top:                  278px;
-}
-.search-page .side {
-  margin-top:           230px;
-}
-/* Content Formatting */
-body {
-  min-width:            inherit;
-}
-body > .debuginfo,
-body > .footer-parent {
-  margin:               -16px 332px 16px 16px;
-}
-@media only screen and (max-width: 840px) {
-  body > .content,
-  body > .debuginfo,
-  body > .footer-parent {
-    margin-right:         96px;
-    max-width:            492px;
-    width:                calc(100% - 112px);
-  }
-  .side {
-    right:                calc(100% - 840px);
-    transition:           all 0.25s ease;
-    transition-delay:     0.5s;
-  }
-  .side:hover {
-    right:                0;
-    transition:           all 0.25s ease;
-    transition-delay:     0.5s;
-  }
-}
-@media only screen and (max-width: 604px) {
-  .side {
-    right:                -236px;
-  }
-}
-/* --- Addon: Floating Navigation Bar --- */
-/* Enable positioning of titlebox children */
-.titlebox form {
-  position:             static;
-}
-/* Float first blockquote child */
-.titlebox blockquote:first-child {
-  background:           transparent;
-  border-left:          none;
-  margin:               0 8px 0 0;
-  padding:              0;
-  position:             fixed;
-  right:                -8px;
-  top:                  24px;
-  z-index:              2;
-}
-/* Float first blockquote paragraph as Menu Title */
-.titlebox blockquote:first-child p:first-child {
-  border-left:          solid 1px;
-  border-right:         solid 1px;
-  box-shadow:           0 1px 5px rgba(0,0,0,0.24);
-  cursor:               default;
-  float:                left;
-  font-size:            12pt;
-  font-weight:          bold;
-  margin:               0;
-  padding:              4px 10px 5px;
-}
-.titlebox blockquote:first-child:hover p:first-child {
-  float:                right;
-}
-.titlebox blockquote:first-child:not(:hover) p:first-child::after {
-  content:              " <<";
-}
-.titlebox blockquote:first-child:hover p:first-child::after {
-  content:              " >>";
-}
-/* General Formatting */
-.titlebox blockquote:first-child > blockquote {
-  clear:                left;
-  border-left:          none;
-  float:                left;
-  margin:               0;
-  max-height:           30px;
-  padding:              0;
-}
-.titlebox blockquote:first-child > blockquote > ul {
-  box-shadow:           0 1px 5px rgba(0,0,0,0.24);
-  float:                right;
-  margin:               0;
-  padding:              0;
-}
-.titlebox blockquote:first-child > blockquote > ul li {
-  border:               solid 1px;
-  border-bottom:        none;
-  padding:              3px 22px;
-  text-align:           center;
-}
-.titlebox blockquote:first-child li:first-child {
-  border-top:           none;
-  cursor:               default;
-  font-size:            12pt;
-  padding:              5px 24px;
-  z-index:              5;
-}
-.titlebox blockquote:first-child li:not(:first-child) {
-  padding:              3px 12px;
-  position:             relative;
-  z-index:              6;
-}
-/* Hide/Display Functionality */
-.titlebox blockquote:first-child > p:not(:first-child),
-.titlebox blockquote:first-child > ul {
-  display:              none;
-}
-.titlebox blockquote:first-child > blockquote li a,
-.titlebox blockquote:first-child > blockquote > ul li:first-child,
-.titlebox blockquote:first-child > blockquote > ul:hover li:not(:first-child),
-.titlebox blockquote:first-child:hover > blockquote {
-  display:              block;
 }
 /*
 .link .midcol {
