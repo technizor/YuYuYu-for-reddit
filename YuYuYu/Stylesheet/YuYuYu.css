@@ -589,9 +589,11 @@ body>.content{animation-name:fadein;animation-duration:.75s;animation-iteration-
 
 
 ==================================================================================================================================*/
+
 /* --- Addon: Header Background Image --- */
 body {
-  background-color:     #555;
+  background: repeating-linear-gradient( 45deg, #444 0%, #444 1%, #4C4C4C 1%, #4C4C4C 2%);
+  background-size: 256px 256px;
 }
 body:before {
   background:           url(%%headerimg%%) fixed no-repeat 50% 0;
@@ -601,8 +603,6 @@ body:before {
 body.res-nightmode:before {
   background:           linear-gradient(rgba(34, 34, 34, 0.45), rgba(34, 34, 34, 0.45)),
                         url(%%headerimg%%) fixed no-repeat 50% 0;
-  background-size:      auto 200px;
-  height:               142px;
 }
 @media only screen and (min-width: 1921px) {
   body:before { background-size: cover }
@@ -613,9 +613,10 @@ body.res-nightmode:before {
 .res-nightmode #header-bottom-right {
   background-color:     transparent;
 }
-/* Add or subtract THE SAME AMOUNT ON EACH OF THESE */
 
 body > .content {
+  animation:            none;
+  -webkit-animation:    none;
   margin-top:           126px;
 }
 #header-bottom-left {
@@ -866,6 +867,15 @@ div.titlebox span.number:after {
   content:              " participating"
 }
 /* --- End Addon --- */
+/* --- Addon: Nightmode Fix --- */
+.res-nightmode .arrow {
+  margin-left:          10px;
+}
+.side .titlebox h1+div {
+    text-align:         center;
+}
+/* --- End Nightmode Addon --- */
+
 
 /* --- Addon: Spoiler Tags --- */
 
@@ -902,6 +912,8 @@ a[href="#s"]:active::after {
   color:                #FFF;
   transition:           color 1s ease-in;
 }
+/* --- End Addon --- */
+
 }
 }
 }
@@ -1366,7 +1378,24 @@ body > .footer-parent {
 .titlebox blockquote:first-child:hover > blockquote {
   display:              block;
 }
-.titlebox blockquote:first-child > blockquote,
-.titlebox blockquote:first-child > blockquote > ul:not(:hover) li:not(:first-child) {
-  display:              none;
+/*
+.link .midcol {
+  margin: 15px 6px 0 3px;
+  margin-top: 40px;
+}
+.thumbnail {
+  margin-top: 40px;
+  margin-right:auto;
+}
+.linkflairlabel {
+  position: absolute;
+  top: 14px;
+  top: 0px;
+left: 0px;
+width: 109px;
+height: 32px;
+}*/
+.comments-page .link .md {
+  background: url(%%yuuna-flower-3600%%) 0 0 no-repeat;
+  background-size: 100% auto;
 }
