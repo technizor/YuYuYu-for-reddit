@@ -1141,17 +1141,23 @@ a[href="#s"]:active::after {
   vertical-align:       middle;
 }
 .flair-graphic {
-  border:               2px ridge;
+  border:               2px outset;
   height:               40px;
-  line-height:          35.5px;
+  line-height:          37.5px;
   max-height:           40px;
   min-height:           40px;
   min-width:            80px;
-  padding-left:         40px;
-}
-.flair-graphic.flair-mod {
-  border-color:         #65B354;
-  background-color:     #C7F7BB;
+  padding-left:         44px;
+  padding-right:        4px;
+  text-shadow:
+     0.1px  0.1px 0px #000,
+     0.1px -0.1px 0px #000,
+    -0.1px  0.1px 0px #000,
+    -0.1px -0.1px 0px #000,
+     0.1px  0.1px 0.2px #000,
+     0.1px -0.1px 0.2px #000,
+    -0.1px  0.1px 0.2px #000,
+    -0.1px -0.1px 0.2px #000;
 }
 .flair-graphic::before {
   background:           url(%%flairsheet-80px%%) no-repeat -9999px;
@@ -1179,11 +1185,20 @@ a[href="#s"]:active::after {
 .flairselector > .flairoptionpane .flair-graphic:before {
   left:                 -20px;
 }
+
+.flair-yuna-0,
+.flair-yuna-1 {
+  background-color:     #EBCCCC;
+}
 .flair-yuna-0::before {
   background-position:  0 0;
 }
 .flair-yuna-1::before {
   background-position:  0 -80px;
+}
+.flair-mimori-0,
+.flair-mimori-1 {
+  background-color:     #636B73;
 }
 .flair-mimori-0::before {
   background-position:  -80px 0;
@@ -1191,17 +1206,29 @@ a[href="#s"]:active::after {
 .flair-mimori-1::before {
   background-position:  -80px -80px;
 }
+.flair-fu-0,
+.flair-fu-1 {
+  background-color:     #EAE96B;
+}
 .flair-fu-0::before {
   background-position:  -160px 0;
 }
 .flair-fu-1::before {
   background-position:  -160px -80px;
 }
+.flair-itsuki-0,
+.flair-itsuki-1 {
+  background-color:     #A2D792;
+}
 .flair-itsuki-0::before {
   background-position:  -240px 0;
 }
 .flair-itsuki-1::before {
   background-position:  -240px -80px;
+}
+.flair-karin-0,
+.flair-karin-1 {
+  background-color:     #CC6065;
 }
 .flair-karin-0::before {
   background-position:  -320px 0;
