@@ -672,6 +672,8 @@ button,
 .res div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed,
 .res div.RES-keyNav-activeElement,
 .side .titlebox .md h3 a,
+.side .titlebox blockquote:first-child > p:first-child,
+.side .titlebox blockquote:first-child > blockquote > ul li,
 .submit-page #newlink.submit.content .btn,
 .submit-page #newlink.submit.content .tabmenu.formtab .selected a,
 .submit-page .infobar,
@@ -1083,13 +1085,40 @@ a[href="#s"]:active::after {
 }
 /* --- End Addon --- */
 
+/* --- Addon: Post Flairs --- */
+/* Post Flair Labels*/
+
+.linkflair-spoiler .linkflairlabel,
+.linkflair-spoiler-title .linkflairlabel {
+  background-color:     #AD6B68;
 }
+.linkflair-meta .linkflairlabel {
+  background-color:     #FFBC5E;
 }
+.linkflair-merch .linkflairlabel {
+  background-color:     #CE6DFF;
 }
+.linkflair-discussion .linkflairlabel {
+  background-color:     #23B2FF;
 }
+/* Spoiler Titles */
+
+.listing-page #siteTable .thing.linkflair-spoiler-title a.title {
+  background-color:     #AD6B68;
+  color:                #AD6B68;
+  text-shadow:          none;
 }
+.listing-page #siteTable .thing.linkflair-spoiler-title a.title:hover {
+  background-color:     #ECF0F1 !important;
+  transition:           color 1s ease-in;
 }
+.listing-page #siteTable .thing.linkflair-spoiler-title a.title:visited {
+  background-color:     #ECF0F1 !important;
+  color:                #7D5D8A !important;
 }
+.res-nightmode .listing-page #siteTable .thing.linkflair-spoiler-title a.title:hover,
+.res-nightmode .listing-page #siteTable .thing.linkflair-spoiler-title a.title:visited {
+  background-color:     #161616 !important;
 }
 /* Spoiler Images */
 
