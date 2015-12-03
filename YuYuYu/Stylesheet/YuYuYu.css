@@ -725,6 +725,124 @@ body .content .sitetable .link .title a:hover,
 .usertext .bottom-area a.reddiquette {
   color:                #B62E2E;
 }
+/* Colouring */
+.comments-page .side .linkinfo,
+.footer-parent .footer,
+.side {
+  background-color:     #444;
+}
+.side .md .-blocks,
+.side .md .-lists,
+.side .md pre,
+.side .md blockquote,
+.side .md table,
+.side .md p,
+.side .md ul,
+.side .md ol
+{
+  color:                #CCC;
+}
+.footer-parent .footer a:not(.buygold),
+.footer-parent .footer a:visited:not(.buygold),
+.side a,
+.side a:visited {
+  color:                rgba(20, 150, 220, 0.8);
+}
+.side .morelink a,
+.side .morelink:hover a {
+  color:                #FFF;
+}
+.comments-page .side .linkinfo .date,
+.comments-page .side .linkinfo .score {
+  color:                #B3B3B3;
+}
+.comments-page .side .linkinfo .score .point,
+.comments-page .side .linkinfo .score .word,
+.comments-page .side .linkinfo .totalvotes,
+.comments-page .side .linkinfo .shortlink {
+  color:                #CCC;
+}
+.res .RESshortcutside,
+.res .RESDashboardToggle,
+.side #moderation_tools .title h1,
+.tabmenu li a {
+  color:               gray;
+}
+.side .redditname a,
+.side .redditname a, .side h1,
+.side .usertext-body ol,
+.side .usertext-body .md blockquote p,
+.side h2,
+.side h3,
+.side h4,
+.side h5,
+.side h6 {
+  color:                #EEE;
+}
+.titlebox form.toggle, .leavemoderator {
+  background-color:     transparent;
+}
+.titlebox .fancy-toggle-button .remove {
+  background-color:     rgba(0, 0, 0, 0.05);
+}
+.titlebox .fancy-toggle-button .remove:hover {
+  background-color:     #FFF;
+}
+/* Menu Colors */
+.side .titlebox blockquote:first-child::after {
+  color:                #555;
+}
+.res-nightmode .side .titlebox blockquote:first-child::after {
+  color:                #EEE;
+}
+.side .titlebox blockquote:first-child > p:first-child,
+.side .titlebox blockquote:first-child > blockquote > ul li {
+  border-color:         #C9A9A7;
+}
+.res-nightmode .side .titlebox blockquote:first-child p:first-child,
+.res-nightmode .side .titlebox blockquote:first-child > blockquote > ul li {
+  background-color:     #444;
+}
+.side .titlebox blockquote:first-child ul li:hover,
+.side .titlebox blockquote:first-child p:first-child:hover  {
+  background-color:     #FFF;
+}
+.res-nightmode .side .titlebox blockquote:first-child ul li:hover,
+.res-nightmode .side .titlebox blockquote:first-child p:first-child:hover {
+  background-color:     #333;
+}
+.side .titlebox blockquote:first-child a,
+.side .titlebox blockquote:first-child > p:first-child,
+.side .titlebox blockquote:first-child > blockquote > ul li {
+  color:                #4D5763;
+}
+.side .titlebox blockquote:first-child li:hover > a {
+  color:                rgba(20, 150, 220, 0.8);
+}
+.res-nightmode #images,
+.res-nightmode .commentarea > .usertext,
+.res-nightmode .link,
+.res-nightmode .stylesheet-customize-container .pretty-form,
+.res-nightmode .wiki-page .pageactions,
+.res-nightmode .wiki-page .wiki-page-content,
+.res-nightmode .wiki-page .wikititle {
+  background-color:     #161616;
+}
+.res-nightmode .stylesheet-customize-container textarea,
+.res-nightmode .wiki-page .wiki-page-content textarea {
+  color:                #DDD;
+  background-color:     #222;
+}
+.res-nightmode .morelink:after {
+  background-color:     #333;
+}
+.res-nightmode .comments-page .side .linkinfo {
+  background-color:     #222;
+}
+.res-nightmode input[type="file"],
+.res-nightmode input[type="text"] {
+  background-color:     #AAA;
+}
 /* --- End Addon --- */
 
 /* --- Addon: Text Strings --- */
@@ -784,42 +902,13 @@ a[href="#s"]:active::after {
   color:                #FFF;
   transition:           color 1s ease-in;
 }
-/* --- End Addon --- */
-
-/* --- Addon: Post Flairs --- */
-/* Post Flair Labels*/
-
-.linkflair-spoiler .linkflairlabel,
-.linkflair-spoiler-title .linkflairlabel {
-  background-color:     #AD6B68;
 }
-.linkflair-meta .linkflairlabel {
-  background-color:     #FFBC5E;
 }
-.linkflair-merch .linkflairlabel {
-  background-color:     #CE6DFF;
 }
-.linkflair-discussion .linkflairlabel {
-  background-color:     #23B2FF;
 }
-/* Spoiler Titles */
-
-.listing-page #siteTable .thing.linkflair-spoiler-title a.title {
-  background-color:     #AD6B68;
-  color:                #AD6B68;
-  text-shadow:          none;
 }
-.listing-page #siteTable .thing.linkflair-spoiler-title a.title:hover {
-  background-color:     #ECF0F1 !important;
-  transition:           color 1s ease-in;
 }
-.listing-page #siteTable .thing.linkflair-spoiler-title a.title:visited {
-  background-color:     #ECF0F1 !important;
-  color:                #7D5D8A !important;
 }
-.res-nightmode .listing-page #siteTable .thing.linkflair-spoiler-title a.title:hover,
-.res-nightmode .listing-page #siteTable .thing.linkflair-spoiler-title a.title:visited {
-  background-color:     #161616 !important;
 }
 /* Spoiler Images */
 
@@ -1196,70 +1285,6 @@ body > .footer-parent {
     right:                -236px;
   }
 }
-/* Colouring */
-.comments-page .side .linkinfo,
-.footer-parent .footer,
-.side {
-  background-color:     #444;
-}
-.side .md .-blocks,
-.side .md .-lists,
-.side .md pre,
-.side .md blockquote,
-.side .md table,
-.side .md p,
-.side .md ul,
-.side .md ol
-{
-  color:                #CCC;
-}
-.footer-parent .footer a:not(.buygold),
-.footer-parent .footer a:visited:not(.buygold),
-.side a,
-.side a:visited {
-  color:                rgba(20, 150, 220, 0.8);
-}
-.side .morelink a,
-.side .morelink:hover a {
-  color:                #FFF;
-}
-.comments-page .side .linkinfo .date,
-.comments-page .side .linkinfo .score {
-  color: #B3B3B3;
-}
-.comments-page .side .linkinfo .score .point,
-.comments-page .side .linkinfo .score .word,
-.comments-page .side .linkinfo .totalvotes,
-.comments-page .side .linkinfo .shortlink {
-  color: #CCC;
-}
-.res .RESshortcutside, .res .RESDashboardToggle {
-  color:                gray;
-}
-.side .redditname a,
-.side .redditname a, .side h1,
-.side .usertext-body ol,
-.side .usertext-body .md blockquote p,
-.side h2,
-.side h3,
-.side h4,
-.side h5,
-.side h6 {
-  color:                #EEE;
-}
-.side #moderation_tools .title h1 {
-  color:                gray;
-}
-.titlebox form.toggle, .leavemoderator {
-  background-color:     transparent;
-}
-.titlebox .fancy-toggle-button .remove {
-  background-color:     rgba(0, 0, 0, 0.05);
-}
-.titlebox .fancy-toggle-button .remove:hover {
-  background-color:     #FFF;
-}
-/* --- End Layout Addon --- */
 /* --- Addon: Floating Navigation Bar --- */
 /* Enable positioning of titlebox children */
 .titlebox form {
@@ -1345,68 +1370,3 @@ body > .footer-parent {
 .titlebox blockquote:first-child > blockquote > ul:not(:hover) li:not(:first-child) {
   display:              none;
 }
-/* Menu Colors */
-.side .titlebox blockquote:first-child::after {
-  color:                #555;
-}
-.res-nightmode .side .titlebox blockquote:first-child::after {
-  color:                #EEE;
-}
-.side .titlebox blockquote:first-child > p:first-child,
-.side .titlebox blockquote:first-child > blockquote > ul li {
-  background-color:     #ECC6C3;
-  border-color:         #C9A9A7;
-}
-.res-nightmode .side .titlebox blockquote:first-child p:first-child,
-.res-nightmode .side .titlebox blockquote:first-child > blockquote > ul li {
-  background-color:     #444;
-}
-.side .titlebox blockquote:first-child ul li:hover,
-.side .titlebox blockquote:first-child p:first-child:hover  {
-  background:           #ffffff;
-}
-.res-nightmode .side .titlebox blockquote:first-child ul li:hover,
-.res-nightmode .side .titlebox blockquote:first-child p:first-child:hover {
-  background:           #333;
-}
-.side .titlebox blockquote:first-child a,
-.side .titlebox blockquote:first-child > p:first-child,
-.side .titlebox blockquote:first-child > blockquote > ul li {
-  color:                #4D5763;
-}
-.side .titlebox blockquote:first-child li:hover > a {
-  color:                rgba(20, 150, 220, 0.8);
-}
-/*custom size for menu sections*//*
-.titlebox blockquote ul:nth-of-type(1) {width:100px;}
-.titlebox blockquote ul:nth-of-type(2) {width:100px;}
-/* --- End Addon --- */
-/* --- Addon: Nightmode Fix --- */
-.res-nightmode #images,
-.res-nightmode .commentarea > .usertext,
-.res-nightmode .link,
-.res-nightmode .stylesheet-customize-container .pretty-form,
-.res-nightmode .wiki-page .pageactions,
-.res-nightmode .wiki-page .wiki-page-content,
-.res-nightmode .wiki-page .wikititle {
-  background-color:       #161616;
-}
-.res-nightmode .stylesheet-customize-container textarea,
-.res-nightmode .wiki-page .wiki-page-content textarea {
-  color:                  #DDD;
-  background-color:       #222;
-}
-.res-nightmode .arrow {
-  margin-left:            10px;
-}
-.res-nightmode .morelink:after {
-  background-color:       #333;
-}
-.res-nightmode .comments-page .side .linkinfo {
-  background-color:       #222;
-}
-.res-nightmode input[type="file"],
-.res-nightmode input[type="text"] {
-  background-color:       #AAA;
-}
-/* --- End Nightmode Addon --- */
