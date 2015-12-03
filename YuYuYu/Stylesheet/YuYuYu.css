@@ -869,6 +869,23 @@ div.titlebox span.number:after {
   content:              " participating"
 }
 /* --- End Addon --- */
+/* --- Addon: Layout Adjustments --- */
+/* --- Header button overflow --- */
+#header-bottom-left {
+  white-space:          nowrap;
+}
+/* --- Stylesheet Image Preview List --- */
+#images {
+  height:               auto;
+}
+ul#image-preview-list {
+  display:              flex;
+  flex-wrap:            wrap;
+  margin-right:         20px;
+}
+ul#image-preview-list li {
+  flex:                 1 0 50%;
+}
 /* --- Sidebar Layout --- */
 .side {
   margin-top:           282px;
@@ -1423,24 +1440,17 @@ a[href^="#"][href$="itsuki-writing"] {
   color:                black !important;
 }
 /* --- End Comment-Face Addon --- */
-/* --- Addon: Layout Adjustments --- */
-/* --- Header button overflow --- */
-#header-bottom-left {
-  white-space:          nowrap;
+.markdownEditor,
+.RESMacroWrappingSpan
+.commentarea .markdownEditor-wrapper,
+.usertext .bottom-area {
+  width:                100%;
+  max-width:            500px;
 }
-/* --- Stylesheet Image Preview List --- */
-#images {
-  height: auto;
-}
-ul#image-preview-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: 20px;
-}
-ul#image-preview-list li {
-  flex: 1 0 50%;
-}
-}
+.usertext-edit,
+.usertext-edit textarea
+{
+  max-width:            100%;
 }
 /*
 .link .midcol {
