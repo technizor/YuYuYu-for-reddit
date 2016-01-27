@@ -1,0 +1,914 @@
+$header-color: #FFD6D3;
+$secondary-color: #ECC6C3;
+$white-color: #FFF;
+$black-color: #000;
+$active-color: #4059DB;
+$tertiary-color: #B62E2E;
+$gray-color: #CCC;
+$linkinfo-color: #B3B3B3;
+$title-color: #EEE;
+$content-back-color: #222;
+$content-editor-text-color: #DDD;
+$navmenu-color: #555;
+$navmenu-border-color: #C9A9A7;
+$navmenu-hover-color: #333;
+$navmenu-text-color: #4D5763;
+$nightmode-text-color: #161616;
+$flair-spoiler-background-color: #AD6B68;
+$spoiler-reveal-background-color: #ECF0F1;
+$spoiler-reveal-text-color: #7D5D8A;
+$flair-meta-background-color: #FFBC5E;
+$flair-merch-background-color: #CE6DFF;
+$flair-discussion-background-color: #23B2FF;
+$flair-yuna-background-color: #EBCCCC;
+$flair-mimori-background-color: #636B73;
+$flair-fu-background-color: #EAE96B;
+$flair-itsuki-background-color: #A2D792;
+$flair-karin-background-color: #CC6065;
+$nightmode-input-background-color: #AAA;
+$commentface-border-color: #BBB;
+$gradient-color-0: #444;
+$gradient-color-1: #4C4C4C;
+
+/* --- Addon: Header Background Image --- */
+body {
+  background: repeating-linear-gradient( 45deg, $gradient-color-0 0%, $gradient-color-0 1%, $gradient-color-1 1%, $gradient-color-1 2%);
+  background-size: 256px 256px;
+}
+body:before {
+  background:           url(%%headerimg%%) fixed no-repeat 50% 0;
+  background-size:      auto 200px;
+  height:               142px;
+}
+body.res-nightmode:before {
+  background:           linear-gradient(rgba(34, 34, 34, 0.45), rgba(34, 34, 34, 0.45)),
+                        url(%%headerimg%%) fixed no-repeat 50% 0;
+}
+@media only screen and (min-width: 1921px) {
+  body:before { background-size: cover }
+}
+.res-nightmode #sr-header-area {
+  background-color:     rgba(0, 0, 0, 0.05);
+}
+.res-nightmode #header-bottom-right {
+  background-color:     transparent;
+}
+
+body > .content {
+  animation:            none;
+  -webkit-animation:    none;
+  margin-top:           126px;
+}
+#header-bottom-left {
+  top:                  42px;
+}
+#header .tabmenu {
+  background-color:     rgba(0, 0, 0, 0.1);
+  display:              block;
+}
+#header .tabmenu li a {
+  padding:              8px;
+}
+#header .tabmenu li.selected a {
+  padding:              8px 8px 6px;
+}
+#header .tabmenu li a,
+.pagename a {
+  text-shadow:          0px 1px 8px rgba(0, 0, 0, 0.5);
+}
+#header .tabmenu li a:hover,
+.pagename a:hover {
+  background-color:     rgba(0, 0, 0, 0.12);
+}
+/* --- End Addon --- */
+
+/* Addon: Show submit text button */
+.sidebox.submit.submit-text {
+  display:              block;
+}
+.sidebox.submit.submit-text .morelink:after {
+/* You can change the hover message for the submit-text button here */
+  content:              "Please remember to read the rules. Thank you!";
+}
+/* --- End Addon --- */
+
+/* --- Addon: Header Color (Primary Color) --- */
+
+body:before {
+  background-color:     $header-color;
+}
+/* --- End Addon --- */
+
+/* --- Addon: Button color (Secondary Color) --- */
+button,
+.btn,
+.content .infobar,
+.drop-choices a.choice:hover,
+.expando-button:hover,
+.fancy-toggle-button .remove:active .expando-button:hover,
+.linkflairlabel,
+.morelink,
+.morelink:after,
+.res div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed,
+.res div.RES-keyNav-activeElement,
+.side .titlebox .md h3 a,
+.side .titlebox blockquote:first-child > p:first-child,
+.side .titlebox blockquote:first-child > blockquote > ul li,
+.submit-page #newlink.submit.content .btn,
+.submit-page #newlink.submit.content .tabmenu.formtab .selected a,
+.submit-page .infobar,
+.titlebox .fancy-toggle-button .add,
+.top-page .content .menuarea .dropdown.lightdrop .selected {
+  background-color:     $secondary-color;
+}
+/* Hover color = 10% white overlay color */
+
+button:hover,
+.btn:hover,
+.morelink:hover,
+.side .titlebox .md h3 a:hover,
+.submit-page #newlink.submit.content .tabmenu.formtab .selected a:hover,
+.titlebox .fancy-toggle-button .add:hover,
+.titlebox .fancy-toggle-button .add:hover:after {
+  background-color:     $white-color;
+}
+/* Active color = 10% black overlay color */
+button:active,
+.btn:active,
+.morelink:active,
+.side .titlebox .md h3 a:active {
+  background-color:     $active-color;
+}
+/* --- End Addon --- */
+
+/* --- Addon: Link Color (Tertiary Color) - This color should be either
+similiar to the primary color, or to the secondary color.
+Else the page will become too busy.-- */
+
+a,
+body .content .sitetable .link .title a:hover,
+.comment .author:hover ,
+.comment .flat-list li a[onclick*="reply"],
+.comment .flat-list li a:hover,
+.md a,
+.titlebox .tagline a.flairselectbtn,
+.thing .title.loggedin.click,
+.thing .title.click,
+.thing .title.loggedin,
+.thing .title,
+.link .domain a:hover,
+.link .entry .buttons li a:hover,
+.link .entry .buttons li a.comments,
+.link .entry .buttons li a.flairselectbtn,
+.link .entry .tagline a:hover,
+.tagline .submitter,
+.tagline .submitter,
+.side:after,
+.side .titlebox .md h6 a,
+.usertext .bottom-area a.reddiquette {
+  color:                $tertiary-color;
+}
+/* Colouring */
+.comments-page .side .linkinfo,
+.footer-parent .footer,
+.side {
+  background-color:     $gradient-color-0;
+}
+.side .md .-blocks,
+.side .md .-lists,
+.side .md pre,
+.side .md blockquote,
+.side .md table,
+.side .md p,
+.side .md ul,
+.side .md ol
+{
+  color:                $gray-color;
+}
+.footer-parent .footer a:not(.buygold),
+.footer-parent .footer a:visited:not(.buygold),
+.side a,
+.side a:visited {
+  color:                rgba(20, 150, 220, 0.8);
+}
+.side .morelink a,
+.side .morelink:hover a {
+  color:                $white-color;
+}
+.comments-page .side .linkinfo .date,
+.comments-page .side .linkinfo .score {
+  color:                $linkinfo-color;
+}
+.comments-page .side .linkinfo .score .point,
+.comments-page .side .linkinfo .score .word,
+.comments-page .side .linkinfo .totalvotes,
+.comments-page .side .linkinfo .shortlink {
+  color:                $gray-color;
+}
+.res .RESshortcutside,
+.res .RESDashboardToggle,
+.side #moderation_tools .title h1,
+.tabmenu li a {
+  color:               gray;
+}
+.side .redditname a,
+.side .redditname a, .side h1,
+.side .usertext-body ol,
+.side .usertext-body .md blockquote p,
+.side h2,
+.side h3,
+.side h4,
+.side h5,
+.side h6 {
+  color:                $title-color;
+}
+.titlebox form.toggle, .leavemoderator {
+  background-color:     transparent;
+}
+.titlebox .fancy-toggle-button .remove {
+  background-color:     rgba(0, 0, 0, 0.05);
+}
+.titlebox .fancy-toggle-button .remove:hover {
+  background-color:     $white-color;
+}
+/* Menu Colors */
+.side .titlebox blockquote:first-child::after {
+  color:                $navmenu-color;
+}
+.res-nightmode .side .titlebox blockquote:first-child::after {
+  color:                $title-color;
+}
+.side .titlebox blockquote:first-child > p:first-child,
+.side .titlebox blockquote:first-child > blockquote > ul li {
+  border-color:         $navmenu-border-color;
+}
+.res-nightmode .side .titlebox blockquote:first-child p:first-child,
+.res-nightmode .side .titlebox blockquote:first-child > blockquote > ul li {
+  background-color:     $gradient-color-0;
+}
+.side .titlebox blockquote:first-child ul li:hover,
+.side .titlebox blockquote:first-child p:first-child:hover  {
+  background-color:     $white-color;
+}
+.res-nightmode .side .titlebox blockquote:first-child ul li:hover,
+.res-nightmode .side .titlebox blockquote:first-child p:first-child:hover {
+  background-color:     $navmenu-hover-color;
+}
+.side .titlebox blockquote:first-child a,
+.side .titlebox blockquote:first-child > p:first-child,
+.side .titlebox blockquote:first-child > blockquote > ul li {
+  color:                $navmenu-text-color;
+}
+.side .titlebox blockquote:first-child li:hover > a {
+  color:                rgba(20, 150, 220, 0.8);
+}
+.res-nightmode #images,
+.res-nightmode .commentarea > .usertext,
+.res-nightmode .link,
+.res-nightmode .stylesheet-customize-container .pretty-form,
+.res-nightmode .wiki-page .pageactions,
+.res-nightmode .wiki-page .wiki-page-content,
+.res-nightmode .wiki-page .wikititle {
+  background-color:     $nightmode-text-color;
+}
+.res-nightmode .stylesheet-customize-container textarea,
+.res-nightmode .wiki-page .wiki-page-content textarea {
+  color:                $content-editor-text-color;
+  background-color:     $content-back-color;
+}
+.res-nightmode .morelink:after {
+  background-color:     $navmenu-hover-color;
+}
+.res-nightmode .comments-page .side .linkinfo {
+  background-color:     $content-back-color;
+}
+.res-nightmode input[type="file"],
+.res-nightmode input[type="text"] {
+  background-color:     $nightmode-input-background-color;
+}
+/* --- End Addon --- */
+
+/* --- Addon: Text Strings --- */
+
+.arrow.down:after {
+  content:              "For content that does not contribute to any discussion."
+}
+.morelink:after {
+  content:              "Please remember to read the rules. Thank you!"
+}
+.submit-page .infobar:before {
+  content:              "Please submit insightful content that allows for discussion!"
+}
+#mail.havemail:before {
+  content:              "You have new messages!"
+}
+div.titlebox span.number:after {
+  content:              " Heroes,"
+}
+.titlebox .users-online .number:after {
+  content:              " participating"
+}
+/* --- End Addon --- */
+/* --- Addon: Layout Adjustments --- */
+/* --- Header button overflow --- */
+#header-bottom-left {
+  white-space:          nowrap;
+}
+/* --- Stylesheet Image Preview List --- */
+#images {
+  height:               auto;
+}
+ul#image-preview-list {
+  display:              flex;
+  flex-wrap:            wrap;
+  margin-right:         20px;
+}
+ul#image-preview-list li {
+  flex:                 1 0 50%;
+}
+/* --- Sidebar Layout --- */
+.side {
+  margin-top:           282px;
+  position:             absolute;
+  right:                0;
+  z-index:              1000;
+}
+.side::after {
+  content:              "";
+}
+#search {
+  right:                0;
+  top:                  -156px;
+}
+.sidebox {
+  position:             absolute;
+  right:                -16px;
+  top:                  -340px;
+}
+.comments-page .side,
+.res .comments-page .side {
+  margin-top:           408px;
+}
+.comments-page #search,
+.res .comments-page #search {
+  top:                  -282px;
+}
+.comments-page .sidebox,
+.res .comments-page .sidebox {
+  top:                  -466px;
+}
+.comments-page .side .linkinfo,
+.res .comments-page .side .linkinfo {
+  right:                0;
+  top:                  -126px
+}
+.morelink,
+.search-page .morelink {
+  top:                  226px;
+  margin-top:           10px;
+}
+.sidebox.submit.submit-text .morelink {
+  top:                  278px;
+}
+.search-page .side {
+  margin-top:           230px;
+}
+/* Content Formatting */
+body {
+  min-width:            inherit;
+}
+body > .debuginfo,
+body > .footer-parent {
+  margin:               -16px 332px 16px 16px;
+}
+@media only screen and (max-width: 840px) {
+  body > .content,
+  body > .debuginfo,
+  body > .footer-parent {
+    margin-right:         96px;
+    max-width:            492px;
+    width:                calc(100% - 112px);
+  }
+  .side {
+    right:                calc(100% - 840px);
+    transition:           all 0.25s ease;
+    transition-delay:     0.5s;
+  }
+  .side:hover {
+    right:                0;
+  }
+}
+@media only screen and (max-width: 604px) {
+  .side {
+    right:                -236px;
+  }
+}
+
+/* --- End Layout Addon --- */
+/* --- Addon: Floating Navigation Bar --- */
+/* Enable positioning of titlebox children */
+.titlebox form {
+  position:             static;
+}
+/* Float first blockquote child */
+.titlebox blockquote:first-child {
+  background:           transparent;
+  border-left:          none;
+  margin:               0 8px 0 0;
+  padding:              0;
+  position:             fixed;
+  right:                -8px;
+  top:                  24px;
+  z-index:              2;
+}
+/* Float first blockquote paragraph as Menu Title */
+.titlebox blockquote:first-child p:first-child {
+  border-left:          solid 1px;
+  border-right:         solid 1px;
+  box-shadow:           0 1px 5px rgba(0,0,0,0.24);
+  cursor:               default;
+  float:                left;
+  font-size:            12pt;
+  font-weight:          bold;
+  margin:               0;
+  padding:              4px 10px 5px;
+}
+.titlebox blockquote:first-child:hover p:first-child {
+  float:                right;
+}
+.titlebox blockquote:first-child:not(:hover) p:first-child::after {
+  content:              " <<";
+}
+.titlebox blockquote:first-child:hover p:first-child::after {
+  content:              " >>";
+}
+/* General Formatting */
+.titlebox blockquote:first-child > blockquote {
+  clear:                left;
+  border-left:          none;
+  float:                left;
+  margin:               0;
+  max-height:           30px;
+  padding:              0;
+}
+.titlebox blockquote:first-child > blockquote > ul {
+  box-shadow:           0 1px 5px rgba(0,0,0,0.24);
+  float:                right;
+  margin:               0;
+  padding:              0;
+}
+.titlebox blockquote:first-child > blockquote > ul li {
+  border:               solid 1px;
+  border-bottom:        none;
+  padding:              3px 22px;
+  text-align:           center;
+}
+.titlebox blockquote:first-child li:first-child {
+  border-top:           none;
+  cursor:               default;
+  font-size:            12pt;
+  padding:              5px 24px;
+  z-index:              5;
+}
+.titlebox blockquote:first-child li:not(:first-child) {
+  padding:              3px 12px;
+  position:             relative;
+  z-index:              6;
+}
+/* Hide/Display Functionality */
+.titlebox blockquote:first-child > p:not(:first-child),
+.titlebox blockquote:first-child > ul {
+  display:              none;
+}
+.titlebox blockquote:first-child > blockquote li a,
+.titlebox blockquote:first-child > blockquote > ul li:first-child,
+.titlebox blockquote:first-child > blockquote > ul:hover li:not(:first-child),
+.titlebox blockquote:first-child:hover > blockquote {
+  display:              block;
+}
+.titlebox blockquote:first-child > blockquote,
+.titlebox blockquote:first-child > blockquote > ul:not(:hover) li:not(:first-child) {
+  display:              none;
+}
+
+/*custom size for menu sections*//*
+.titlebox blockquote ul:nth-of-type(1) {width:100px;}
+.titlebox blockquote ul:nth-of-type(2) {width:100px;}
+/* --- End Addon --- */
+/* --- Addon: Nightmode Fix --- */
+.res-nightmode .arrow {
+  margin-left:          10px;
+}
+.side .titlebox h1+div {
+    text-align:         center;
+}
+/* --- End Nightmode Addon --- */
+
+
+/* --- Addon: Spoiler Tags --- */
+
+a[href="/s"],
+.md p > a[href="/s"],
+a[href="#s"] {
+  background:           $black-color;
+  color:                $white-color !important;
+  cursor:               default;
+  display:              inline-block;
+  text-decoration:      none !important;
+}
+a[href="/s"]::after,
+.md p > a[href="/s"]::after,
+a[href="#s"]::after {
+  content:              attr(title);
+  color:                $black-color;
+  padding:              0 0.5em;
+  visibility:           visible;
+}
+a[href="/s"]:hover,
+.md p > a[href="/s"]:hover,
+a[href="#s"]:hover {
+  color:                $tertiary-color !important;
+}
+a[href="/s"]:hover::after,
+a[href="/s"]:active::after,
+.md p > a[href="/s"]:hover::after,
+.md p > a[href="/s"]:active::after,
+a[href="#s"]:hover::after,
+a[href="#s"]:active::after,
+a[href="#s"]:hover::after,
+a[href="#s"]:active::after {
+  color:                $white-color;
+  transition:           color 1s ease-in;
+}
+/* --- End Addon --- */
+
+/* --- Addon: Post Flairs --- */
+/* Post Flair Labels*/
+
+.linkflair-spoiler .linkflairlabel,
+.linkflair-spoiler-title .linkflairlabel {
+  background-color:     $flair-spoiler-background-color;
+}
+.linkflair-meta .linkflairlabel {
+  background-color:     $flair-meta-background-color;
+}
+.linkflair-merch .linkflairlabel {
+  background-color:     $flair-merch-background-color;
+}
+.linkflair-discussion .linkflairlabel {
+  background-color:     $flair-discussion-background-color;
+}
+/* Spoiler Titles */
+
+.listing-page #siteTable .thing.linkflair-spoiler-title a.title {
+  background-color:     $flair-spoiler-background-color;
+  color:                $flair-spoiler-background-color;
+  text-shadow:          none;
+}
+.listing-page #siteTable .thing.linkflair-spoiler-title a.title:hover {
+  background-color:     $spoiler-reveal-background-color !important;
+  transition:           color 1s ease-in;
+}
+.listing-page #siteTable .thing.linkflair-spoiler-title a.title:visited {
+  background-color:     $spoiler-reveal-background-color !important;
+  color:                $spoiler-reveal-text-color !important;
+}
+.res-nightmode .listing-page #siteTable .thing.linkflair-spoiler-title a.title:hover,
+.res-nightmode .listing-page #siteTable .thing.linkflair-spoiler-title a.title:visited {
+  background-color:     $nightmode-text-color !important;
+}
+/* Spoiler Images */
+
+.linkflair-spoiler img,
+.linkflair-spoiler-title img {
+  display:              none;
+}
+.linkflair-spoiler .thumbnail {}
+/* --- End Addon --- */
+
+/* --- Addon: User Flairs --- */
+
+.flair {
+  border:               0;
+  display:              inline-block;
+  overflow:             hidden;
+  padding:              0;
+  position:             relative;
+  text-align:           center;
+  vertical-align:       middle;
+}
+.flair-graphic {
+  border:               2px outset;
+  height:               40px;
+  line-height:          37.5px;
+  max-height:           40px;
+  min-height:           40px;
+  min-width:            80px;
+  padding-left:         44px;
+  padding-right:        4px;
+  text-shadow:
+     0.1px  0.1px 0px $black-color,
+     0.1px -0.1px 0px $black-color,
+    -0.1px  0.1px 0px $black-color,
+    -0.1px -0.1px 0px $black-color,
+     0.1px  0.1px 0.2px $black-color,
+     0.1px -0.1px 0.2px $black-color,
+    -0.1px  0.1px 0.2px $black-color,
+    -0.1px -0.1px 0.2px $black-color;
+}
+.flair-graphic::before {
+  background:           url(%%flairsheet-80px%%) no-repeat -9999px;
+  border:               0;
+  content:              "";
+  display:              inline-block;
+  height:               80px;
+  left:                 0px;
+  margin:               -20px;
+  overflow:             hidden;
+  padding:              0;
+  position:             absolute;
+  top:                  0px;
+  transform:            scale(0.5, 0.5);
+  -ms-transform:        scale(0.5, 0.5);
+  -webkit-transform:    scale(0.5, 0.5);
+  vertical-align:       middle;
+  width:                80px;
+}
+.titlebox .tagline {
+  margin-top:           0px !important;
+}
+.titlebox .tagline .flair-graphic::before,
+.sidecontentbox > .content .flair-graphic::before,
+.flairselector > .flairoptionpane .flair-graphic:before {
+  left:                 -20px;
+}
+.flair-yuna-0,
+.flair-yuna-1 {
+  background-color:     $flair-yuna-background-color;
+}
+.flair-yuna-0::before {
+  background-position:  0 0;
+}
+.flair-yuna-1::before {
+  background-position:  0 -80px;
+}
+.flair-mimori-0,
+.flair-mimori-1 {
+  background-color:     $flair-mimori-background-color;
+}
+.flair-mimori-0::before {
+  background-position:  -80px 0;
+}
+.flair-mimori-1::before {
+  background-position:  -80px -80px;
+}
+.flair-fu-0,
+.flair-fu-1 {
+  background-color:     $flair-fu-background-color;
+}
+.flair-fu-0::before {
+  background-position:  -160px 0;
+}
+.flair-fu-1::before {
+  background-position:  -160px -80px;
+}
+.flair-itsuki-0,
+.flair-itsuki-1 {
+  background-color:     $flair-itsuki-background-color;
+}
+.flair-itsuki-0::before {
+  background-position:  -240px 0;
+}
+.flair-itsuki-1::before {
+  background-position:  -240px -80px;
+}
+.flair-karin-0,
+.flair-karin-1 {
+  background-color:     $flair-karin-background-color;
+}
+.flair-karin-0::before {
+  background-position:  -320px 0;
+}
+.flair-karin-1::before {
+  background-position:  -320px -80px;
+}
+/* --- End Addon --- */
+
+/* --- Addon: Comment Faces --- */
+
+.md a[href^="/"]:not([href^="/r/"]):not([href^="/u/"]):not([href="/s"]):not([href^="/message"]),
+.thing .md :not(.RESdupeimg) > a[href^="#"]:not([href="#s"]),
+.wiki-page-content .md > :not(.toc) :not(.RESdupeimg) > a[href^="#"]:not([href="#s"]) {
+  background-origin:    border-box;
+  border:               2px outset $commentface-border-color;
+  color:                $white-color !important;
+  cursor:               default;
+  display:              inline-block;
+  font-family:          verdana,sans-serif;
+  font-size:            14px;
+  overflow:             hidden;
+  position:             relative;
+  text-align:           center;
+  text-shadow:
+     0.5px  0.5px 0px $black-color,
+     0.5px -0.5px 0px $black-color,
+    -0.5px  0.5px 0px $black-color,
+    -0.5px -0.5px 0px $black-color,
+     0.5px  0.5px 1px $black-color,
+     0.5px -0.5px 1px $black-color,
+    -0.5px  0.5px 1px $black-color,
+    -0.5px -0.5px 1px $black-color;
+  z-index:              900;
+}
+
+.thing .md a[href^="/"]:not([href^="/r/"]):not([href^="/u/"]):not([href="/s"]):not([href^="/message"]) > strong,
+.thing .md :not(.RESdupeimg) > a[href^="#"]:not([href="#s"]) > strong,
+.wiki-page-content .md > :not(.toc) :not(.RESdupeimg) > a[href^="#"]:not([href="#s"])  > strong  {
+  bottom:               4px;
+  display:              block;
+  font-weight:          normal;
+  position:             absolute;
+  width:                100%;
+}
+a[href^="#anim-"]:not(:hover)::before {
+  background:           url(%%play-animation%%) -0px -0px no-repeat;
+  content:              "";
+  display:              block;
+  height:               64px;
+  left:                 48px;
+  position:             absolute;
+  top:                  12px;
+  transform:            scale(0.5, 0.5);
+  -ms-transform:        scale(0.5, 0.5);
+  -webkit-transform:    scale(0.5, 0.5);
+  width:                64px;
+  z-index:              901;
+}
+a[href^="#"][href$="itsuki-applause"],
+a[href^="#"][href$="fuu-fufufu"],
+a[href^="#"][href$="mimori-smile"],
+a[href^="#"][href$="karin-wat"],
+a[href^="#"][href$="yuuna-soexcited"],
+a[href^="#"][href$="yuuna-victory"] {
+  display:              inline-block;
+  height:               90px;
+  width:                160px;
+}
+a[href^="#anim-"]:hover {
+  animation-play-state: running !important;
+}
+@-webkit-keyframes itsuki-applause {
+  from  { background-position: 0px -0px; }
+  to    { background-position: 0px -720px; }
+}
+@keyframes itsuki-applause {
+  from  { background-position: 0px -0px; }
+  to    { background-position: 0px -720px; }
+}
+a[href^="#"][href$="itsuki-applause"] {
+  background:           url(%%itsuki-applause-frames%%) -0px -0px no-repeat;
+  animation:            itsuki-applause 0.60s steps(8, end) infinite paused;
+  -webkit-animation:    itsuki-applause 0.60s steps(8, end) infinite paused;
+  animation-fill-mode:  forwards;
+}
+@-webkit-keyframes fuu-fufufu {
+  from  { background-position: 0px -0px; }
+  to    { background-position: 0px -1890px; }
+}
+@keyframes fuu-fufufu {
+  from  { background-position: 0px -0px; }
+  to    { background-position: 0px -1890px; }
+}
+a[href^="#"][href$="fuu-fufufu"] {
+  background:           url(%%fuu-fufufu-frames%%) -0px -0px no-repeat;
+  animation:            fuu-fufufu 1.575s steps(21, end) infinite paused;
+  -webkit-animation:    fuu-fufufu 1.575s steps(21, end) infinite paused;
+  animation-fill-mode:  forwards;
+}
+@-webkit-keyframes mimori-smile {
+  from  { background-position: 0px -0px; }
+  to    { background-position: 0px -3420px; }
+}
+@keyframes mimori-smile {
+  from  { background-position: 0px -0px; }
+  to    { background-position: 0px -3420px; }
+}
+a[href^="#"][href$="mimori-smile"] {
+  background:           url(%%mimori-smile-frames%%) -0px -0px no-repeat;
+  animation:            mimori-smile 2.85s steps(38, end) infinite paused;
+  -webkit-animation:    mimori-smile 2.85s steps(38, end) infinite paused;
+  animation-fill-mode:  forwards;
+}
+@-webkit-keyframes karin-wat {
+  from  { background-position: 0px -0px; }
+  to    { background-position: 0px -1620px; }
+}
+@keyframes karin-wat {
+  from  { background-position: 0px -0px; }
+  to    { background-position: 0px -1620px; }
+}
+a[href^="#"][href$="karin-wat"] {
+  background:           url(%%karin-wat-frames%%) -0px -0px no-repeat;
+  animation:            karin-wat 1.35s steps(18, end) infinite paused;
+  -webkit-animation:    karin-wat 1.35s steps(18, end) infinite paused;
+  animation-fill-mode:  forwards;
+}
+@-webkit-keyframes yuuna-soexcited {
+  from  { background-position: 0px -0px; }
+  to    { background-position: 0px -1440px; }
+}
+@keyframes yuuna-soexcited {
+  from  { background-position: 0px -0px; }
+  to    { background-position: 0px -1440px; }
+}
+a[href^="#"][href$="yuuna-soexcited"] {
+  background:           url(%%yuuna-soexcited-frames%%) -0px -0px no-repeat;
+  animation:            yuuna-soexcited 1.20s steps(16, end) infinite paused;
+  -webkit-animation:    yuuna-soexcited 1.20s steps(16, end) infinite paused;
+  animation-fill-mode:  forwards;
+}
+@-webkit-keyframes yuuna-victory {
+  from  { background-position: 0px -0px; }
+  to    { background-position: 0px -2070px; }
+}
+@keyframes yuuna-victory {
+  from  { background-position: 0px -0px; }
+  to    { background-position: 0px -2070px; }
+}
+a[href^="#"][href$="yuuna-victory"] {
+  background:           url(%%yuuna-victory-frames%%) -0px -0px no-repeat;
+  animation:            yuuna-victory 3.225s steps(23, end) infinite paused;
+  -webkit-animation:    yuuna-victory 3.225s steps(23, end) infinite paused;
+  animation-fill-mode:  forwards;
+}
+/* --- Static Comment Faces --- */
+a[href^="#"][href$="everything-is-daijoubu"],
+a[href^="#"][href$="itsuki-writing"] {
+  display:              inline-block;
+  height:               160px;
+  width:                160px;
+}
+a[href^="#"][href$="everything-is-daijoubu"] {
+  background:           url(%%everything-is-daijoubu%%) -0px -0px no-repeat;
+}
+/** --- Custom Itsuki Writing Sign --- */
+a[href^="#"][href$="itsuki-writing"] {
+  background:           url(%%itsuki-writing%%) -0px -0px no-repeat;
+}
+.thing .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"],
+.wiki-page-content .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] {
+  color:                $black-color !important;
+  font-family:          "Comic Sans MS", cursive, sans-serif;
+  font-size:            10px;
+  padding-left:         34px;
+  padding-right:        31px;
+  padding-top:          90px;
+  text-shadow:          inherit;
+}
+.thing .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] > strong,
+.wiki-page-content .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] > strong {
+  bottom:               inherit;
+  display:              inherit;
+  font-weight:          bold;
+  position:             inherit;
+  text-align:           inherit;
+  width:                auto;
+}
+.thing .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] > em,
+.wiki-page-content .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] > em {
+  color:                black !important;
+}
+/* --- End Comment-Face Addon --- */
+.markdownEditor,
+.RESMacroWrappingSpan
+.commentarea .markdownEditor-wrapper,
+.usertext .bottom-area {
+  width:                100%;
+  max-width:            500px;
+}
+.usertext-edit,
+.usertext-edit textarea
+{
+  max-width:            100%;
+}
+/*
+.link .midcol {
+  margin: 15px 6px 0 3px;
+  margin-top: 40px;
+}
+.thumbnail {
+  margin-top: 40px;
+  margin-right:auto;
+}
+.linkflairlabel {
+  position: absolute;
+  top: 14px;
+  top: 0px;
+left: 0px;
+width: 109px;
+height: 32px;
+}*/
+.comments-page .link .md {
+  background: url(%%yuuna-flower-3600%%) 0 0 no-repeat;
+  background-size: 100% auto;
+}
