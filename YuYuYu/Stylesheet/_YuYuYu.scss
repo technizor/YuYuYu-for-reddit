@@ -6,6 +6,7 @@ $active-color: #4059DB;
 $tertiary-color: #B62E2E;
 $gray-color: #CCC;
 $linkinfo-color: #B3B3B3;
+$linkinfo-background-color: #4C4C4C;
 $title-color: #EEE;
 $content-back-color: #222;
 $content-editor-text-color: #DDD;
@@ -169,10 +170,12 @@ body .content .sitetable .link .title a:hover,
   color:                $tertiary-color;
 }
 /* Colouring */
-.comments-page .side .linkinfo,
 .footer-parent .footer,
 .side {
   background-color:     $gradient-color-0;
+}
+.comments-page .side .linkinfo {
+  background-color:     $linkinfo-background-color;
 }
 .side .md .-blocks,
 .side .md .-lists,
@@ -325,53 +328,65 @@ ul#image-preview-list {
 }
 ul#image-preview-list li {
   flex:                 1 0 50%;
+  width:                auto;
 }
 /* --- Sidebar Layout --- */
 .side {
-  margin-top:           282px;
-  position:             absolute;
   right:                0;
+}
+.side,
+.comments-page .side,
+.res .comments-page .side {
+  margin-top:           129px;
+  position:             absolute;
   z-index:              1000;
 }
 .side::after {
   content:              "";
 }
-#search {
-  right:                0;
-  top:                  -156px;
+.side .spacer {
+  margin: 7px 0 16px 0;
 }
-.sidebox {
-  position:             absolute;
-  right:                -16px;
-  top:                  -340px;
-}
-.comments-page .side,
-.res .comments-page .side {
-  margin-top:           408px;
-}
+#search,
 .comments-page #search,
 .res .comments-page #search {
-  top:                  -282px;
+  left:                -16px;
+  top:                 -16px;
+  position:            relative;
 }
+.sidebox,
 .comments-page .sidebox,
 .res .comments-page .sidebox {
-  top:                  -466px;
+  position:             relative;
+  right:                0;
+  top:                  0;
 }
 .comments-page .side .linkinfo,
 .res .comments-page .side .linkinfo {
-  right:                0;
-  top:                  -126px
+  left:                 -16px;
+  position:             relative;
+  top:                  -16px;
 }
-.morelink,
-.search-page .morelink {
-  top:                  226px;
-  margin-top:           10px;
+.titlebox {
+  margin-top:           0;
 }
-.sidebox.submit.submit-text .morelink {
-  top:                  278px;
+.morelink {
+  top:                  0px;
+  margin-top:           0px;
+  left:                 -16px;
+  position:             relative;
 }
 .search-page .side {
-  margin-top:           230px;
+  margin-top:           128px;
+}
+.search-page .morelink {
+  top:                  -8px;
+}
+.sponsorshipbox {
+  margin-top:           -16px;
+}
+.res form.toggle.sr_style_toggle {
+  margin-top:           0;
 }
 /* Content Formatting */
 body {
@@ -402,6 +417,10 @@ body > .footer-parent {
   .side {
     right:                -236px;
   }
+}
+/* RESUserTagging */
+.RESUserTagImage {
+  background-image:     none!important;
 }
 
 /* --- End Layout Addon --- */
