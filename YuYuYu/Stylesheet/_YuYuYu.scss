@@ -10,6 +10,7 @@ $linkinfo-background-color: #4C4C4C;
 $title-color: #EEE;
 $content-back-color: #222;
 $content-editor-text-color: #DDD;
+$box-shadow-color: rgba(0,0,0,0.16);
 $navmenu-color: #555;
 $navmenu-border-color: #C9A9A7;
 $navmenu-hover-color: #333;
@@ -55,10 +56,18 @@ body.res-nightmode:before {
   background-color:     transparent;
 }
 
-body > .content {
+body > .content,
+body.modtools-page > .content {
   animation:            none;
   -webkit-animation:    none;
-  margin-top:           126px;
+  border-radius:        2px;
+  box-shadow:           0 1px 5px $box-shadow-color;
+  margin:               126px 332px 0 16px;
+  padding:              0;
+}
+.menuarea {
+  margin: 0;
+  padding: 5px;
 }
 #header-bottom-left {
   top:                  42px;
@@ -129,18 +138,23 @@ button,
 .submit-page #newlink.submit.content .tabmenu.formtab .selected a,
 .submit-page .infobar,
 .titlebox .fancy-toggle-button .add,
-.top-page .content .menuarea .dropdown.lightdrop .selected {
+.top-page .content .menuarea .dropdown.lightdrop .selected,
+.modtools-page button.subreddit-rule-delete-button,
+.modtools-page button.subreddit-rule-edit-button {
   background-color:     $secondary-color;
 }
 /* Hover color = 10% white overlay color */
 
+body.modtools-page > .content,
 button:hover,
 .btn:hover,
+.menuarea,
 .morelink:hover,
 .side .titlebox .md h3 a:hover,
 .submit-page #newlink.submit.content .tabmenu.formtab .selected a:hover,
 .titlebox .fancy-toggle-button .add:hover,
-.titlebox .fancy-toggle-button .add:hover:after {
+.titlebox .fancy-toggle-button .add:hover:after,
+.commentarea .panestack-title {
   background-color:     $white-color;
 }
 /* Active color = 10% black overlay color */
@@ -180,11 +194,16 @@ body .content .sitetable .link .title a:hover,
   color:                $tertiary-color;
 }
 /* Colouring */
+.link,
+.NERPageMarker {
+  background: linear-gradient(90deg, $white-color 52px, $linkinfo-background-color 0px, $linkinfo-background-color 132px, $white-color 0px);
+}
 .footer-parent .footer,
 .side {
   background-color:     $gradient-color-0;
 }
-.comments-page .side .linkinfo {
+#moderation_tools,
+.comments-page .side .linkinfo, {
   background-color:     $linkinfo-background-color;
 }
 .side .md .-blocks,
@@ -401,6 +420,14 @@ ul#image-preview-list li {
 }
 .res form.toggle.sr_style_toggle {
   margin-top:           0;
+}
+#moderation_tools {
+  border-radius:        2px;
+  box-shadow:           0 1px 5px $box-shadow-color;
+  padding:              5px;
+  position:             relative;
+  right:                16px;
+  width:                300px;
 }
 /* Content Formatting */
 body {
@@ -926,24 +953,34 @@ a[href^="#"][href$="itsuki-writing"] {
 {
   max-width:            100%;
 }
-/*
+/* Page Stripe */
 .link .midcol {
-  margin: 15px 6px 0 3px;
-  margin-top: 40px;
+  margin: 16px 8px 0;
 }
 .thumbnail {
-  margin-top: 40px;
-  margin-right:auto;
+  margin: 16px 8px 0;
 }
-.linkflairlabel {
-  position: absolute;
-  top: 14px;
-  top: 0px;
-left: 0px;
-width: 109px;
-height: 32px;
-}*/
+.link .entry {
+  padding-left: 8px;
+}
+/* --- End Page Stripe --- */
 .comments-page .link .md {
   background: url(%%yuuna-flower-3600%%) 0 0 no-repeat;
   background-size: 100% auto;
 }
+.commentarea .panestack-title,
+.res .commentarea .panestack-title {
+  border-radius: 2px 2px 0 0;
+  margin: 8px 0 0;
+  padding: 12px 0 4px 22px;
+}
+.commentarea .menuarea {
+  margin: 0 0 8px;
+  padding: 4px 4px 4px 22px;
+  border-radius: 0 0 2px 2px;
+}
+/* PSA Message */
+#header:after {
+    content: "v1.6.0-beta: Please report any bugs on Github. ;)";
+}
+/* --- End PSA Message --- */
