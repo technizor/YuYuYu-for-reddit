@@ -1,0 +1,112 @@
+/* --- Addon: User Flairs --- */
+$flair-yuna-background-color: #EBCCCC;
+$flair-mimori-background-color: #636B73;
+$flair-fu-background-color: #EAE96B;
+$flair-itsuki-background-color: #A2D792;
+$flair-karin-background-color: #CC6065;
+
+.flair {
+  border:               0;
+  display:              inline-block;
+  overflow:             hidden;
+  padding:              0;
+  position:             relative;
+  text-align:           center;
+  vertical-align:       middle;
+}
+.flair-graphic {
+  border:               2px outset;
+  height:               40px;
+  line-height:          37.5px;
+  max-height:           40px;
+  min-height:           40px;
+  min-width:            80px;
+  padding-left:         44px;
+  padding-right:        4px;
+  text-shadow:
+     0.1px  0.1px 0px $black-color,
+     0.1px -0.1px 0px $black-color,
+    -0.1px  0.1px 0px $black-color,
+    -0.1px -0.1px 0px $black-color,
+     0.1px  0.1px 0.2px $black-color,
+     0.1px -0.1px 0.2px $black-color,
+    -0.1px  0.1px 0.2px $black-color,
+    -0.1px -0.1px 0.2px $black-color;
+}
+.flair-graphic::before {
+  background:           url(%%flairsheet-80px%%) no-repeat -9999px;
+  border:               0;
+  content:              "";
+  display:              inline-block;
+  height:               80px;
+  left:                 0px;
+  margin:               -20px;
+  overflow:             hidden;
+  padding:              0;
+  position:             absolute;
+  top:                  0px;
+  transform:            scale(0.5, 0.5);
+  -ms-transform:        scale(0.5, 0.5);
+  -webkit-transform:    scale(0.5, 0.5);
+  vertical-align:       middle;
+  width:                80px;
+}
+.titlebox .tagline {
+  margin-top:           0px !important;
+}
+.titlebox .tagline .flair-graphic::before,
+.sidecontentbox > .content .flair-graphic::before,
+.flairselector > .flairoptionpane .flair-graphic:before {
+  left:                 -20px;
+}
+.flair-yuna-0,
+.flair-yuna-1 {
+  background-color:     $flair-yuna-background-color;
+}
+.flair-yuna-0::before {
+  background-position:  0 0;
+}
+.flair-yuna-1::before {
+  background-position:  0 -80px;
+}
+.flair-mimori-0,
+.flair-mimori-1 {
+  background-color:     $flair-mimori-background-color;
+}
+.flair-mimori-0::before {
+  background-position:  -80px 0;
+}
+.flair-mimori-1::before {
+  background-position:  -80px -80px;
+}
+.flair-fu-0,
+.flair-fu-1 {
+  background-color:     $flair-fu-background-color;
+}
+.flair-fu-0::before {
+  background-position:  -160px 0;
+}
+.flair-fu-1::before {
+  background-position:  -160px -80px;
+}
+.flair-itsuki-0,
+.flair-itsuki-1 {
+  background-color:     $flair-itsuki-background-color;
+}
+.flair-itsuki-0::before {
+  background-position:  -240px 0;
+}
+.flair-itsuki-1::before {
+  background-position:  -240px -80px;
+}
+.flair-karin-0,
+.flair-karin-1 {
+  background-color:     $flair-karin-background-color;
+}
+.flair-karin-0::before {
+  background-position:  -320px 0;
+}
+.flair-karin-1::before {
+  background-position:  -320px -80px;
+}
+/* --- End Addon --- */

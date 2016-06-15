@@ -1,0 +1,36 @@
+/* --- Addon: Spoiler Tags --- */
+
+a[href="/s"],
+.md p > a[href="/s"],
+a[href="#s"] {
+  background:           $black-color;
+  color:                $white-color !important;
+  cursor:               default;
+  display:              inline-block;
+  text-decoration:      none !important;
+}
+a[href="/s"]::after,
+.md p > a[href="/s"]::after,
+a[href="#s"]::after {
+  content:              attr(title);
+  color:                $black-color;
+  padding:              0 0.5em;
+  visibility:           visible;
+}
+a[href="/s"]:hover,
+.md p > a[href="/s"]:hover,
+a[href="#s"]:hover {
+  color:                $tertiary-color !important;
+}
+a[href="/s"]:hover::after,
+a[href="/s"]:active::after,
+.md p > a[href="/s"]:hover::after,
+.md p > a[href="/s"]:active::after,
+a[href="#s"]:hover::after,
+a[href="#s"]:active::after,
+a[href="#s"]:hover::after,
+a[href="#s"]:active::after {
+  color:                $white-color;
+  transition:           color 1s ease-in;
+}
+/* --- End Addon --- */

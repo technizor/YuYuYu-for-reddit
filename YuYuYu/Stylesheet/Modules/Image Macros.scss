@@ -1,0 +1,185 @@
+/* --- Addon: Comment Faces --- */
+
+.md a[href^="/"]:not([href^="/r/"]):not([href^="/u/"]):not([href="/s"]):not([href^="/message"]),
+.thing .md :not(.RESdupeimg) > a[href^="#"]:not([href="#s"]),
+.wiki-page-content .md > :not(.toc) :not(.RESdupeimg) > a[href^="#"]:not([href="#s"]) {
+  background-origin:    border-box;
+  border:               2px outset $commentface-border-color;
+  color:                $white-color !important;
+  cursor:               default;
+  display:              inline-block;
+  font-family:          verdana,sans-serif;
+  font-size:            14px;
+  overflow:             hidden;
+  position:             relative;
+  text-align:           center;
+  text-shadow:
+     0.5px  0.5px 0px $black-color,
+     0.5px -0.5px 0px $black-color,
+    -0.5px  0.5px 0px $black-color,
+    -0.5px -0.5px 0px $black-color,
+     0.5px  0.5px 1px $black-color,
+     0.5px -0.5px 1px $black-color,
+    -0.5px  0.5px 1px $black-color,
+    -0.5px -0.5px 1px $black-color;
+  z-index:              900;
+}
+
+.thing .md a[href^="/"]:not([href^="/r/"]):not([href^="/u/"]):not([href="/s"]):not([href^="/message"]) > strong,
+.thing .md :not(.RESdupeimg) > a[href^="#"]:not([href="#s"]) > strong,
+.wiki-page-content .md > :not(.toc) :not(.RESdupeimg) > a[href^="#"]:not([href="#s"])  > strong  {
+  bottom:               4px;
+  display:              block;
+  font-weight:          normal;
+  position:             absolute;
+  width:                100%;
+}
+a[href^="#anim-"]:not(:hover)::before {
+  background:           url(%%play-animation%%) -0px -0px no-repeat;
+  content:              "";
+  display:              block;
+  height:               64px;
+  left:                 48px;
+  position:             absolute;
+  top:                  12px;
+  transform:            scale(0.5, 0.5);
+  -ms-transform:        scale(0.5, 0.5);
+  -webkit-transform:    scale(0.5, 0.5);
+  width:                64px;
+  z-index:              901;
+}
+a[href^="#"][href$="itsuki-applause"],
+a[href^="#"][href$="fuu-fufufu"],
+a[href^="#"][href$="mimori-smile"],
+a[href^="#"][href$="karin-wat"],
+a[href^="#"][href$="yuuna-soexcited"],
+a[href^="#"][href$="yuuna-victory"] {
+  display:              inline-block;
+  height:               90px;
+  width:                160px;
+}
+a[href^="#anim-"]:hover {
+  animation-play-state: running !important;
+}
+@-webkit-keyframes itsuki-applause {
+  from  { background-position: 0px -0px; }
+  to    { background-position: 0px -720px; }
+}
+@keyframes itsuki-applause {
+  from  { background-position: 0px -0px; }
+  to    { background-position: 0px -720px; }
+}
+a[href^="#"][href$="itsuki-applause"] {
+  background:           url(%%itsuki-applause-frames%%) -0px -0px no-repeat;
+  animation:            itsuki-applause 0.60s steps(8, end) infinite paused;
+  -webkit-animation:    itsuki-applause 0.60s steps(8, end) infinite paused;
+  animation-fill-mode:  forwards;
+}
+@-webkit-keyframes fuu-fufufu {
+  from  { background-position: 0px -0px; }
+  to    { background-position: 0px -1890px; }
+}
+@keyframes fuu-fufufu {
+  from  { background-position: 0px -0px; }
+  to    { background-position: 0px -1890px; }
+}
+a[href^="#"][href$="fuu-fufufu"] {
+  background:           url(%%fuu-fufufu-frames%%) -0px -0px no-repeat;
+  animation:            fuu-fufufu 1.575s steps(21, end) infinite paused;
+  -webkit-animation:    fuu-fufufu 1.575s steps(21, end) infinite paused;
+  animation-fill-mode:  forwards;
+}
+@-webkit-keyframes mimori-smile {
+  from  { background-position: 0px -0px; }
+  to    { background-position: 0px -3420px; }
+}
+@keyframes mimori-smile {
+  from  { background-position: 0px -0px; }
+  to    { background-position: 0px -3420px; }
+}
+a[href^="#"][href$="mimori-smile"] {
+  background:           url(%%mimori-smile-frames%%) -0px -0px no-repeat;
+  animation:            mimori-smile 2.85s steps(38, end) infinite paused;
+  -webkit-animation:    mimori-smile 2.85s steps(38, end) infinite paused;
+  animation-fill-mode:  forwards;
+}
+@-webkit-keyframes karin-wat {
+  from  { background-position: 0px -0px; }
+  to    { background-position: 0px -1620px; }
+}
+@keyframes karin-wat {
+  from  { background-position: 0px -0px; }
+  to    { background-position: 0px -1620px; }
+}
+a[href^="#"][href$="karin-wat"] {
+  background:           url(%%karin-wat-frames%%) -0px -0px no-repeat;
+  animation:            karin-wat 1.35s steps(18, end) infinite paused;
+  -webkit-animation:    karin-wat 1.35s steps(18, end) infinite paused;
+  animation-fill-mode:  forwards;
+}
+@-webkit-keyframes yuuna-soexcited {
+  from  { background-position: 0px -0px; }
+  to    { background-position: 0px -1440px; }
+}
+@keyframes yuuna-soexcited {
+  from  { background-position: 0px -0px; }
+  to    { background-position: 0px -1440px; }
+}
+a[href^="#"][href$="yuuna-soexcited"] {
+  background:           url(%%yuuna-soexcited-frames%%) -0px -0px no-repeat;
+  animation:            yuuna-soexcited 1.20s steps(16, end) infinite paused;
+  -webkit-animation:    yuuna-soexcited 1.20s steps(16, end) infinite paused;
+  animation-fill-mode:  forwards;
+}
+@-webkit-keyframes yuuna-victory {
+  from  { background-position: 0px -0px; }
+  to    { background-position: 0px -2070px; }
+}
+@keyframes yuuna-victory {
+  from  { background-position: 0px -0px; }
+  to    { background-position: 0px -2070px; }
+}
+a[href^="#"][href$="yuuna-victory"] {
+  background:           url(%%yuuna-victory-frames%%) -0px -0px no-repeat;
+  animation:            yuuna-victory 3.225s steps(23, end) infinite paused;
+  -webkit-animation:    yuuna-victory 3.225s steps(23, end) infinite paused;
+  animation-fill-mode:  forwards;
+}
+/* --- Static Comment Faces --- */
+a[href^="#"][href$="everything-is-daijoubu"],
+a[href^="#"][href$="itsuki-writing"] {
+  display:              inline-block;
+  height:               160px;
+  width:                160px;
+}
+a[href^="#"][href$="everything-is-daijoubu"] {
+  background:           url(%%everything-is-daijoubu%%) -0px -0px no-repeat;
+}
+/** --- Custom Itsuki Writing Sign --- */
+a[href^="#"][href$="itsuki-writing"] {
+  background:           url(%%itsuki-writing%%) -0px -0px no-repeat;
+}
+.thing .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"],
+.wiki-page-content .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] {
+  color:                $black-color !important;
+  font-family:          "Comic Sans MS", cursive, sans-serif;
+  font-size:            10px;
+  padding-left:         34px;
+  padding-right:        31px;
+  padding-top:          90px;
+  text-shadow:          inherit;
+}
+.thing .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] > strong,
+.wiki-page-content .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] > strong {
+  bottom:               inherit;
+  display:              inherit;
+  font-weight:          bold;
+  position:             inherit;
+  text-align:           inherit;
+  width:                auto;
+}
+.thing .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] > em,
+.wiki-page-content .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] > em {
+  color:                black !important;
+}
+/* --- End Comment-Face Addon --- */
