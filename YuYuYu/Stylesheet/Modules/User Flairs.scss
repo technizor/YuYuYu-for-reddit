@@ -4,25 +4,31 @@ $flair-mimori-background-color: #636B73;
 $flair-fu-background-color: #EAE96B;
 $flair-itsuki-background-color: #A2D792;
 $flair-karin-background-color: #CC6065;
+$flair-sonoko-background-color: #90819E;
+$flair-gin-background-color: #E07B59;
+$flair-wakaba-background-color: #6FA5ED;
+$flair-hinata-background-color: #C16964;
+$flair-tamako-background-color: #EDAE6A;
+$flair-anzu-background-color: #A8BFED;
 
 .flair {
-  border:               0;
-  display:              inline-block;
-  overflow:             hidden;
-  padding:              0;
-  position:             relative;
-  text-align:           center;
-  vertical-align:       middle;
+  border: 0;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
 }
 .flair-graphic {
-  border:               2px outset;
-  height:               40px;
-  line-height:          37.5px;
-  max-height:           40px;
-  min-height:           40px;
-  min-width:            80px;
-  padding-left:         44px;
-  padding-right:        4px;
+  border: 2px outset;
+  height: 40px;
+  line-height: 37.5px;
+  max-height: 40px;
+  min-height: 40px;
+  min-width: 80px;
+  padding-left: 44px;
+  padding-right: 4px;
   text-shadow:
      0.1px  0.1px 0px $black-color,
      0.1px -0.1px 0px $black-color,
@@ -34,79 +40,139 @@ $flair-karin-background-color: #CC6065;
     -0.1px -0.1px 0.2px $black-color;
 }
 .flair-graphic::before {
-  background:           url(%%flairsheet-80px%%) no-repeat -9999px;
-  border:               0;
-  content:              "";
-  display:              inline-block;
-  height:               80px;
-  left:                 0px;
-  margin:               -20px;
-  overflow:             hidden;
-  padding:              0;
-  position:             absolute;
-  top:                  0px;
-  transform:            scale(0.5, 0.5);
-  -ms-transform:        scale(0.5, 0.5);
-  -webkit-transform:    scale(0.5, 0.5);
-  vertical-align:       middle;
-  width:                80px;
+  background: url(%%flairsheet-80px%%) no-repeat -9999px;
+  border: 0;
+  content: "";
+  display: inline-block;
+  height: 80px;
+  left: 0px;
+  margin: -20px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  top: 0px;
+  transform: scale(0.5, 0.5);
+  -ms-transform: scale(0.5, 0.5);
+  -webkit-transform: scale(0.5, 0.5);
+  vertical-align: middle;
+  width: 80px;
 }
 .titlebox .tagline {
-  margin-top:           0px !important;
+  margin-top: 0px !important;
 }
 .titlebox .tagline .flair-graphic::before,
 .sidecontentbox > .content .flair-graphic::before,
 .flairselector > .flairoptionpane .flair-graphic:before {
-  left:                 -20px;
+  left: -20px;
 }
 .flair-yuna-0,
 .flair-yuna-1 {
-  background-color:     $flair-yuna-background-color;
+  background-color: $flair-yuna-background-color;
 }
 .flair-yuna-0::before {
-  background-position:  0 0;
+  background-position: 0 0;
 }
 .flair-yuna-1::before {
-  background-position:  0 -80px;
+  background-position: 0 -80px;
 }
 .flair-mimori-0,
 .flair-mimori-1 {
-  background-color:     $flair-mimori-background-color;
+  background-color: $flair-mimori-background-color;
 }
 .flair-mimori-0::before {
-  background-position:  -80px 0;
+  background-position: -80px 0;
 }
 .flair-mimori-1::before {
-  background-position:  -80px -80px;
+  background-position: -80px -80px;
 }
 .flair-fu-0,
 .flair-fu-1 {
-  background-color:     $flair-fu-background-color;
+  background-color: $flair-fu-background-color;
 }
 .flair-fu-0::before {
-  background-position:  -160px 0;
+  background-position: -160px 0;
 }
 .flair-fu-1::before {
-  background-position:  -160px -80px;
+  background-position: -160px -80px;
 }
 .flair-itsuki-0,
 .flair-itsuki-1 {
-  background-color:     $flair-itsuki-background-color;
+  background-color: $flair-itsuki-background-color;
 }
 .flair-itsuki-0::before {
-  background-position:  -240px 0;
+  background-position: -240px 0;
 }
 .flair-itsuki-1::before {
-  background-position:  -240px -80px;
+  background-position: -240px -80px;
 }
 .flair-karin-0,
 .flair-karin-1 {
-  background-color:     $flair-karin-background-color;
+  background-color: $flair-karin-background-color;
 }
 .flair-karin-0::before {
-  background-position:  -320px 0;
+  background-position: -320px 0;
 }
 .flair-karin-1::before {
-  background-position:  -320px -80px;
+  background-position: -320px -80px;
+}
+.flair-sonoko-0,
+.flair-sonoko-1 {
+  background-color: $flair-sonoko-background-color;
+}
+.flair-sonoko-0::before {
+  background-position: -400px 0;
+}
+.flair-sonoko-1::before {
+  background-position: -400px -80px;
+}
+.flair-gin-0,
+.flair-gin-1 {
+  background-color: $flair-gin-background-color;
+}
+.flair-gin-0::before {
+  background-position: -480px 0;
+}
+.flair-gin-1::before {
+  background-position: -480px -80px;
+}
+.flair-wakaba-0,
+.flair-wakaba-1 {
+  background-color: $flair-wakaba-background-color;
+}
+.flair-wakaba-0::before {
+  background-position: -560px 0;
+}
+.flair-wakaba-1::before {
+  background-position: -560px -80px;
+}
+.flair-hinata-0,
+.flair-hinata-1 {
+  background-color: $flair-hinata-background-color;
+}
+.flair-hinata-0::before {
+  background-position: -640px 0;
+}
+.flair-hinata-1::before {
+  background-position: -640px -80px;
+}
+.flair-tamako-0,
+.flair-tamako-1 {
+  background-color: $flair-tamako-background-color;
+}
+.flair-tamako-0::before {
+  background-position: -720px 0;
+}
+.flair-tamako-1::before {
+  background-position: -720px -80px;
+}
+.flair-anzu-0,
+.flair-anzu-1 {
+  background-color: $flair-anzu-background-color;
+}
+.flair-anzu-0::before {
+  background-position: -800px 0;
+}
+.flair-anzu-1::before {
+  background-position: -800px -80px;
 }
 /* --- End Addon --- */
