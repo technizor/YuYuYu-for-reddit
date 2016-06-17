@@ -1,122 +1,131 @@
+$navmenu-color: #555;
+$navmenu-border-color: #C9A9A7;
+$navmenu-hover-color: #333;
+$navmenu-text-color: #4D5763;
+
+
 /* --- Addon: Floating Navigation Bar --- */
 /* Menu Colors */
 .side .titlebox blockquote:first-child::after {
-  color:                $navmenu-color;
+  color: $navmenu-color;
 }
 .res-nightmode .side .titlebox blockquote:first-child::after {
-  color:                $title-color;
+  color: $title-color;
 }
 .side .titlebox blockquote:first-child > p:first-child,
 .side .titlebox blockquote:first-child > blockquote > ul li {
-  border-color:         $navmenu-border-color;
+  border-color: $navmenu-border-color;
 }
 .res-nightmode .side .titlebox blockquote:first-child p:first-child,
 .res-nightmode .side .titlebox blockquote:first-child > blockquote > ul li {
-  background-color:     $gradient-color-0;
+  background-color: $gradient-color-0;
 }
 .side .titlebox blockquote:first-child ul li:hover,
 .side .titlebox blockquote:first-child p:first-child:hover  {
-  background-color:     $white-color;
+  background-color: $white-color;
 }
 .res-nightmode .side .titlebox blockquote:first-child ul li:hover,
 .res-nightmode .side .titlebox blockquote:first-child p:first-child:hover {
-  background-color:     $navmenu-hover-color;
+  background-color: $navmenu-hover-color;
 }
 .side .titlebox blockquote:first-child a,
 .side .titlebox blockquote:first-child > p:first-child,
 .side .titlebox blockquote:first-child > blockquote > ul li {
-  color:                $navmenu-text-color;
+  color: $navmenu-text-color;
 }
 .side .titlebox blockquote:first-child li:hover > a {
-  color:                rgba(20, 150, 220, 0.8);
+  color: rgba(20, 150, 220, 0.8);
+}
+.res-nightmode .morelink:after {
+  background-color:     $navmenu-hover-color;
 }
 
 /* Enable positioning of titlebox children */
 .titlebox form {
-  position:             static;
+  position: static;
 }
 /* Float first blockquote child */
 .titlebox blockquote:first-child {
-  background:           transparent;
-  border-left:          none;
-  margin:               0 8px 0 0;
-  padding:              0;
-  position:             fixed;
-  right:                -8px;
-  top:                  24px;
-  z-index:              2;
+  background: transparent;
+  border-left: none;
+  margin: 0 8px 0 0;
+  padding: 0;
+  position: fixed;
+  right: -8px;
+  top: 24px;
+  z-index: 2;
 }
 /* Float first blockquote paragraph as Menu Title */
 .titlebox blockquote:first-child p:first-child {
-  border-left:          solid 1px;
-  border-right:         solid 1px;
-  box-shadow:           0 1px 5px rgba(0,0,0,0.24);
-  cursor:               default;
-  float:                left;
-  font-size:            12pt;
-  font-weight:          bold;
-  margin:               0;
-  padding:              4px 10px 5px;
+  border-left: solid 1px;
+  border-right: solid 1px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.24);
+  cursor: default;
+  float: left;
+  font-size: 12pt;
+  font-weight: bold;
+  margin: 0;
+  padding: 4px 10px 5px;
 }
 .titlebox blockquote:first-child:hover p:first-child {
-  float:                right;
+  float: right;
 }
 .titlebox blockquote:first-child:not(:hover) p:first-child::after {
-  content:              " <<";
+  content: " <<";
 }
 .titlebox blockquote:first-child:hover p:first-child::after {
-  content:              " >>";
+  content: " >>";
 }
 /* General Formatting */
 .titlebox blockquote:first-child > blockquote {
-  clear:                left;
-  border-left:          none;
-  float:                left;
-  margin:               0;
-  max-height:           30px;
-  padding:              0;
+  clear: left;
+  border-left: none;
+  float: left;
+  margin: 0;
+  max-height: 30px;
+  padding: 0;
 }
 .titlebox blockquote:first-child > blockquote > ul {
-  box-shadow:           0 1px 5px rgba(0,0,0,0.24);
-  float:                right;
-  margin:               0;
-  padding:              0;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.24);
+  float: right;
+  margin: 0;
+  padding: 0;
 }
 .titlebox blockquote:first-child > blockquote > ul li {
-  border:               solid 1px;
-  border-bottom:        none;
-  padding:              3px 22px;
-  text-align:           center;
+  border: solid 1px;
+  border-bottom: none;
+  padding: 3px 22px;
+  text-align: center;
 }
 .titlebox blockquote:first-child li:first-child {
-  border-top:           none;
-  cursor:               default;
-  font-size:            12pt;
-  padding:              5px 24px;
-  z-index:              5;
+  border-top: none;
+  cursor: default;
+  font-size: 12pt;
+  padding: 5px 24px;
+  z-index: 5;
 }
 .titlebox blockquote:first-child li:not(:first-child) {
-  padding:              3px 12px;
-  position:             relative;
-  z-index:              6;
+  padding: 3px 12px;
+  position: relative;
+  z-index: 6;
 }
 /* Hide/Display Functionality */
 .titlebox blockquote:first-child > p:not(:first-child),
 .titlebox blockquote:first-child > ul {
-  display:              none;
+  display: none;
 }
 .titlebox blockquote:first-child > blockquote li a,
 .titlebox blockquote:first-child > blockquote > ul li:first-child,
 .titlebox blockquote:first-child > blockquote > ul:hover li:not(:first-child),
 .titlebox blockquote:first-child:hover > blockquote {
-  display:              block;
+  display: block;
 }
 .titlebox blockquote:first-child > blockquote,
 .titlebox blockquote:first-child > blockquote > ul:not(:hover) li:not(:first-child) {
-  display:              none;
+  display: none;
 }
 #NREFloat.res-floater-visibleAfterScroll {
-  top:                  0;
+  top: 0;
 }
 /*custom size for menu sections*//*
 .titlebox blockquote ul:nth-of-type(1) {width:100px;}

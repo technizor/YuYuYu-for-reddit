@@ -1,0 +1,28 @@
+
+/* --- Addon: Text Strings --- */
+
+.arrow.down:after {
+  content: "For content that does not contribute to any discussion."
+}
+.morelink:after {
+  content: "Please remember to read the rules. Thank you!"
+}
+.submit-page .infobar:before {
+  content: "Please submit insightful content that allows for discussion!"
+}
+#mail.havemail:before {
+  content: "You have new messages!"
+}
+div.titlebox span.number:after {
+  content: " Heroes,"
+}
+.titlebox .users-online .number:after {
+  content: " participating"
+}
+/* --- End Addon --- */
+
+/* PSA Message */
+#header:after {
+  content: "v1.6.1-beta: Please report any bugs on Github. ;)";
+}
+/* --- End PSA Message --- */
