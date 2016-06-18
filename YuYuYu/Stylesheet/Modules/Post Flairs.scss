@@ -7,9 +7,7 @@ $flair-discussion-background-color: #23B2FF;
 $flair-artwork-background-color: #006C87;
 $flair-news-background-color: #426369;
 
-/* --- Addon: Post Flairs --- */
-/* Post Flair Labels*/
-
+// Post Flairs
 $post-flairs: (
   ('spoiler', $flair-spoiler-background-color),
   ('meta', $flair-meta-background-color),
@@ -20,24 +18,35 @@ $post-flairs: (
 );
 
 @each $value in $post-flairs {
-  .linkflair-#{nth($value, 1)} .linkflairlabel {
+  .link.linkflair-#{nth($value, 1)} .linkflairlabel {
     background-color: #{nth($value, 2)};
   }
-  .linkflair-#{nth($value, 1)} {
+  .link.linkflair-#{nth($value, 1)} {
     background: linear-gradient(90deg, $white-color 52px, #{nth($value, 2)} 0px, #{nth($value, 2)} 132px, $white-color 0px);
   }
-  .res-nightmode .linkflair-#{nth($value, 1)} {
+  .res-nightmode .link.linkflair-#{nth($value, 1)} {
     background: linear-gradient(90deg, $nightmode-post-background-color 52px, #{nth($value, 2)} 0px, #{nth($value, 2)} 132px, $nightmode-post-background-color 0px);
   }
-  .search-result-link.linkflair-#{nth($value, 1)} {
+  .link.search-result-link.linkflair-#{nth($value, 1)} {
     background: linear-gradient(90deg, #{nth($value, 2)} 82px, $white-color 0px);
   }
-  .res-nightmode .search-result-link.linkflair-#{nth($value, 1)} {
+  .res-nightmode .link.search-result-link.linkflair-#{nth($value, 1)} {
     background: linear-gradient(90deg, #{nth($value, 2)} 82px, $nightmode-post-background-color 0px);
   }
 }
-/* Spoiler Titles */
 
+// Post Margins
+.link .midcol {
+  margin: 16px 8px 0;
+}
+.link .thumbnail {
+  margin: 16px 8px 0;
+}
+.link .entry {
+  padding-left: 8px;
+}
+
+// Spoiler in Title Hiding
 .listing-page #siteTable .thing.linkflair-spoiler-title a.title {
   background-color: $flair-spoiler-background-color;
   color: $flair-spoiler-background-color;
@@ -55,10 +64,9 @@ $post-flairs: (
 .res-nightmode .listing-page #siteTable .thing.linkflair-spoiler-title a.title:visited {
   background-color: $nightmode-text-color !important;
 }
-/* Spoiler Images */
 
+// Spoiler in Thumbnail
 .linkflair-spoiler img {
   display: none;
 }
 .linkflair-spoiler .thumbnail {}
-/* --- End Addon --- */
