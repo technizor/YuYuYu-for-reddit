@@ -11,6 +11,7 @@ $title-color: #EEE;
 $content-back-color: #222;
 $content-editor-text-color: #DDD;
 $box-shadow-color: rgba(0,0,0,0.16);
+$nightmode-post-background-color: #262626;
 $nightmode-text-color: #161616;
 $nightmode-input-background-color: #AAA;
 $gradient-color-0: #444;
@@ -22,13 +23,14 @@ body {
   background-size: 256px 256px;
 }
 body:before {
-  background:           url(%%headerimg%%) fixed no-repeat 50% 0;
-  background-size:      auto 200px;
-  height:               142px;
+  background: url(%%headerimg%%) fixed no-repeat 50% 0;
+  background-size: auto 200px;
+  height: 142px;
 }
 body.res-nightmode:before {
-  background:           linear-gradient(rgba(34, 34, 34, 0.45), rgba(34, 34, 34, 0.45)),
-                        url(%%headerimg%%) fixed no-repeat 50% 0;
+  background: linear-gradient(rgba(34, 34, 34, 0.45), rgba(34, 34, 34, 0.45)),
+              url(%%headerimg%%) fixed no-repeat 50% 0;
+  background-size: auto 200px;
 }
 @media only screen and (min-width: 1921px) {
   body:before { background-size: cover }
@@ -178,10 +180,6 @@ body .content .sitetable .link .title a:hover,
   color:                $tertiary-color;
 }
 /* Colouring */
-.link,
-.NERPageMarker {
-  background: linear-gradient(90deg, $white-color 52px, $linkinfo-background-color 0px, $linkinfo-background-color 132px, $white-color 0px);
-}
 .footer-parent .footer,
 .side {
   background-color:     $gradient-color-0;
@@ -271,7 +269,7 @@ body .content .sitetable .link .title a:hover,
 }
 /* --- End Addon --- */
 
-@import 'Modules/Text.scss';
+@import 'Modules/Text';
 
 /* --- Addon: Layout Adjustments --- */
 /* --- Header button overflow --- */
@@ -407,10 +405,10 @@ body > .footer-parent {
 }
 /* --- End Nightmode Addon --- */
 
-@import 'Modules/Inline Spoilers.scss';
-@import 'Modules/Post Flairs.scss';
-@import 'Modules/User Flairs.scss';
-@import 'Modules/Image Macros.scss';
+@import 'Modules/Inline Spoilers';
+@import 'Modules/Post Flairs';
+@import 'Modules/User Flairs';
+@import 'Modules/Image Macros';
 
 .markdownEditor,
 .RESMacroWrappingSpan
