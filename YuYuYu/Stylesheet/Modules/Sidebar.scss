@@ -1,0 +1,70 @@
+/* --- Sidebar Layout --- */
+.side {
+  right: 0;
+}
+.side,
+.comments-page .side,
+.res .comments-page .side {
+  margin-top: 129px;
+  position: absolute;
+  z-index: 1000;
+}
+.side::after {
+  content: "";
+}
+.side .spacer {
+  margin: 7px 0 16px 0;
+}
+#search,
+.comments-page #search,
+.res .comments-page #search {
+  left: -16px;
+  top: -16px;
+  position: relative;
+}
+.sidebox,
+.comments-page .sidebox,
+.res .comments-page .sidebox {
+  position: relative;
+  right: 0;
+  top: 0;
+}
+.comments-page .side .linkinfo,
+.res .comments-page .side .linkinfo {
+  left: -16px;
+  position: relative;
+  top: -16px;
+}
+.titlebox {
+  margin-top: 0;
+}
+.morelink {
+  top: 0px;
+  margin-top: 0px;
+  left: -16px;
+  position: relative;
+}
+.search-page .side {
+  margin-top: 128px;
+}
+.search-page .morelink {
+  top: -8px;
+}
+.login-form-side {
+  margin-top: -16px;
+  margin-bottom: 32px;
+}
+.sponsorshipbox {
+  margin-top: -16px;
+}
+.res form.toggle.sr_style_toggle {
+  margin-top: 0;
+}
+#moderation_tools {
+  border-radius: 2px;
+  box-shadow: 0 1px 5px $box-shadow-color;
+  padding: 5px;
+  position: relative;
+  right: 16px;
+  width: 300px;
+}

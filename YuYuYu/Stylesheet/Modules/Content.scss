@@ -1,0 +1,10 @@
+// Remove Animations
+body > .content,
+body.modtools-page > .content {
+  animation: none;
+  -webkit-animation: none;
+  border-radius: 2px;
+  box-shadow: 0 1px 5px $box-shadow-color;
+  margin: 126px 332px 0 16px;
+  padding: 0;
+}

@@ -1,0 +1,30 @@
+/* Content Formatting */
+body {
+  min-width: inherit;
+}
+body > .debuginfo,
+body > .footer-parent {
+  margin: -16px 332px 16px 16px;
+}
+@media only screen and (max-width: 840px) {
+  body > .content,
+  body > .debuginfo,
+  body > .footer-parent {
+    margin-right: 96px;
+    max-width: 492px;
+    width: calc(100% - 112px);
+  }
+  .side {
+    right: calc(100% - 840px);
+    transition: all 0.25s ease;
+    transition-delay: 0.5s;
+  }
+  .side:hover {
+    right: 0;
+  }
+}
+@media only screen and (max-width: 604px) {
+  .side {
+    right: -236px;
+  }
+}

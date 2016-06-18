@@ -1,0 +1,41 @@
+$color-spoiler-ln-background: #FF6666;
+$color-spoiler-m-background: #6666FF;
+$color-spoiler-s-active-warning: #B62E2E;
+$color-spoiler-ln-active-warning: #2E2EB6;
+$color-spoiler-m-active-warning: #2EB62E;
+
+$spoilers: (
+  ('a[href="#s"]', $black-color, $white-color, $black-color, $color-spoiler-s-active-warning, $white-color),
+  ('a[href="/s"]', $black-color, $white-color, $black-color, $color-spoiler-s-active-warning, $white-color),
+  ('a[href="#ln"]', $color-spoiler-ln-background, $white-color, $color-spoiler-ln-background, $color-spoiler-ln-active-warning, $white-color),
+  ('a[href="#m"]', $color-spoiler-m-background, $white-color, $color-spoiler-m-background, $color-spoiler-m-active-warning, $white-color)
+);
+
+@each $value in $spoilers {
+  #{nth($value, 1)},
+  .md p > #{nth($value, 1)} {
+    background: #{nth($value, 2)};
+    color: #{nth($value, 3)} !important;
+    cursor: default;
+    display: inline-block;
+    text-decoration: none !important;
+  }
+  #{nth($value, 1)}::after,
+  .md p > #{nth($value, 1)}::after {
+    content: attr(title);
+    color: #{nth($value, 4)};
+    padding: 0 0.5em;
+    visibility: visible;
+  }
+  #{nth($value, 1)}:hover,
+  .md p > #{nth($value, 1)}:hover {
+    color: #{nth($value, 5)} !important;
+  }
+  #{nth($value, 1)}:hover::after,
+  #{nth($value, 1)}:active::after,
+  .md p > #{nth($value, 1)}:hover::after,
+  .md p > #{nth($value, 1)}:active::after {
+    color: #{nth($value, 6)};
+    transition: color 1.0s ease-in;
+  }
+}

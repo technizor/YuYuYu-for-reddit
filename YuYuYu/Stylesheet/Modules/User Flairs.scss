@@ -1,0 +1,82 @@
+.flair {
+  border: 0;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+}
+.flair-graphic {
+  border: 2px outset;
+  height: 40px;
+  line-height: 37.5px;
+  max-height: 40px;
+  min-height: 40px;
+  min-width: 80px;
+  padding-left: 44px;
+  padding-right: 4px;
+  text-shadow:
+     0.1px  0.1px 0px $black-color,
+     0.1px -0.1px 0px $black-color,
+    -0.1px  0.1px 0px $black-color,
+    -0.1px -0.1px 0px $black-color,
+     0.1px  0.1px 0.2px $black-color,
+     0.1px -0.1px 0.2px $black-color,
+    -0.1px  0.1px 0.2px $black-color,
+    -0.1px -0.1px 0.2px $black-color;
+}
+.flair-graphic::before {
+  background: url(%%flairsheet-80px%%) no-repeat -9999px;
+  border: 0;
+  content: "";
+  display: inline-block;
+  height: 80px;
+  left: 0px;
+  margin: -20px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  top: 0px;
+  transform: scale(0.5, 0.5);
+  -ms-transform: scale(0.5, 0.5);
+  -webkit-transform: scale(0.5, 0.5);
+  vertical-align: middle;
+  width: 80px;
+}
+.titlebox .tagline {
+  margin-top: 0px !important;
+}
+.titlebox .tagline .flair-graphic::before,
+.sidecontentbox > .content .flair-graphic::before,
+.flairselector > .flairoptionpane .flair-graphic:before {
+  left: -22px;
+  top: -2px;
+}
+
+$graphic-flairs: (
+  ('yuna',   #EBCCCC,   -0px),
+  ('mimori', #636B73,  -80px),
+  ('fu',     #EAE96B, -160px),
+  ('itsuki', #A2D792, -240px),
+  ('karin',  #CC6065, -320px),
+  ('sonoko', #90819E, -400px),
+  ('gin',    #E07B59, -480px),
+  ('wakaba', #6FA5ED, -560px),
+  ('hinata', #C16964, -640px),
+  ('tamako', #EDAE6A, -720px),
+  ('anzu',   #A8BFED, -800px)
+);
+
+@each $value in $graphic-flairs {
+  .flair-#{nth($value, 1)}-0,
+  .flair-#{nth($value, 1)}-1 {
+    background-color: #{nth($value, 2)};
+  }
+  .flair-#{nth($value, 1)}-0::before {
+    background-position: #{nth($value, 3)} 0px;
+  }
+  .flair-#{nth($value, 1)}-1::before {
+    background-position: #{nth($value, 3)} -80px;
+  }
+}

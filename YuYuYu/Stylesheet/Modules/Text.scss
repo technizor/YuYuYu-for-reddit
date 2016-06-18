@@ -1,0 +1,33 @@
+// Submit Button Text
+.sidebox.submit.submit-text {
+  display: block;
+}
+.sidebox.submit.submit-text .morelink:after {
+/* You can change the hover message for the submit-text button here */
+  content: "Please remember to read the rules. Thank you!";
+}
+
+// Text Strings
+.arrow.down:after {
+  content: "For content that does not contribute to any discussion."
+}
+.morelink:after {
+  content: "Please remember to read the rules. Thank you!"
+}
+.submit-page .infobar:before {
+  content: "Please submit insightful content that allows for discussion!"
+}
+#mail.havemail:before {
+  content: "You have new messages!"
+}
+div.titlebox span.number:after {
+  content: " Heroes,"
+}
+.titlebox .users-online .number:after {
+  content: " participating"
+}
+
+// PSA Message
+#header:after {
+  content: "v1.6.1-beta: Visual Updates Everywhere!";
+}
