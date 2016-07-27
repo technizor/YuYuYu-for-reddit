@@ -3,9 +3,13 @@ $spoiler-reveal-background-color: #ECF0F1;
 $spoiler-reveal-text-color: #7D5D8A;
 $flair-meta-background-color: #FFBC5E;
 $flair-merch-background-color: #CE6DFF;
-$flair-discussion-background-color: #23B2FF;
+$flair-discussion-background-color: #6EB0D3; //#23B2FF;
 $flair-artwork-background-color: #006C87;
 $flair-news-background-color: #426369;
+
+.link {
+  position:relative;
+}
 
 // Post Flairs
 $post-flairs: (
@@ -36,14 +40,38 @@ $post-flairs: (
 }
 
 // Post Margins
-.link .midcol {
-  margin: 16px 8px 0;
-}
-.link .thumbnail {
-  margin: 16px 8px 0;
-}
-.link .entry {
-  padding-left: 8px;
+.link {
+  //border-radius: 2px;
+  //margin-top: 8px;
+
+  .thumbnail {
+    margin: 32px 8px 0px;
+  }
+  .midcol {
+    margin: 32px 8px 0;
+    .score {
+        top: 0px;
+        position: absolute;
+        margin: 4px 2px;
+        left: 0;
+        padding: 0px;
+        text-align: center;
+        width: 48px;
+    }
+  }
+  .entry {
+    padding-left: 8px;
+    padding-top: 41px;
+    .title > .linkflairlabel {
+      position: absolute;
+      top: 0px;
+      left: 52px;
+      max-width: none;
+      height: 26px;
+      padding: 5px 6px 5px 88px;
+      width: calc(100% - 52px);
+    }
+  }
 }
 
 // Spoiler in Title Hiding
