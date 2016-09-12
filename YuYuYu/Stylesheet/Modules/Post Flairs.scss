@@ -6,6 +6,8 @@ $flair-merch-background-color: #CE6DFF;
 $flair-discussion-background-color: #6EB0D3; //#23B2FF;
 $flair-artwork-background-color: #006C87;
 $flair-news-background-color: #426369;
+$flair-general-background-color: #444;
+$flair-fan-creation-background-color: #2165A9;
 
 .link {
   position:relative;
@@ -18,7 +20,9 @@ $post-flairs: (
   ('merch', $flair-merch-background-color),
   ('discussion', $flair-discussion-background-color),
   ('artwork', $flair-artwork-background-color),
-  ('news', $flair-news-background-color)
+  ('news', $flair-news-background-color),
+  ('general', $flair-general-background-color),
+  ('fan-creation', $flair-fan-creation-background-color)
 );
 
 @each $value in $post-flairs {

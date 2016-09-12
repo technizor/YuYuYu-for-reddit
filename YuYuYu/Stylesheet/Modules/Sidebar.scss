@@ -68,3 +68,11 @@
   right: 16px;
   width: 300px;
 }
+
+#ad_main, #ad_main_top {
+  margin-left: -16px;
+  margin-top: -16px;
+  &:empty {
+    display: none;
+  }
+}
