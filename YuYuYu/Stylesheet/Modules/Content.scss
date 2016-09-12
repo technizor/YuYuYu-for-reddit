@@ -10,3 +10,8 @@ body.modtools-page > .content {
 }
 // Prevent Naut from hiding h1's in the RES text post preview box
 .submit-page .content * h1 { display: block }
+
+.submit-page .roundfield .title {
+    color: #4D5763;
+    text-transform: none;
+}

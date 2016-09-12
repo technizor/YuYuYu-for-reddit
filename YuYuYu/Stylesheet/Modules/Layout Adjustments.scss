@@ -34,7 +34,8 @@ ul#image-preview-list li {
   max-width: 500px;
 }
 .usertext-edit,
-.usertext-edit textarea {
+.usertext-edit textarea,
+.usertext-edit input[type=text] {
   max-width: 100%;
 }
 
@@ -59,4 +60,23 @@ ul#image-preview-list li {
 .menuarea {
   margin: 0;
   padding: 5px;
+}
+
+// Fixes Transparent Backgrounds on most of the mod pages...
+.sitetable {
+  background: white;
+  border-radius: 2px;
+}
+
+// Remove the content box shadow
+body > .content,
+body.modtools-page > .content {
+  box-shadow: none;
+}
+
+// Flair user table
+.usertable {
+  background: white;
+  border-radius: 2px;
+  margin-left: 0;
 }

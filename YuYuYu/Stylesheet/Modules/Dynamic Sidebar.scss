@@ -6,6 +6,10 @@ body > .debuginfo,
 body > .footer-parent {
   margin: -16px 332px 16px 16px;
 }
+body > .content .linefield {
+  width: 100%;
+}
+
 @media only screen and (max-width: 840px) {
   body > .content,
   body > .debuginfo,
