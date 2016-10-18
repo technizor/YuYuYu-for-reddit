@@ -1,20 +1,44 @@
 @charset "utf-8";
 
+$header-height: 420px;
+
+#header {
+    margin: 0;
+    height: $header-height;
+    background: transparent;
+    border: none;
+}
 // Header Image
-body {
+body:before {
+  background: none;
+  height: 0px;
+  content: initial;
+}
+body,
+body > .content {
   background: repeating-linear-gradient( 45deg, $gradient-color-0 0%, $gradient-color-0 1%, $gradient-color-1 1%, $gradient-color-1 2%);
   background-size: 256px 256px;
 }
-body:before {
+body.listing-page > .content {
+  box-shadow: none;
+}
+
+body > .content > div {
+  position: relative;
+}
+
+#header {
   background: url(%%headerimg%%) fixed no-repeat 50% 0;
-  background-size: auto 200px;
-  height: 142px;
+  background-color: black;
+  background-size: auto $header-height;
+  height: 200px;
+  z-index: 0;
+  transition: height ease 1s 1s;
 }
-body.res-nightmode:before {
-  background: linear-gradient(rgba(34, 34, 34, 0.45), rgba(34, 34, 34, 0.45)),
-              url(%%headerimg%%) fixed no-repeat 50% 0;
-  background-size: auto 200px;
+#header:hover {
+  height: $header-height;
 }
+
 @media only screen and (min-width: 1921px) {
   body:before { background-size: cover }
 }
@@ -27,7 +51,9 @@ body.res-nightmode:before {
 
 // Tab Menu
 #header-bottom-left {
-  top: 42px;
+  top: initial;
+  bottom: 18px;
+  height: 83px;
 }
 #header .tabmenu {
   background-color: rgba(0, 0, 0, 0.1);

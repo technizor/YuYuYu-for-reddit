@@ -4,21 +4,28 @@
 body {
   min-width: inherit;
 }
+body > .content,
 body > .debuginfo,
-body > .footer-parent {
-  margin: -16px 332px 16px 16px;
+body > .footer-parent,
+body.modtools-page > .content {
+  margin: -16px 0px 16px 0px;
+  padding-left: 16px;
+  padding-right: 332px;
 }
 body > .content .linefield {
   width: 100%;
 }
 
-@media only screen and (max-width: 840px) {
+$sidebar-min-width: 80px;
+$sidebar-max-width: 316px;
+$sidebar-transition-width: 840px;
+$sidebar-width-diff: $sidebar-max-width - $sidebar-min-width;
+
+@media only screen and (max-width: $sidebar-transition-width) {
   body > .content,
   body > .debuginfo,
   body > .footer-parent {
-    margin-right: 96px;
-    max-width: 492px;
-    width: calc(100% - 112px);
+    padding-right: calc(100% - 508px);
   }
   .side {
     right: calc(100% - 840px);
@@ -29,8 +36,13 @@ body > .content .linefield {
     right: 0;
   }
 }
-@media only screen and (max-width: 604px) {
+@media only screen and (max-width: ($sidebar-transition-width - $sidebar-width-diff)) {
+  body > .content,
+  body > .debuginfo,
+  body > .footer-parent {
+    padding-right: 96px;
+  }
   .side {
-    right: -236px;
+    right: (- $sidebar-width-diff);
   }
 }
