@@ -1,10 +1,13 @@
 @charset "utf-8";
 
-$header-height: 420px;
+$initial-header-height: 200px;
+$max-header-height: 420px;
+$header-img-height: 1002px;
+$header-img-width: 2556px;
+$header-img-ratio: $header-img-width / $header-img-height;
 
 #header {
     margin: 0;
-    height: $header-height;
     background: transparent;
     border: none;
 }
@@ -30,18 +33,38 @@ body > .content > div {
 #header {
   background: url(%%headerimg%%) fixed no-repeat 50% 0;
   background-color: black;
-  background-size: auto $header-height;
-  height: 200px;
+  height: #{$initial-header-height};
   z-index: 0;
   transition: height ease 1s 1s;
 }
 #header:hover {
-  height: $header-height;
+  max-height: 90vh;
+}
+@media screen and (min-width: 1920px) {
+  #header {
+    background-size: 1920px auto;
+  }
+  #header:hover {
+    height: calc(1920px / #{$header-img-ratio});
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1920px) {
+  #header {
+    background-size: 100vw auto;
+  }
+  #header:hover {
+    height: calc(100vw / #{$header-img-ratio});
+  }
+}
+@media screen and (max-width: 960px) {
+  #header {
+    background-size: 960px auto;
+  }
+  #header:hover {
+    height: calc(960px / #{$header-img-ratio});
+  }
 }
 
-@media only screen and (min-width: 1921px) {
-  body:before { background-size: cover }
-}
 .res-nightmode #sr-header-area {
   background-color: rgba(0, 0, 0, 0.05);
 }

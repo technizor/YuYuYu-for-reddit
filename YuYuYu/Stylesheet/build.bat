@@ -1,1 +1,1 @@
-sass Stylesheet.scss out.css
+sass --watch Stylesheet.scss:out.css

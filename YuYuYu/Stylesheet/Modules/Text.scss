@@ -26,11 +26,24 @@ div.titlebox span.number:after {
   content: " Heroes,"
 }
 .titlebox .users-online .number:after {
-  content: " participating"
+  content: " in combat"
 }
 
 // PSA Message
 #header:after {
-  content: "v1.6.1-beta: Visual Updates Everywhere!";
-  background: rgba(255, 255, 255, 0.75);
+  content: "Hover to expand header image";
+  background: rgba(255, 255, 255, 0.5);
+}
+
+// Automoderator Rename
+a.author[href$="AutoModerator"] {
+  font-size: 0px;
+}
+a.author[href$="AutoModerator"]:before {
+  content: "[Taisha-Bot]";
+  color: white;
+  font-size: 11px!important;
+  padding: 1px 4px;
+  border-radius: 1px;
+  background: #228822;
 }
