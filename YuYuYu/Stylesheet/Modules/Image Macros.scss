@@ -130,10 +130,11 @@ $image-macro-animated: (
 }
 
 $image-macro-simple: (
-  daijoubu: (
+  everything-is-daijoubu: (
     image: 'url(%%everything-is-daijoubu%%)',
-    width: 160px, height: 160px,
+    width: 320px, height: 180px,
     x: -0px, y: -0px,
+    types: (""),
   ),
   itsuki-writing: (
     image: 'url(%%itsuki-writing%%)',
@@ -144,7 +145,7 @@ $image-macro-simple: (
     image: 'url(%%fuu-contract%%)',
     width: 320px, height: 180px,
     x: -0px, y: -0px,
-    types: ("accept", "decline"),
+    types: ("/accept", "/decline"),
   ),
 );
 @each $im-id, $value in $image-macro-simple {
@@ -160,7 +161,7 @@ $image-macro-simple: (
       $i: index(map-get($value, types), $sub);
       $off: (map-get($value, y) - $i * map-get($value, height));
 
-      .md a[href^="#im/#{$im-id}/#{$sub}"] {
+      .md a[href^="#im/#{$im-id}#{$sub}"] {
         &:hover {
           background-position: #{map-get($value, x)} #{$off};
         }

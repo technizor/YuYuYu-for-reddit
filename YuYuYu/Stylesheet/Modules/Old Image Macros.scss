@@ -8,8 +8,8 @@ a[href^="#"][href$="mimori-smile"],
 a[href^="#"][href$="karin-wat"],
 a[href^="#"][href$="yuuna-soexcited"],
 a[href^="#"][href$="yuuna-victory"],
-a[href^="#"][href$="everything-is-daijoubu"],
-a[href^="#"][href$="itsuki-writing"] {
+a[href^="#everything-is-daijoubu"],
+a[href^="#itsuki-writing"] {
   background-origin: border-box;
   border: 2px outset $commentface-border-color;
   color: $white-color !important;
@@ -191,21 +191,21 @@ a[href^="#"][href$="yuuna-victory"] {
 }
 
 // Static Comment Faces
-a[href^="#"][href$="everything-is-daijoubu"],
-a[href^="#"][href$="itsuki-writing"] {
+a[href^="#everything-is-daijoubu"],
+a[href^="#itsuki-writing"] {
   display: inline-block;
   height: 160px;
   width: 160px;
 }
-a[href^="#"][href$="everything-is-daijoubu"] {
+a[href^="#everything-is-daijoubu"] {
   background: url(%%everything-is-daijoubu%%) -0px -0px no-repeat;
 }
 // Custom Itsuki Writing
-a[href^="#"][href$="itsuki-writing"] {
+a[href^="#itsuki-writing"] {
   background: url(%%itsuki-writing%%) -0px -0px no-repeat;
 }
-.thing .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"],
-.wiki-page-content .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] {
+.thing .md :not(.RESdupeimg) > a[href^="#itsuki-writing"],
+.wiki-page-content .md :not(.RESdupeimg) > a[href^="#itsuki-writing"] {
   color: $black-color !important;
   font-family: "Comic Sans MS", cursive, sans-serif;
   font-size: 10px;
@@ -214,8 +214,8 @@ a[href^="#"][href$="itsuki-writing"] {
   padding-top: 90px;
   text-shadow: inherit;
 }
-.thing .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] > strong,
-.wiki-page-content .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] > strong {
+.thing .md :not(.RESdupeimg) > a[href^="#itsuki-writing"] > strong,
+.wiki-page-content .md :not(.RESdupeimg) > a[href^="#itsuki-writing"] > strong {
   bottom: inherit;
   display: inherit;
   font-weight: bold;
@@ -223,7 +223,7 @@ a[href^="#"][href$="itsuki-writing"] {
   text-align: inherit;
   width: auto;
 }
-.thing .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] > em,
-.wiki-page-content .md :not(.RESdupeimg) > a[href^="#"][href$="itsuki-writing"] > em {
+.thing .md :not(.RESdupeimg) > a[href^="#itsuki-writing"] > em,
+.wiki-page-content .md :not(.RESdupeimg) > a[href^="#itsuki-writing"] > em {
   color: black !important;
 }
