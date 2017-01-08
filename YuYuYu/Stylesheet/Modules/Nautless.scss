@@ -1,0 +1,139 @@
+*, :before, :after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+  font: normal x-small "Noto Sans",verdana,arial,helvetica,sans-serif;
+}
+
+.sitetable {
+  background: none;
+}
+
+.link {
+  border-radius: 16px;
+  padding-left: 0px;
+
+  .rank {
+    display: none;
+  }
+
+  .midcol {
+    margin: 32px 0px;
+
+    .score {
+      width: 80px;
+      height: 24px;
+      margin: 0 0 0 32px;
+      padding: 4px 8px;
+      position: absolute;
+      font-size: large;
+    }
+  }
+
+  .thumbnail {
+    margin: 32px 8px 0;
+  }
+
+  .entry {
+    margin-right: 32px;
+  }
+}
+.midcol {
+  width: 32px !important;
+
+  .arrow {
+    margin: 0;
+  }
+}
+.entry {
+  background: $white-color;
+}
+
+.arrow {
+  width: 32px;
+  height: 32px;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+}
+
+// comments-page
+.commentarea, .res .commentarea {
+  .panestack-title {
+    border-radius: 16px 16px 0 0;
+    margin: 8px 0 0;
+    padding: 12px 0 4px 22px;
+  }
+
+  .menuarea {
+    margin: 0 0 8px;
+    padding: 4px 0px 12px 22px;
+    border-radius: 0 0 16px 16px;
+  }
+
+  > .usertext {
+    margin: 0 0 10px;
+    overflow: auto;
+    background: $white-color;
+    padding: 12px 0 4px 22px;
+    border-radius: 16px;
+  }
+}
+
+.comment {
+  .midcol {
+    width: 32px;
+    height: 64px;
+    margin: 0px;
+    border-radius: 16px 0 0 16px;
+    background: $white-color;
+  }
+  .entry {
+    padding: 0;
+    border-radius: 0 16px 16px;
+    margin-bottom: 8px;
+
+    .tagline {
+      background: $white-color;
+      height: 64px;
+      padding: 7px 8px;
+    }
+    .usertext {
+      padding: 8px 8px 0;
+    }
+    .flat-list {
+      padding: 0 8px 8px;
+    }
+  }
+  &.collapsed {
+    .midcol {
+      visibility: visible;
+      height: 64px;
+
+      .arrow {
+        visibility: hidden;
+      }
+    }
+    .entry {
+      border-radius: 0 16px 16px 0;
+
+      .tagline .flair {
+        display: inline-block;
+      }
+    }
+  }
+}
+.res-commentBoxes .comment, .res-commentBoxes .comment .comment, .res-commentBoxes .comment .comment .comment .comment, .res-commentBoxes .comment .comment .comment .comment .comment .comment, .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes .comment .comment .comment, .res-commentBoxes .comment .comment .comment .comment .comment, .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment, .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+  background-color: transparent !important;
+  margin: 0 !important;
+  border-width: 0px !important;
+  padding: 0 !important;
+}
+.comment .child, .comment .showreplies {
+  margin: 0 0 0 32px;
+}
