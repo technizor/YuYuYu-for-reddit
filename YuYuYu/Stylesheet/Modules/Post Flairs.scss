@@ -32,24 +32,20 @@ $post-flairs: (
     background-color: #{nth($value, 2)};
   }
   .link.linkflair-#{nth($value, 1)} {
-    background: linear-gradient(90deg, $white-color 52px, #{nth($value, 2)} 0px, #{nth($value, 2)} 132px, $white-color 0px);
+    background: #{nth($value, 2)};//linear-gradient(90deg, $white-color 52px, #{nth($value, 2)} 0px, #{nth($value, 2)} 132px, $white-color 0px);
   }
   .res-nightmode .link.linkflair-#{nth($value, 1)} {
-    background: linear-gradient(90deg, $nightmode-post-background-color 52px, #{nth($value, 2)} 0px, #{nth($value, 2)} 132px, $nightmode-post-background-color 0px);
+    background: #{nth($value, 2)};//linear-gradient(90deg, $nightmode-post-background-color 52px, #{nth($value, 2)} 0px, #{nth($value, 2)} 132px, $nightmode-post-background-color 0px);
   }
   .link.search-result-link.linkflair-#{nth($value, 1)} {
-    background: linear-gradient(90deg, #{nth($value, 2)} 82px, $white-color 0px);
+    background: #{nth($value, 2)};//linear-gradient(90deg, #{nth($value, 2)} 82px, $white-color 0px);
   }
   .res-nightmode .link.search-result-link.linkflair-#{nth($value, 1)} {
-    background: linear-gradient(90deg, #{nth($value, 2)} 82px, $nightmode-post-background-color 0px);
+    background: #{nth($value, 2)};//linear-gradient(90deg, #{nth($value, 2)} 82px, $nightmode-post-background-color 0px);
   }
 }
-
 // Post Margins
 .link {
-  //border-radius: 2px;
-  //margin-top: 8px;
-
   .thumbnail {
     margin: 32px 8px 0px;
     max-height: 64px;
@@ -72,11 +68,15 @@ $post-flairs: (
     .title > .linkflairlabel {
       position: absolute;
       top: 0px;
-      left: 52px;
+      left: 128px;
       max-width: none;
-      height: 26px;
-      padding: 5px 6px 5px 88px;
-      width: calc(100% - 52px);
+      height: 32px;
+      border: none;
+      border-radius: 0;
+      padding: 4px 8px;
+      font-size: large;
+      color: $white-color;
+      width: calc(100% - 160px);
     }
   }
 }
