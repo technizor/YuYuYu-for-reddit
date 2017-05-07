@@ -1,6 +1,22 @@
 @charset "utf-8";
 
 /* --- Addon: Button color (Secondary Color) --- */
+@mixin bgcolor-primary {
+  background-color: $header-color;
+}
+@mixin bgcolor-white {
+  background-color: $white-color;
+}
+@mixin bgcolor-active {
+  background-color: $active-color;
+}
+@mixin bgcolor-secondary {
+  background-color: $secondary-color;
+}
+@mixin bgcolor-tertiary {
+  background-color: $tertiary-color;
+}
+
 button,
 .btn,
 .content .infobar,
@@ -8,15 +24,9 @@ button,
 .expando-button:hover,
 .fancy-toggle-button .remove:active .expando-button:hover,
 .linkflairlabel,
-.morelink,
-.morelink:after,
 .res div.commentarea div.RES-keyNav-activeElement.entry div.noncollapsed,
 .res div.RES-keyNav-activeElement,
-.side .titlebox .md h3 a,
-.side .titlebox blockquote:first-child > p:first-child,
-.side .titlebox blockquote:first-child > blockquote > ul li,
-.side .titlebox blockquote:nth-child(2) > p:first-child,
-.side .titlebox blockquote:nth-child(2) > blockquote > ul li,
+.side #search #searchexpando,
 .submit-page #newlink.submit.content .btn,
 .submit-page #newlink.submit.content .tabmenu.formtab .selected a,
 .submit-page .infobar,
@@ -103,7 +113,7 @@ body .content .sitetable .link .title a:hover,
 }
 .side .morelink a,
 .side .morelink:hover a {
-  color: $white-color;
+  color: $sidebar-button-color;
 }
 .comments-page .side .linkinfo .date,
 .comments-page .side .linkinfo .score {

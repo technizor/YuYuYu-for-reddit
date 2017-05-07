@@ -13,14 +13,16 @@ $header-img-ratio: $header-img-width / $header-img-height;
 }
 // Header Image
 body:before {
-  background: none;
-  height: 0px;
-  content: initial;
+  background: url(%%headerimg%%) fixed no-repeat 50% 0;
+  height: #{$initial-header-height};
+  //background: none;
+  //height: 0px;
+  //content: initial;
 }
 body,
 body > .content {
-  background: repeating-linear-gradient( 45deg, $gradient-color-0 0%, $gradient-color-0 1%, $gradient-color-1 1%, $gradient-color-1 2%);
-  background-size: 256px 256px;
+  background: url(%%headerimg%%) fixed no-repeat 50% 0, repeating-linear-gradient( 45deg, $gradient-color-0 0%, $gradient-color-0 1%, $gradient-color-1 1%, $gradient-color-1 2%);
+  background-size: contain, 256px 256px;
 }
 body.listing-page > .content {
   box-shadow: none;
@@ -31,21 +33,21 @@ body > .content > div {
 }
 
 #header {
-  background: url(%%headerimg%%) fixed no-repeat 50% 0;
-  background-color: black;
+  //background: url(%%headerimg%%) fixed no-repeat 50% 0;
+  //background-color: black;
   height: #{$initial-header-height};
   z-index: 0;
-  transition: height ease 1s 1s;
+  //transition: height ease 1s 1s;
 }
 #header:hover {
-  max-height: 90vh;
+  //max-height: 90vh;
 }
 @media screen and (min-width: 1920px) {
   #header {
     background-size: 1920px auto;
   }
   #header:hover {
-    height: calc(1920px / #{$header-img-ratio});
+    //height: calc(1920px / #{$header-img-ratio});
   }
 }
 @media screen and (min-width: 960px) and (max-width: 1920px) {
@@ -53,7 +55,7 @@ body > .content > div {
     background-size: 100vw auto;
   }
   #header:hover {
-    height: calc(100vw / #{$header-img-ratio});
+    //height: calc(100vw / #{$header-img-ratio});
   }
 }
 @media screen and (max-width: 960px) {
@@ -61,7 +63,7 @@ body > .content > div {
     background-size: 960px auto;
   }
   #header:hover {
-    height: calc(960px / #{$header-img-ratio});
+    //height: calc(960px / #{$header-img-ratio});
   }
 }
 
