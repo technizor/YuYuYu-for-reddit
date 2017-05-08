@@ -1,6 +1,38 @@
+
+@mixin bgcolor-primary {
+  background-color: $header-color;
+}
+@mixin bgcolor-white {
+  background-color: $white-color;
+}
+@mixin bgcolor-active {
+  background-color: $active-color;
+}
+@mixin bgcolor-secondary {
+  background-color: $secondary-color;
+}
+@mixin bgcolor-tertiary {
+  background-color: $tertiary-color;
+}
+
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
       -ms-border-radius: $radius;
           border-radius: $radius;
+}
+@mixin box-shadow {
+  box-shadow: 1px 1px 4px $black-color;
+}
+
+@mixin bgimage-lookup($id, $scale, $x, $y, $w, $h) {
+  background-image: url(%%#{$id}%%);
+  background-position: #{-($x * $scale)} #{-($y * $scale)};
+  background-repeat: no-repeat;
+  width: #{($w * $scale)};
+  height: #{($h * $scale)};
+}
+
+@mixin bgimage-sprites($x, $y, $w, $h) {
+  @include bgimage-lookup("sprites", 32px, $x, $y, $w, $h);
 }

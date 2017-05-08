@@ -11,7 +11,8 @@ $flair-news-background-color: #426369;
 $flair-general-background-color: #444;
 $flair-fan-creation-background-color: #2165A9;
 
-.link {
+.link,
+.search-result-link {
   position:relative;
 }
 
@@ -28,24 +29,28 @@ $post-flairs: (
 );
 
 @each $value in $post-flairs {
-  .link.linkflair-#{nth($value, 1)} .linkflairlabel {
-    background-color: #{nth($value, 2)};
+  .link,
+  .search-result-link {
+    &.linkflair-#{nth($value, 1)} .linkflairlabel {
+      background-color: #{nth($value, 2)};
+      &:hover {
+        background: #{lighten(nth($value, 2), 10%)};
+      }
+    }
+    &.linkflair-#{nth($value, 1)} {
+      background: #{nth($value, 2)};
+    }
   }
-  .link.linkflair-#{nth($value, 1)} {
-    background: #{nth($value, 2)};//linear-gradient(90deg, $white-color 52px, #{nth($value, 2)} 0px, #{nth($value, 2)} 132px, $white-color 0px);
-  }
-  .res-nightmode .link.linkflair-#{nth($value, 1)} {
-    background: #{nth($value, 2)};//linear-gradient(90deg, $nightmode-post-background-color 52px, #{nth($value, 2)} 0px, #{nth($value, 2)} 132px, $nightmode-post-background-color 0px);
-  }
-  .link.search-result-link.linkflair-#{nth($value, 1)} {
-    background: #{nth($value, 2)};//linear-gradient(90deg, #{nth($value, 2)} 82px, $white-color 0px);
-  }
-  .res-nightmode .link.search-result-link.linkflair-#{nth($value, 1)} {
-    background: #{nth($value, 2)};//linear-gradient(90deg, #{nth($value, 2)} 82px, $nightmode-post-background-color 0px);
+  .res-nightmode .link,
+  .res-nightmode .search-result-link {
+    &.linkflair-#{nth($value, 1)} {
+      background: #{nth($value, 2)};
+    }
   }
 }
 // Post Margins
-.link {
+.link,
+.search-result-link {
   .thumbnail {
     margin: 32px 8px 0px;
     max-height: 64px;
@@ -62,22 +67,27 @@ $post-flairs: (
         width: 48px;
     }
   }
-  .entry {
-    padding-left: 8px;
-    padding-top: 41px;
-    .title > .linkflairlabel {
-      position: absolute;
-      top: 0px;
-      left: 128px;
-      max-width: none;
-      height: 32px;
-      border: none;
-      border-radius: 0;
-      padding: 4px 8px;
-      font-size: large;
-      color: $white-color;
-      width: calc(100% - 160px);
-    }
+}
+.search-result-link .thumbnail {
+  margin-left: 48px;
+}
+
+.link .entry,
+.search-result-link > div {
+  padding-left: 8px;
+  padding-top: 41px;
+  .linkflairlabel {
+    position: absolute;
+    top: 0px;
+    left: 128px;
+    max-width: none;
+    height: 32px;
+    border: none;
+    @include border-radius(0);
+    padding: 4px 8px;
+    font-size: large;
+    color: $white-color;
+    width: calc(100% - 160px);
   }
 }
 

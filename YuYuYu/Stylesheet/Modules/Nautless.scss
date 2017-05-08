@@ -1,3 +1,4 @@
+@charset "utf-8";
 
 *, :before, :after {
   -webkit-box-sizing: border-box;
@@ -13,10 +14,11 @@ body {
   background: none;
 }
 
-.link {
-  border-radius: 16px;
+.link,
+.search-result-link {
+  @include border-radius(16px);
   padding-left: 0px;
-  box-shadow: 1px 1px 4px $black-color;
+  @include box-shadow;
   background: $white-color;
 
   &.last-clicked {
@@ -43,25 +45,36 @@ body {
   .thumbnail {
     margin: 32px 8px 0;
   }
-
-  .entry {
-    margin-right: 32px;
-  }
 }
 .midcol {
   width: 32px !important;
 
   .arrow {
     margin: 0;
+    width: 32px;
+    height: 32px;
+    &.up {
+      @include bgimage-lookup("spritesheet2", 32px, 0, 0, 1, 1);
+    }
+    &.down {
+      @include bgimage-lookup("spritesheet2", 32px, 0, 1, 1, 1);
+    }
+    &.upmod {
+      @include bgimage-lookup("spritesheet2", 32px, 1, 0, 1, 1);
+    }
+    &.downmod {
+      @include bgimage-lookup("spritesheet2", 32px, 1, 1, 1, 1);
+    }
   }
 }
-.entry {
-  background: $white-color;
+.search-result-link .thumbnail {
+  margin-left: 48px;
 }
-
-.arrow {
-  width: 32px;
-  height: 32px;
+.link .entry,
+.search-result-link > div {
+  background: $white-color;
+  margin-right: 32px;
+  min-height: 128px;
 }
 
 .thumbnail {
@@ -79,34 +92,40 @@ body {
 .commentarea, .res .commentarea {
   .panestack-title {
     @include border-radius(16px 16px 0 0);
-    border-radius: 16px 16px 0 0;
+    @include box-shadow;
     margin: 8px 0 0;
-    padding: 12px 0 4px 22px;
+    padding: 12px 22px 4px 22px;
   }
 
   .menuarea {
     margin: 0 0 8px;
-    padding: 4px 0px 12px 22px;
-    border-radius: 0 0 16px 16px;
+    padding: 4px 22px 12px 22px;
+    @include border-radius(0 0 16px 16px);
+    @include box-shadow;
   }
 
   > .usertext {
     margin: 0 0 10px;
     overflow: auto;
     background: $white-color;
-    padding: 12px 0 4px 22px;
-    border-radius: 16px;
+    padding: 12px 22px 4px 22px;
+    @include border-radius(16px);
+    @include box-shadow;
   }
 }
 
+.res-commentBoxes .comment {
+  overflow: visible !important;
+}
 .comment {
   position: relative;
+  overflow: visible;
 
   .midcol {
     width: 32px;
     height: 64px;
     margin: 0px;
-    border-radius: 16px 0 0 16px;
+    @include border-radius(16px 0 0 16px);
     background: $white-color;
     position: absolute;
     z-index: 2;
@@ -117,10 +136,10 @@ body {
     font-size: 0;
     line-height: 0;
     display: block;
-    border-radius: 16px 0 0 16px;
+    @include border-radius(16px 0 0 16px);
     border: none;
     box-shadow: none;
-    height: calc(100% - 8px);
+    height: 100%;
     width: 32px;
     left: 0px;
     top: 0px;
@@ -132,14 +151,15 @@ body {
     }
   }
   & .child .comment .expand {
-    border-radius: 16px 0 0 0;
+    @include border-radius(16px 0 0 0);
   }
   .entry {
     padding: 0;
-    border-radius: 0 16px 16px 0;
+    @include border-radius(0 16px 16px 0);
     margin-left: 32px;
     margin-bottom: 8px;
     box-shadow: 1px 1px 4px $black-color;
+    background: $white-color;
 
     .tagline {
       background: $white-color;
@@ -164,7 +184,7 @@ body {
       }
     }
     .entry {
-      border-radius: 0 16px 16px 0;
+      @include border-radius(0 16px 16px 0);
 
       .tagline .flair {
         display: inline-block;
@@ -216,15 +236,17 @@ body {
 
 .side {
   margin: -16px 16px 0 0;
-  padding: 6px 16px;
-  border-radius: 16px;
+  padding: 8px 16px;
+  @include border-radius(16px 16px);
+  @include box-shadow;
+
   .entry,
   .icon-menu a {
       background: transparent;
   }
   #search {
     input[type=text] {
-      border-radius: 16px 16px 0 0;
+    @include border-radius(16px 16px 0 0);
       border: none;
       &:focus {
         outline: none;
@@ -239,7 +261,7 @@ body {
   }
   .morelink {
     background-image: none;
-    border-radius: 16px;
+    @include border-radius(16px);
     border: none;
     margin: 0 -16px;
     height: 32px;
@@ -258,7 +280,7 @@ body {
         margin-top: -32px;
         width: 284px;
         height: 32px;
-        border-radius: 16px 0 0 16px;
+        @include border-radius(16px 0 0 16px);
         right: 16px;
     }
     &:hover:after {
@@ -270,5 +292,56 @@ body {
 .content {
   .spacer {
     margin-bottom: 0px;
+  }
+}
+.search-page .searchpane,
+.search-page .search-result-listing .search-result-group-header {
+  background: $white-color;
+  @include border-radius(16px);
+  @include box-shadow;
+  padding: 4px 16px;
+  margin-bottom: 16px;
+}
+.search-page .searchpane {
+  margin-top: 0;
+  margin-right: 0;
+}
+.search-page .search-result-listing .search-result-group {
+  min-width: none;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: none;
+}
+.content > .reddit-infobar {
+  margin-top: 0;
+}
+.content .stylesheet-customize-container {
+  #subreddit_stylesheet,
+  #preview-table,
+  #images {
+    @include border-radius(16px);
+    @include box-shadow;
+    background: white;
+    padding: 4px 16px;
+    margin-bottom: 16px;
+  }
+}
+.res-navTop #header-bottom-right {
+    border-radius: 16px 0 0 16px !important;
+    padding: 8px !important;
+    height: 32px !important;
+    top: 26px;
+}
+
+#header .tabmenu {
+  margin-left: 16px;
+  background: none;
+  margin-top: 75px;
+  height: 32px;
+
+  li {
+    border: none;
+    margin: 8px 16px 8px 0;
+    border-radius: 16px;
   }
 }

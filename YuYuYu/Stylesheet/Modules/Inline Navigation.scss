@@ -16,7 +16,7 @@ $navmenu-link-color: rgba(20, 150, 220, 0.8);
     margin-left: 0;
     padding-left: 0;
     padding-right: 0;
-    border-radius: 16px;
+    @include border-radius(16px);
 
     > p:first-child,
     > ul {
@@ -28,7 +28,7 @@ $navmenu-link-color: rgba(20, 150, 220, 0.8);
     > p:first-child {
       background: rgba(255, 255, 255, 0.50);
       font-size: large;
-      border-radius: 16px 16px 0 0;
+      @include border-radius(16px 16px 0 0);
     }
     > ul > li:first-child {
       font-size: larger;

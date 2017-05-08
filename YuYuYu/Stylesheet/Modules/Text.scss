@@ -30,20 +30,21 @@ div.titlebox span.number:after {
 }
 
 // PSA Message
+/*
 #header:after {
   content: "Hover to expand header image";
   background: rgba(255, 255, 255, 0.5);
-}
+}*/
 
 // Automoderator Rename
 a.author[href$="AutoModerator"] {
   font-size: 0px;
-}
-a.author[href$="AutoModerator"]:before {
-  content: "[Taisha-Bot]";
-  color: white;
-  font-size: 11px!important;
-  padding: 1px 4px;
-  border-radius: 1px;
-  background: #228822;
+  &:before {
+    content: "[Taisha-Bot]";
+    color: white;
+    font-size: 11px!important;
+    padding: 1px 4px;
+    @include border-radius(1px);
+    background: #228822;
+  }
 }

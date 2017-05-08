@@ -48,14 +48,14 @@ ul#image-preview-list li {
 }
 .commentarea .panestack-title,
 .res .commentarea .panestack-title {
-  border-radius: 2px 2px 0 0;
+  @include border-radius(2px 2px 0 0);
   margin: 8px 0 0;
-  padding: 12px 0 4px 22px;
+  padding: 12px 22 4px 22px;
 }
 .commentarea .menuarea {
   margin: 0 0 8px;
   padding: 4px 4px 4px 22px;
-  border-radius: 0 0 2px 2px;
+    @include border-radius(0 0 2px 2px);
 }
 
 // ???
@@ -67,7 +67,7 @@ ul#image-preview-list li {
 // Fixes Transparent Backgrounds on most of the mod pages...
 .sitetable {
   background: white;
-  border-radius: 2px;
+    @include border-radius(2px);
 }
 
 // Remove the content box shadow
@@ -79,6 +79,6 @@ body.modtools-page > .content {
 // Flair user table
 .usertable {
   background: white;
-  border-radius: 2px;
+    @include border-radius(2px);
   margin-left: 0;
 }

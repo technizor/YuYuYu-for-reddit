@@ -7,7 +7,6 @@
 .side,
 .comments-page .side,
 .res .comments-page .side {
-  margin-top: -13px;
   position: absolute;
   z-index: 1000;
 }
@@ -15,7 +14,7 @@
   content: "";
 }
 .side .spacer {
-  margin: 7px 0 16px 0;
+  margin: 8px 0 8px 0;
 }
 #search,
 .comments-page #search,
@@ -23,6 +22,7 @@
   left: -16px;
   top: -16px;
   position: relative;
+  margin-bottom: -16px;
 }
 .sidebox,
 .comments-page .sidebox,
@@ -35,7 +35,10 @@
 .res .comments-page .side .linkinfo {
   left: -16px;
   position: relative;
-  top: -16px;
+  top: 0;
+  width: 300px;
+  border: none;
+  text-align: center;
 }
 .titlebox {
   margin-top: 0;
@@ -46,11 +49,8 @@
   left: -16px;
   position: relative;
 }
-.search-page .side {
-  margin-top: 128px;
-}
 .search-page .morelink {
-  top: -8px;
+  top: -16px;
 }
 .login-form-side {
   margin-top: -16px;
@@ -63,7 +63,7 @@
   margin-top: 0;
 }
 #moderation_tools {
-  border-radius: 2px;
+  @include border-radius(2px);
   box-shadow: 0 1px 5px $box-shadow-color;
   padding: 5px;
   position: relative;
