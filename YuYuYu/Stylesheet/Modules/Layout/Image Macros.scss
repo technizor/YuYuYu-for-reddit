@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.md a[href^="#im/"],
+.md a[href^="#anim/"] {
+  position: relative;
+  z-index: 900;
+
+  > strong {
+    position: absolute;
+    bottom: 4px;
+  }
+}
+
+.md a[href^="#anim/"] {
+  &:not(:hover)::before {
+    position: absolute;
+    left: 48px;
+    top: 12px;
+    z-index: 901;
+  }
+}
+.md a[href="#im/itsuki-writing"] {
+  > strong {
+    bottom: inherit;
+    position: inherit;
+  }
+}

@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset "UTF-8";
 
 $flair-spoiler-background-color: #AD6B68;
 $spoiler-reveal-background-color: #ECF0F1;
@@ -16,25 +16,39 @@ $flair-fan-creation-background-color: #2165A9;
   position:relative;
 }
 
-// Post Flairs
+// Post Flair Decoration
+.linkflairlabel {
+  border: none;
+  @include border-radius(0);
+  padding: 4px 8px;
+  font-size: large;
+  color: $white-color;
+
+  &::before {
+    font-weight: bold;
+    padding-right: 8px;
+  }
+}
+
 $post-flairs: (
-  ('spoiler', $flair-spoiler-background-color),
-  ('meta', $flair-meta-background-color),
-  ('merch', $flair-merch-background-color),
-  ('discussion', $flair-discussion-background-color),
-  ('artwork', $flair-artwork-background-color),
-  ('news', $flair-news-background-color),
-  ('general', $flair-general-background-color),
-  ('fan-creation', $flair-fan-creation-background-color)
+  ('spoiler', $flair-spoiler-background-color, 'Spoiler'),
+  ('meta', $flair-meta-background-color, 'Meta'),
+  ('merch', $flair-merch-background-color, 'Merch'),
+  ('discussion', $flair-discussion-background-color, 'Discussion'),
+  ('artwork', $flair-artwork-background-color, 'Artwork'),
+  ('news', $flair-news-background-color, 'News'),
+  ('general', $flair-general-background-color, 'General'),
+  ('fan-creation', $flair-fan-creation-background-color, 'Fan Creation')
 );
 
 @each $value in $post-flairs {
   .link,
   .search-result-link {
     &.linkflair-#{nth($value, 1)} .linkflairlabel {
-      background-color: #{nth($value, 2)};
-      &:hover {
-        background: #{lighten(nth($value, 2), 10%)};
+      @include bgcolor-hover-lighten(nth($value, 2), 10%);
+
+      &::before {
+        content: "#{nth($value, 3)}";
       }
     }
     &.linkflair-#{nth($value, 1)} {
@@ -48,46 +62,49 @@ $post-flairs: (
     }
   }
 }
-// Post Margins
+
 .link,
 .search-result-link {
-  .thumbnail {
-    margin: 32px 8px 0px;
-    max-height: 64px;
+  .linkflairlabel,
+  .linkflairlabel.res-flairSearch {
+    height: 32px;
+    max-width: none;
   }
-  .midcol {
-    margin: 32px 8px 0;
-    .score {
-        top: 0px;
-        position: absolute;
-        margin: 4px 2px;
-        left: 0;
-        padding: 0px;
-        text-align: center;
-        width: 48px;
-    }
-  }
-}
-.search-result-link .thumbnail {
-  margin-left: 48px;
 }
 
 .link .entry,
 .search-result-link > div {
-  padding-left: 8px;
-  padding-top: 41px;
-  .linkflairlabel {
-    position: absolute;
-    top: 0px;
-    left: 128px;
-    max-width: none;
-    height: 32px;
+  background: $white-color;
+}
+
+.link,
+.search-result-link {
+  @include border-radius(16px);
+  @include box-shadow;
+  padding-left: 0px;
+  background: $white-color;
+
+  &.last-clicked {
     border: none;
-    @include border-radius(0);
-    padding: 4px 8px;
+    box-shadow: 0px 0px 0 2px Highlight;
+  }
+  .rank {
+    display: none;
+  }
+
+  .midcol .score {
+    width: 64px;
+    height: 24px;
+    padding: 4px 0;
+    text-align: center;
     font-size: large;
-    color: $white-color;
-    width: calc(100% - 160px);
+  }
+
+  .thumbnail {
+    max-height: 64px;
+    max-width: 64px;
+    min-height: 64px;
+    min-width: 64px;
   }
 }
 
@@ -110,8 +127,6 @@ $post-flairs: (
   background-color: $nightmode-text-color !important;
 }
 
-// Spoiler in Thumbnail
 .linkflair-spoiler img {
   display: none;
 }
-.linkflair-spoiler .thumbnail {}

@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+$sidebar-min-width: 80px;
+$sidebar-max-width: 316px;
+$sidebar-transition-width: 840px;
+$sidebar-width-diff: $sidebar-max-width - $sidebar-min-width;
+@media only screen and (max-width: $sidebar-transition-width) {
+  .side {
+    right: calc(100% - 840px);
+  }
+  .side:hover {
+    right: 0;
+  }
+}
+@media only screen and (max-width: ($sidebar-transition-width - $sidebar-width-diff)) {
+  .side {
+    right: (- $sidebar-width-diff);
+  }
+}

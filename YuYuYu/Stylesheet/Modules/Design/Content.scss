@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+// Remove Animations
+body > .content,
+body.modtools-page > .content {
+  @include border-radius(2px);
+  box-shadow: 0 1px 5px $box-shadow-color;
+  padding: 0;
+
+  animation: none;
+  -webkit-animation: none;
+}
+// Prevent Naut from hiding h1's in the RES text post preview box
+.submit-page .content * h1 {
+  display: block;
+}
+
+.submit-page .roundfield .title {
+    color: #4D5763;
+    text-transform: none;
+}

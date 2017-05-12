@@ -19,19 +19,36 @@ $nightmode-input-background-color: #AAA;
 $gradient-color-0: #444;//#343a43; //#444;
 $gradient-color-1: #4C4C4C;//#343a43; //#4C4C4C;
 $sidebar-button-color: #4D5763;
+
+
 @import "Mixins/Mixins";
 
+@import 'Modules/_Colour Scheme';
+@import 'Modules/_Layout Adjustments';
+
+/* -------------\
+| Split Modules |
+\--------------*/
+
+// Content
+@import 'Modules/Text Inserts';
 @import 'Modules/Header';
 @import 'Modules/Content';
-@import 'Modules/Colour Scheme';
-@import 'Modules/Text';
+
+// Sidebar
 @import 'Modules/Sidebar';
 @import 'Modules/Dynamic Sidebar';
-//@import 'Modules/Floating Navigation.scss';
-@import 'Modules/Inline Navigation.scss';
-@import 'Modules/Inline Spoilers';
-@import 'Modules/Post Flairs';
+@import 'Modules/Inline Navigation';
+
+// Flairs
+@import 'Modules/Link Flairs';
 @import 'Modules/User Flairs';
+
+// User-Content
+@import 'Modules/Inline Spoilers';
 @import 'Modules/Image Macros';
-@import 'Modules/Layout Adjustments';
-@import 'Modules/Nautless';
+
+
+// Todo split nautless
+
+@import 'Modules/_Nautless';

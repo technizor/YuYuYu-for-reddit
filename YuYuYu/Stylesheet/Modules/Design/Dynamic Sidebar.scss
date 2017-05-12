@@ -1,0 +1,41 @@
+body {
+  min-width: inherit;
+}
+
+body > .content,
+body > .debuginfo,
+body > .footer-parent,
+body.modtools-page > .content,
+.res-commentBoxes body > .content {
+  padding-left: 16px;
+  padding-right: 332px !important;
+}
+
+body > .content .linefield {
+  width: 100%;
+}
+$sidebar-min-width: 80px;
+$sidebar-max-width: 316px;
+$sidebar-transition-width: 840px;
+$sidebar-width-diff: $sidebar-max-width - $sidebar-min-width;
+
+@media only screen and (max-width: $sidebar-transition-width) {
+  body > .content,
+  body > .debuginfo,
+  body > .footer-parent,
+  .res-commentBoxes body > .content {
+    padding-right: calc(100% - 508px) !important;
+  }
+  .side {
+    transition: all 0.25s ease;
+    transition-delay: 0.5s;
+  }
+}
+@media only screen and (max-width: ($sidebar-transition-width - $sidebar-width-diff)) {
+  body > .content,
+  body > .debuginfo,
+  body > .footer-parent,
+  .res-commentBoxes body > .content {
+    padding-right: 96px !important;
+  }
+}

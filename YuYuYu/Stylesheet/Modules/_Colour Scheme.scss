@@ -79,35 +79,44 @@ body .content .sitetable .link .title a:hover,
 .comments-page .side .linkinfo, {
   background-color: $linkinfo-background-color;
 }
-.side .md .-blocks,
-.side .md .-lists,
-.side .md pre,
-.side .md blockquote,
-.side .md table,
-.side .md p,
-.side .md ul,
-.side .md ol {
-  color: $gray-color;
+.side .md {
+  .-blocks,
+  .-lists,
+  pre,
+  blockquote,
+  table,
+  p,
+  ul,
+  ol {
+    color: $gray-color;
+  }
 }
-.footer-parent .footer a:not(.buygold),
-.footer-parent .footer a:visited:not(.buygold),
-.side a,
-.side a:visited {
-  color: rgba(20, 150, 220, 0.8);
+
+.footer-parent .footer a:not(.buygold)
+.side a {
+  &,
+  &:visited {
+    color: rgba(20, 150, 220, 0.8);
+  }
 }
-.side .morelink a,
-.side .morelink:hover a {
-  color: $sidebar-button-color;
+.side .morelink {
+  a,
+  &:hover a {
+    color: $sidebar-button-color;
+  }
 }
-.comments-page .side .linkinfo .date,
-.comments-page .side .linkinfo .score {
-  color: $linkinfo-color;
-}
-.comments-page .side .linkinfo .score .point,
-.comments-page .side .linkinfo .score .word,
-.comments-page .side .linkinfo .totalvotes,
-.comments-page .side .linkinfo .shortlink {
-  color: $gray-color;
+.comments-page .side .linkinfo {
+  .date,
+  .score {
+    color: $linkinfo-color;
+  }
+
+  .score .point,
+  .score .word,
+  .totalvotes,
+  .shortlink {
+    color: $gray-color;
+  }
 }
 .res .RESshortcutside,
 .res .RESDashboardToggle,
@@ -115,17 +124,15 @@ body .content .sitetable .link .title a:hover,
 .tabmenu li a {
   color: gray;
 }
-.side .redditname a,
-.side .redditname a, .side h1,
-.side .usertext-body ol,
-.side .usertext-body .md blockquote p,
-.side h2,
-.side h3,
-.side h4,
-.side h5,
-.side h6 {
-  color: $title-color;
+.side {
+  .redditname a,
+  h1, h2, h3, h4, h5, h6,
+  .usertext-body ol,
+  .usertext-body .md blockquote p {
+    color: $title-color;
+  }
 }
+
 .titlebox form.toggle, .leavemoderator {
   background-color: transparent;
 }
@@ -136,24 +143,26 @@ body .content .sitetable .link .title a:hover,
   background-color: $white-color;
 }
 
-.res-nightmode #images,
-.res-nightmode .commentarea > .usertext,
-.res-nightmode .link,
-.res-nightmode .stylesheet-customize-container .pretty-form,
-.res-nightmode .wiki-page .pageactions,
-.res-nightmode .wiki-page .wiki-page-content,
-.res-nightmode .wiki-page .wikititle {
-  background-color: $nightmode-text-color;
-}
-.res-nightmode .stylesheet-customize-container textarea,
-.res-nightmode .wiki-page .wiki-page-content textarea {
-  color: $content-editor-text-color;
-  background-color: $content-back-color;
-}
-.res-nightmode .comments-page .side .linkinfo {
-  background-color: $content-back-color;
-}
-.res-nightmode input[type="file"],
-.res-nightmode input[type="text"] {
-  background-color: $nightmode-input-background-color;
+.res-nightmode {
+  #images,
+  .commentarea > .usertext,
+  .link,
+  .stylesheet-customize-container .pretty-form,
+  .wiki-page .pageactions,
+  .wiki-page .wiki-page-content,
+  .wiki-page .wikititle {
+    background-color: $nightmode-text-color;
+  }
+  .stylesheet-customize-container textarea,
+  .wiki-page .wiki-page-content textarea {
+    color: $content-editor-text-color;
+    background-color: $content-back-color;
+  }
+  .comments-page .side .linkinfo {
+    background-color: $content-back-color;
+  }
+  input[type="file"],
+  input[type="text"] {
+    background-color: $nightmode-input-background-color;
+  }
 }

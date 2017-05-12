@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+// Header Image
+body:before {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+body > .content > div {
+  position: relative;
+}
+
+#header {
+  z-index: 0;
+}
+
+// Tab Menu
+#header-bottom-left {
+  top: initial;
+  bottom: 18px;
+}
