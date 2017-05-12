@@ -15,10 +15,29 @@
   background-color: $tertiary-color;
 }
 
+@mixin bgcolor-hover-lighten($bgcolor, $amount) {
+    background-color: #{$bgcolor};
+    &:hover {
+      background: #{lighten($bgcolor, $amount)};
+    }
+}
+@mixin bgcolor-hover-darken($bgcolor, $amount) {
+    background-color: #{$bgcolor};
+    &:hover {
+      background: #{darken($bgcolor, $amount)};
+    }
+}
+
+@mixin transform($transform) {
+  transform: #{$transform};
+  -ms-transform: #{$transform};
+  -webkit-transform: #{$transform};
+}
+
 @mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
+  //-webkit-border-radius: $radius;
+  //   -moz-border-radius: $radius;
+  //    -ms-border-radius: $radius;
           border-radius: $radius;
 }
 @mixin box-shadow {
