@@ -13,14 +13,16 @@ $flair-fan-creation-background-color: #2165A9;
 
 .link,
 .search-result-link {
-  position:relative;
+  position: relative;
 }
 
 // Post Flair Decoration
-.linkflairlabel {
+.linkflairlabel,
+.combined-search-page .linkflairlabel {
   border: none;
   @include border-radius(0 16px 16px 0);
   padding: 4px 16px;
+  line-height: 20px;
   font-size: large;
   color: $white-color;
 
@@ -42,15 +44,18 @@ $post-flairs: (
 );
 
 @each $value in $post-flairs {
+  .linkflair-#{nth($value, 1)} .title > .linkflairlabel,
+  .flairselector .flairoptionpane .linkflair-#{nth($value, 1)} .linkflairlabel,
+  .flairselector .flairselection .linkflair-#{nth($value, 1)} .linkflairlabel {
+    @include bgcolor-hover-lighten(nth($value, 2), 10%);
+
+    &::before {
+      content: "#{nth($value, 3)}";
+    }
+  }
+
   .link,
   .search-result-link {
-    &.linkflair-#{nth($value, 1)} .linkflairlabel {
-      @include bgcolor-hover-lighten(nth($value, 2), 10%);
-
-      &::before {
-        content: "#{nth($value, 3)}";
-      }
-    }
     &.linkflair-#{nth($value, 1)} {
       background: #{nth($value, 2)};
     }
@@ -63,13 +68,9 @@ $post-flairs: (
   }
 }
 
-.link,
-.search-result-link {
-  .linkflairlabel,
-  .linkflairlabel.res-flairSearch {
-    height: 32px;
-    max-width: none;
-  }
+.linkflairlabel,
+.linkflairlabel.res-flairSearch {
+  height: 32px;
 }
 
 .link .entry,
@@ -84,7 +85,7 @@ $post-flairs: (
 
   &.last-clicked {
     border: none;
-    box-shadow: 0px 0px 0 2px Highlight;
+    box-shadow: none;
   }
   .rank {
     display: none;

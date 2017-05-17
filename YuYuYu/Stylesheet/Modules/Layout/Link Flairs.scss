@@ -4,15 +4,18 @@
 .link,
 .search-result-link {
   margin: 0;
-  
-  .linkflairlabel,
-  .linkflairlabel.res-flairSearch {
+
+  .title .linkflairlabel,
+  .title .linkflairlabel.res-flairSearch {
     position: absolute;
     top: 0px;
     left: 128px;
     max-width: calc(100% - 144px);
   }
 
+  &.last-clicked {
+    overflow: visible;
+  }
   .midcol {
     margin: 32px 4px 0 4px;
 
@@ -30,6 +33,9 @@
 }
 
 // Post Margins
+.linkflairlabel {
+  max-width: none;
+}
 .link .entry,
 .search-result-link > div {
   padding-left: 8px;
@@ -43,5 +49,15 @@
 
   &.search-result.has-thumbnail > .thumbnail {
     margin-right: 16px;
+  }
+}
+
+// Flair Selector
+.flairselector {
+  .flairsample-left {
+    text-align: left !important;
+  }
+  .linkflair .title {
+    display: none;
   }
 }

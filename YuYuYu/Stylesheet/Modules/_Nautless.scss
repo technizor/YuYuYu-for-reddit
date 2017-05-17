@@ -426,6 +426,47 @@ body {
   }
 }
 
+:not(.commentarea) > :not(.sitetable) > .sitetable {
+  @include box-shadow;
+}
+.sitetable .NERPageMarker {
+  margin: 0;
+  @include border-radius(0);
+}
+#progressIndicator.neverEndingReddit {
+  @include border-radius(0);
+}
+
+#header .tabmenu {
+  li {
+    margin: 8px 0;
+  }
+  li a {
+    background: #{$gradient-color-0};
+    color: #{$white-color};
+    border: solid #{$gradient-color-1} 0.5px;
+    border-top: none;
+    border-bottom: none;
+
+    &:hover {
+      background: #{$gradient-color-1};
+    }
+  }
+  li:first-of-type a {
+    @include border-radius(16px 0 0 16px);
+    border-left: none;
+    padding-left: 16px;
+  }
+
+  li:last-of-type a {
+    @include border-radius(0 16px 16px 0);
+    border-right: none;
+    padding-right: 16px;
+  }
+}
+
+
+
 // Deal with RES being annoying with its injected stylesheets
 .res-commentBoxes .comment,
 .res-commentBoxes .comment .comment .comment,
