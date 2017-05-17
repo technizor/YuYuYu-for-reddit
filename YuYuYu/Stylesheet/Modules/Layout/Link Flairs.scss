@@ -3,14 +3,16 @@
 // Post Flair Positioning
 .link,
 .search-result-link {
+  margin: 0;
+  
   .linkflairlabel,
   .linkflairlabel.res-flairSearch {
     position: absolute;
     top: 0px;
     left: 128px;
-    width: calc(100% - 160px);
+    max-width: calc(100% - 144px);
   }
-  
+
   .midcol {
     margin: 32px 4px 0 4px;
 

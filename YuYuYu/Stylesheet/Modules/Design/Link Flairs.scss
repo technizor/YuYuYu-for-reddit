@@ -19,8 +19,8 @@ $flair-fan-creation-background-color: #2165A9;
 // Post Flair Decoration
 .linkflairlabel {
   border: none;
-  @include border-radius(0);
-  padding: 4px 8px;
+  @include border-radius(0 16px 16px 0);
+  padding: 4px 16px;
   font-size: large;
   color: $white-color;
 
@@ -79,8 +79,6 @@ $post-flairs: (
 
 .link,
 .search-result-link {
-  @include border-radius(16px);
-  @include box-shadow;
   padding-left: 0px;
   background: $white-color;
 
