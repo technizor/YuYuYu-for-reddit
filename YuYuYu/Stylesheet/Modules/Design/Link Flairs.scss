@@ -45,6 +45,7 @@ $post-flairs: (
 
 @each $value in $post-flairs {
   .linkflair-#{nth($value, 1)} .title > .linkflairlabel,
+  .linkflair-#{nth($value, 1)} .search-result-header > .linkflairlabel,
   .flairselector .flairoptionpane .linkflair-#{nth($value, 1)} .linkflairlabel,
   .flairselector .flairselection .linkflair-#{nth($value, 1)} .linkflairlabel {
     @include bgcolor-hover-lighten(nth($value, 2), 10%);

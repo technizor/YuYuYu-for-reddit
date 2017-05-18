@@ -252,9 +252,21 @@ body {
 .search-page .searchpane,
 .search-page .search-result-listing .search-result-group-header {
   background: $white-color;
-  @include border-radius(16px);
-  @include box-shadow;
   padding: 4px 16px;
+}
+.search-page .searchpane,
+.search-page .search-result-listing {
+  @include box-shadow;
+}
+.search-page .searchpane {
+  @include border-radius(16px);
+}
+.search-page .search-result-listing {
+  @include border-radius(16px 16px 0 0);
+}
+.search-page .search-result-listing .search-result-group-header {
+  @include border-radius(16px 16px 0 0);
+  border-bottom: none;
 }
 
 .search-page .search-result-listing .search-result-group {
@@ -295,7 +307,10 @@ body {
   }
 }
 
-
+.tagline .flairselector {
+  box-shadow: none;
+  left: -470px !important;
+}
 // # fuck RES's injected styles
 .res-commentBoxes.res-commentBoxes.res-commentBoxes,
 .res-commentBoxes.res-commentBoxes.res-commentBoxes-rounded {
@@ -393,14 +408,11 @@ body {
 
 .search-page .searchpane,
 .search-page .search-result-listing .search-result-group-header {
+  margin: 0;
+}
+.search-page .searchpane {
   margin-bottom: 16px;
 }
-
-.search-page .searchpane {
-  margin-top: 0;
-  margin-right: 0;
-}
-
 .content > .reddit-infobar {
   margin-top: 0;
 }
@@ -426,7 +438,7 @@ body {
   }
 }
 
-:not(.commentarea) > :not(.sitetable) > .sitetable {
+:not(.commentarea):not(.sitetable) > .sitetable {
   @include box-shadow;
 }
 .sitetable .NERPageMarker {
@@ -435,6 +447,10 @@ body {
 }
 #progressIndicator.neverEndingReddit {
   @include border-radius(0);
+}
+
+.sheets {
+  margin-right: 0;
 }
 
 #header .tabmenu {

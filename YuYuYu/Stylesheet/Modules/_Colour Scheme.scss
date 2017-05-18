@@ -107,7 +107,8 @@ body .content .sitetable .link .title a:hover,
 }
 .comments-page .side .linkinfo {
   .date,
-  .score {
+  .score,
+  .views {
     color: $linkinfo-color;
   }
 
