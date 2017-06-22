@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+// Post Flair Positioning
+.link,
+.search-result-link {
+  margin: 0;
+
+  .title .linkflairlabel,
+  .search-result-header .linkflairlabel {
+    position: absolute;
+    top: 0px;
+    left: 128px;
+    max-width: calc(100% - 144px);
+  }
+
+  &.last-clicked {
+    overflow: visible;
+  }
+  .midcol {
+    margin: 32px 4px 0 4px;
+
+    .score {
+      margin: 0 16px 0 48px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .thumbnail {
+    margin: 32px 16px 0 8px;
+  }
+}
+
+// Post Margins
+.linkflairlabel {
+  max-width: none;
+}
+.link .entry,
+.search-result-link > div {
+  padding-left: 8px;
+  padding-top: 41px;
+  margin-right: 32px;
+  min-height: 128px;
+}
+
+.search-result-link {
+  padding-left: 40px;
+
+  &.search-result.has-thumbnail > .thumbnail {
+    margin-right: 16px;
+  }
+}
+
+// Flair Selector
+.flairselector {
+  .flairsample-left {
+    text-align: left !important;
+  }
+  .linkflair .title {
+    display: none;
+  }
+}

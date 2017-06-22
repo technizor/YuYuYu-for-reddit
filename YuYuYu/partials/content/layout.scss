@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+// Remove Animations
+body > .content,
+body.modtools-page > .content {
+  margin: -16px 332px 0 16px;
+}
+
+body > .content,
+body > .debuginfo,
+body > .footer-parent,
+body.modtools-page > .content,
+.res-commentBoxes body > .content {
+  margin: -16px 0px 16px 0px;
+}

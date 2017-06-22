@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.side .titlebox .usertext-body > .md > blockquote {
+  > p:first-child,
+  > ul {
+    position: relative;
+  }
+  > ul {
+    margin: 4px 0 12px;
+  }
+}
+
+/* Enable positioning of titlebox children */
+.side .titlebox form {
+  position: static;
+}

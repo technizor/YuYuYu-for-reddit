@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+$post-flairs: (
+  ('spoiler'),
+  ('meta'),
+  ('merch'),
+  ('discussion'),
+  ('artwork'),
+  ('news'),
+  ('general'),
+  ('fan-creation')
+);
+
+@each $value in $post-flairs {
+  .link {
+    // display: none;
+  }
+
+}

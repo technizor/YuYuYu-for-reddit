@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+// Old stuff
+.side {
+  &::after {
+    content: "";
+  }
+
+
+  .comments-page & .linkinfo,
+  .res .comments-page & .linkinfo {
+    width: 300px;
+    border: none;
+    text-align: center;
+  }
+}
+
+#moderation_tools {
+  @include border-radius(2px);
+  box-shadow: 0 1px 5px $box-shadow-color;
+  padding: 5px;
+  width: 300px;
+}
+
+#ad_main,
+#ad_main_top {
+  &:empty {
+    display: none;
+  }
+}
+
+// New stuff
+
+.side {
+  @include border-radius(16px 16px);
+  @include box-shadow;
+  padding: 8px 16px;
+
+  .entry,
+  .icon-menu a {
+      background: transparent;
+  }
+
+  #search {
+    input[type=text] {
+      @include border-radius(16px 16px 0 0);
+      border: none;
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2pt Highlight;
+      }
+    }
+    #searchexpando {
+      width: 300px;
+      border: none;
+      border-radius: 0;
+    }
+  }
+
+  .morelink {
+    background-image: none;
+    @include border-radius(16px);
+    border: none;
+    height: 32px;
+
+    .nub {
+      background: none;
+    }
+    &:after {
+      @include border-radius(16px 0 0 16px);
+      display: block;
+      overflow: hidden;
+      font-size: small;
+      transition: width ease 0.25s 0.125s, right ease 0.5s;
+      height: 32px;
+
+      width: 284px;
+    }
+    &:hover:after {
+      width: 316px;
+    }
+  }
+}
