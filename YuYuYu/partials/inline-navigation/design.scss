@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+$navmenu-color: #555;
+$navmenu-border-color: #C9A9A7;
+$navmenu-hover-color: #333;
+$navmenu-text-color: #4D5763;
+$navmenu-shadow-color: rgba(0,0,0,0.24);
+$navmenu-link-color: rgba(20, 150, 220, 0.8);
+
+
+/* --- Addon: Floating Navigation Bar --- */
+/* Menu Colors */
+.side .titlebox .usertext-body > .md > blockquote {
+  @include border-radius(16px);
+  border-left: none;
+  margin-left: 0;
+  padding-left: 0;
+  padding-right: 0;
+
+  > p:first-child,
+  > ul {
+    min-height: 32px;
+    padding: 4px 16px;
+    text-align: center;
+  }
+
+  > p:first-child {
+    @include border-radius(16px 16px 0 0);
+    background: rgba(255, 255, 255, 0.50);
+    font-size: large;
+  }
+  > ul > li:first-child {
+    font-size: larger;
+    font-weight: bold;
+  }
+
+  &::after {
+    color: $navmenu-color;
+  }
+  > p:first-child,
+  > ul {
+    border-color: $navmenu-border-color;
+  }
+  > ul {
+    padding: 0;
+  }
+  :hover > a:hover {
+    background-color: $white-color;
+    color: $navmenu-link-color;
+  }
+  a,
+  p:first-child,
+  ul li {
+    display: block;
+    color: $sidebar-button-color;
+  }
+}

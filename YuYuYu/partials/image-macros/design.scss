@@ -1,0 +1,194 @@
+@charset "UTF-8";
+
+$commentface-border-color: #BBB;
+
+.md a[href^="#im/"],
+.md a[href^="#anim/"] {
+  background-origin: border-box;
+  border: 2px outset $commentface-border-color;
+  color: $white-color !important;
+  cursor: default;
+  display: inline-block;
+  font-family: verdana,sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  text-align: center;
+  text-shadow:
+     0.5px  0.5px 0px $black-color,
+     0.5px -0.5px 0px $black-color,
+    -0.5px  0.5px 0px $black-color,
+    -0.5px -0.5px 0px $black-color,
+     0.5px  0.5px 1px $black-color,
+     0.5px -0.5px 1px $black-color,
+    -0.5px  0.5px 1px $black-color,
+    -0.5px -0.5px 1px $black-color;
+
+  > strong {
+    display: block;
+    font-weight: normal;
+    width: 100%;
+  }
+}
+
+.md a[href^="#anim/"] {
+  &:not(:hover)::before {
+    background: url(%%play-animation%%) -0px -0px no-repeat;
+    content: "";
+    display: block;
+    height: 64px;
+    transform: scale(0.5, 0.5);
+    -ms-transform: scale(0.5, 0.5);
+    -webkit-transform: scale(0.5, 0.5);
+    width: 64px;
+  }
+  &:hover {
+    animation-play-state: running !important;
+  }
+}
+
+$image-macro-animated: (
+  itsuki-applause: (
+    image: 'url(%%itsuki-applause-frames%%)',
+    width: 160px, height: 90px,
+    x: -0px, y: -0px,
+    dx: -0px, dy: -720px,
+    duration: 0.60s, steps: 8,
+  ),
+  fuu-fufufu: (
+    image: 'url(%%fuu-fufufu-frames%%)',
+    width: 160px, height: 90px,
+    x: -0px, y: -0px,
+    dx: -0px, dy: -1890px,
+    duration: 1.575s, steps: 21,
+  ),
+  mimori-smile: (
+    image: 'url(%%mimori-smile-frames%%)',
+    width: 160px, height: 90px,
+    x: -0px, y: -0px,
+    dx: -0px, dy: -3420px,
+    duration: 2.85s, steps: 38,
+  ),
+  karin-wat: (
+    image: 'url(%%karin-wat-frames%%)',
+    width: 160px, height: 90px,
+    x: -0px, y: -0px,
+    dx: -0px, dy: -1620px,
+    duration: 1.35s, steps: 18,
+  ),
+  yuuna-soexcited: (
+    image: 'url(%%yuuna-soexcited-frames%%)',
+    width: 160px, height: 90px,
+    x: -0px, y: -0px,
+    dx: -0px, dy: -1440px,
+    duration: 1.20s, steps: 16,
+  ),
+  yuuna-victory: (
+    image: 'url(%%yuuna-victory-frames%%)',
+    width: 160px, height: 90px,
+    x: -0px, y: -0px,
+    dx: -0px, dy: -2070px,
+    duration: 3.225s, steps: 23,
+  ),
+);
+
+@each $im-id, $value in $image-macro-animated {
+  $im-id: nth($value, 1);
+
+  .md a[href="#im/#{$im-id}"] {
+    display: inline-block;
+    height: #{map-get($value, height)};
+    width: #{map-get($value, width)};
+  }
+  @-webkit-keyframes anim/#{$im-id} {
+    from {
+      background-position: #{map-get($value, x)} #{map-get($value, y)};
+    }
+    to {
+      background-position: #{map-get($value, dx)} #{map-get($value, dy)};
+    }
+  }
+  @keyframes anim/#{$im-id} {
+    from {
+      background-position: #{map-get($value, x)} #{map-get($value, y)};
+    }
+    to {
+      background-position: #{map-get($value, x)} #{map-get($value, y)};
+    }
+  }
+  .md a[href="#anim/#{$im-id}"] {
+    background: #{map-get($value, image)} #{map-get($value, width)} #{map-get($value, height)} no-repeat;
+    animation: anim/#{$im-id} #{map-get($value, duration)} steps(#{map-get($value, steps)}, end) infinite paused;
+    -webkit-animation: anim/#{$im-id} #{map-get($value, duration)} steps(#{map-get($value, steps)}, end) infinite paused;
+    animation-fill-mode: forwards;
+  }
+}
+
+$image-macro-simple: (
+  everything-is-daijoubu: (
+    image: 'url(%%everything-is-daijoubu%%)',
+    width: 320px, height: 180px,
+    x: -0px, y: -0px,
+    types: (""),
+  ),
+  itsuki-writing: (
+    image: 'url(%%itsuki-writing%%)',
+    width: 160px, height: 160px,
+    x: -0px, y: -0px,
+  ),
+  fuu-contract: (
+    image: 'url(%%fuu-contract%%)',
+    width: 320px, height: 180px,
+    x: -0px, y: -0px,
+    types: ("/accept", "/decline"),
+  ),
+);
+@each $im-id, $value in $image-macro-simple {
+  .md a[href^="#im/#{$im-id}"] {
+    display: inline-block;
+    height: #{map-get($value, height)};
+    width: #{map-get($value, width)};
+    background: #{map-get($value, image)} #{map-get($value, x)} #{map-get($value, y)} no-repeat;
+  }
+
+  @if map-has-key($value, types) {
+    @each $sub in map-get($value, types) {
+      $i: index(map-get($value, types), $sub);
+      $off: (map-get($value, y) - $i * map-get($value, height));
+
+      .md a[href^="#im/#{$im-id}#{$sub}"] {
+        &:hover {
+          background-position: #{map-get($value, x)} #{$off};
+        }
+        &:not(:hover) > strong {
+          font-size: 0px;
+        }
+        &:hover {
+          font-size: 0px;
+        }
+        &:hover > strong {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.md a[href="#im/itsuki-writing"] {
+  color: $black-color !important;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 10px;
+  padding-left: 34px;
+  padding-right: 31px;
+  padding-top: 90px;
+  text-shadow: inherit;
+
+  > strong {
+    display: inherit;
+    font-weight: bold;
+    text-align: inherit;
+    width: auto;
+  }
+  > em {
+    color: black !important;
+  }
+}

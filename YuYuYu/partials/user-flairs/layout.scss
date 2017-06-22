@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.flair {
+  position: relative;
+  margin: 0 0 0 5px;
+}
+
+.flair.flair-graphic {
+  text-indent: -1000px;
+}
+
+.flair.flair-graphic:hover,
+.side .flair.flair-graphic,
+.flairselector .flair.flair-graphic {
+  text-indent: 50px;
+}
+
+.flair.flair-graphic::before {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  margin: -20px;
+}
+
+.titlebox .tagline {
+  margin-top: 0px !important;
+}

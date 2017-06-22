@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+.flair {
+  border: 0;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.flair.flair-graphic {
+  @include border-radius(25px);
+  height: 50px;
+  line-height: 40px;
+  max-height: 50px;
+  min-height: 50px;
+  min-width: 50px;
+  padding: 5px 10px;
+  font-weight: bold;
+  /*text-shadow:
+     0.1px  0.1px 0px $black-color,
+     0.1px -0.1px 0px $black-color,
+    -0.1px  0.1px 0px $black-color,
+    -0.1px -0.1px 0px $black-color,
+     0.1px  0.1px 0.2px $black-color,
+     0.1px -0.1px 0.2px $black-color,
+    -0.1px  0.1px 0.2px $black-color,
+    -0.1px -0.1px 0.2px $black-color;*/
+  transition: text-indent 0.25s ease;
+}
+
+.flair.flair-graphic::before {
+  border: 0;
+  content: "";
+  display: inline-block;
+  overflow: hidden;
+  padding: 0;
+  @include transform(scale(0.5, 0.5));
+  vertical-align: middle;
+}
+
+$graphic-flairs: (
+  ('yuna',   #EBCCCC, 0, "Yūki Yūna", $black-color),
+  ('mimori', #636B73, 1, "Tōgō Mimori", $white-color),
+  ('fu',     #EAE96B, 2, "Inubōzaki Fū", $black-color),
+  ('itsuki', #A2D792, 3, "Inubōzaki Itsuki", $black-color),
+  ('karin',  #CC6065, 4, "Miyoshi Karin", $white-color),
+  ('sonoko', #90819E, 5, "Nogi Sonoko", $black-color),
+  ('gin',    #E07B59, 6, "Minowa Gin", $black-color),
+  ('wakaba', #6FA5ED, 7, "Nogi Wakaba", $black-color),
+  ('hinata', #C16964, 8, "Uesato Hinata", $black-color),
+  ('tamako', #EDAE6A, 9, "Doi Tamako", $black-color),
+  ('anzu',   #A8BFED, 10, "Iyojima Anzu", $black-color),
+  //('', #000000, 11, "Kōri Chikage"),
+  //('', #000000, 12, "Takashima Yūna"),
+  //('', #000000, 13, "Shiratori Utano"),
+);
+
+@each $value in $graphic-flairs {
+  .flair.flair-#{nth($value, 1)}-0,
+  .flair.flair-#{nth($value, 1)}-1 {
+    background-color: #{nth($value, 2)};
+    color: #{nth($value, 5)};
+  }
+
+  .flair.flair-#{nth($value, 1)}-0::before {
+    @include bgimage-lookup('flairsheet-80px', 80px, 0, nth($value, 3), 1, 1);
+  }
+
+  .flair.flair-#{nth($value, 1)}-1::before {
+    @include bgimage-lookup('flairsheet-80px', 80px, 1, nth($value, 3), 1, 1);
+  }
+
+  .flairselector .flairoptionpane .flair.flair-#{nth($value, 1)}-0::after,
+  .flairselector .flairoptionpane .flair.flair-#{nth($value, 1)}-1::after {
+    content: "#{nth($value, 4)}";
+  }
+}

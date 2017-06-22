@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+// Stylesheet Image Preview List
+#images {
+  height: auto;
+}
+ul#image-preview-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul#image-preview-list li {
+  width: auto;
+}
+
+// RESUserTagging
+.RESUserTagImage {
+  background-image: none!important;
+}
+
+// Nightmode Fix (doesn't work anymore)
+.side .titlebox h1+div {
+  text-align: center;
+}
+
+// Text Area Adjustments
+.markdownEditor,
+.RESMacroWrappingSpan
+.commentarea .markdownEditor-wrapper,
+.usertext .bottom-area {
+  width: 100%;
+  max-width: 500px;
+}
+.usertext-edit,
+.usertext-edit textarea,
+.usertext-edit input[type=text] {
+  max-width: 100%;
+}
+
+// Comments Page Adjustments
+.comments-page .link .md {
+  background: url(%%yuuna-flower-3600%%) 0 0 no-repeat;
+  background-size: 100% auto;
+}
+.commentarea .panestack-title,
+.res .commentarea .panestack-title {
+  @include border-radius(2px 2px 0 0);
+  padding: 12px 22 4px 22px;
+}
+.commentarea .menuarea {
+  @include border-radius(0 0 2px 2px);
+  padding: 4px 4px 4px 22px;
+}
+
+// ???
+.menuarea {
+  padding: 5px;
+}
+
+// Remove the content box shadow
+body > .content,
+body.modtools-page > .content {
+  box-shadow: none;
+}
+
+// Fixes Transparent Backgrounds on most of the mod pages...
+// and Flair user table
+.sitetable,
+.usertable {
+  background: white;
+  @include border-radius(2px);
+}
+
+/* Layout */
+// Stylesheet Image Preview List
+ul#image-preview-list {
+  margin-right: 20px;
+}
+ul#image-preview-list li {
+  flex: 1 0 50%;
+}
+// Nightmode Fix (doesn't work anymore)
+.res-nightmode .arrow {
+  margin-left: 10px;
+}
+// Comments Page Adjustments
+.commentarea .panestack-title,
+.res .commentarea .panestack-title {
+  margin: 8px 0 0;
+}
+.commentarea .menuarea {
+  margin: 0 0 8px;
+}
+
+// ???
+.menuarea {
+  margin: 0;
+}
+
+// Fixes Transparent Backgrounds on most of the mod pages...
+// and Flair user table
+.usertable {
+  margin-left: 0;
+}

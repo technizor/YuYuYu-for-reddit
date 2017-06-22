@@ -1,0 +1,498 @@
+@charset "utf-8";
+
+/* Design */
+*, :before, :after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font: normal x-small "Noto Sans",verdana,arial,helvetica,sans-serif;
+}
+
+.sitetable {
+  background: none;
+}
+
+.midcol {
+  width: 32px !important;
+
+  .arrow {
+    width: 32px;
+    height: 32px;
+
+    &.up {
+      @include bgimage-lookup("spritesheet2", 32px, 0, 0, 1, 1);
+    }
+
+    &.down {
+      @include bgimage-lookup("spritesheet2", 32px, 0, 1, 1, 1);
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &.upmod {
+      @include bgimage-lookup("spritesheet2", 32px, 1, 0, 1, 1);
+    }
+
+    &.downmod {
+      @include bgimage-lookup("spritesheet2", 32px, 1, 1, 1, 1);
+    }
+  }
+}
+
+.link,
+.search-result-link {
+  /* Standard Post Thumbnails */
+  &.spoiler .thumbnail {
+    @include bgimage-lookup("spritesheet2", 64px, 1, 1, 1, 1);
+  }
+  &.self .thumbnail {
+    @include bgimage-lookup("spritesheet2", 64px, 0, 1, 1, 1);
+  }
+  /* Flair-Based Post Thumbnails */
+  &.linkflair-general {
+
+  }
+
+  &.linkflair-mod {
+
+  }
+
+  &.linkflair-meta {
+
+  }
+
+  &.linkflair-merch {
+
+  }
+
+  &.linkflair-discussion {
+
+  }
+
+  &.linkflair-artwork {
+
+  }
+
+  &.linkflair-news {
+
+  }
+
+  &.linkflair-fan-creation {
+
+  }
+}
+
+.morelink,
+.morelink:after,
+.side .titlebox .md h3 a,
+.side .titlebox blockquote {
+  @include bgcolor-secondary;
+}
+// comments-page
+.commentarea, .res .commentarea {
+  .panestack-title {
+    @include border-radius(16px 16px 0 0);
+    @include box-shadow;
+    padding: 12px 22px 4px 22px;
+  }
+
+  .menuarea {
+    padding: 4px 22px 12px 22px;
+    @include border-radius(0 0 16px 16px);
+    @include box-shadow;
+  }
+
+  > .usertext {
+    overflow: auto;
+    background: $white-color;
+    padding: 12px 22px 4px 22px;
+    @include border-radius(16px);
+    @include box-shadow;
+  }
+}
+
+.res-commentBoxes .comment {
+  overflow: visible !important;
+}
+.commentarea > .sitetable > .comment {
+  background: rgba(0, 0, 0, 0.25);
+  margin-top: 16px !important
+}
+.comment {
+  @include border-radius(16px);
+  overflow: visible;
+  margin: 0;
+  .child {
+    border: none;
+  }
+
+  .midcol {
+    width: 32px;
+    height: 64px;
+    @include border-radius(16px 0 0 16px);
+    background: $white-color;
+  }
+
+  .expand {
+    background: transparent;
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    @include border-radius(16px 0 0 16px);
+    border: none;
+    box-shadow: none;
+    height: 100%;
+    width: 32px;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  & .child .comment .expand {
+    @include border-radius(16px 0 0 0);
+  }
+
+  &.collapsed {
+    padding: 0;
+    margin-bottom: 8px;
+
+    & > .entry .expand {
+      border-bottom-left-radius: 16px;
+      background: rgba(0, 0, 0, 0.25);
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
+  .entry {
+    padding: 0;
+    @include border-radius(0 16px 16px 16px);
+    box-shadow: 1px 1px 4px $black-color;
+    background: $white-color;
+
+    .tagline {
+      background: $white-color;
+      height: 64px;
+      padding: 7px 8px;
+    }
+
+    .usertext {
+      padding: 8px 8px 0;
+    }
+
+    .flat-list {
+      padding: 0 8px 8px;
+    }
+  }
+
+  &.collapsed {
+    .midcol {
+      visibility: visible;
+      height: 64px;
+
+      .arrow {
+        visibility: hidden;
+      }
+    }
+
+    .entry {
+      @include border-radius(0 16px 16px 0);
+
+      .tagline .flair {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+
+#header-img {
+  width: 0;
+  padding-left: 48px;
+  height: 48px;
+}
+
+#header .pagename {
+  font-size: 0;
+}
+
+#header .pagename a {
+  font-variant: normal;
+  font-size: 22px;
+  padding: 9px;
+  display: inline-block;
+  vertical-align: top;
+  color: white;
+  font-family: "Noto Sans", sans-serif;
+
+  &::before {
+    content: "/r/";
+  }
+}
+
+#header-img,
+#header .pagename a {
+  transition: background-color 0.25s ease;
+}
+
+#header-img:hover,
+#header .pagename a:hover {
+  background-color: rgba(0,0,0,0.08);
+}
+
+// Content Positioning
+.search-page .searchpane,
+.search-page .search-result-listing .search-result-group-header {
+  background: $white-color;
+  padding: 4px 16px;
+}
+.search-page .searchpane,
+.search-page .search-result-listing {
+  @include box-shadow;
+}
+.search-page .searchpane {
+  @include border-radius(16px);
+}
+.search-page .search-result-listing {
+  @include border-radius(16px 16px 0 0);
+}
+.search-page .search-result-listing .search-result-group-header {
+  @include border-radius(16px 16px 0 0);
+  border-bottom: none;
+}
+
+.search-page .search-result-listing .search-result-group {
+  min-width: none;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: none;
+}
+
+.content > .reddit-infobar {
+  margin-top: 0;
+}
+
+.content .stylesheet-customize-container {
+  #subreddit_stylesheet,
+  #preview-table,
+  #images {
+    @include border-radius(16px);
+    @include box-shadow;
+    background: white;
+    padding: 4px 16px;
+  }
+}
+
+.res-navTop #header-bottom-right {
+  border-radius: 16px 0 0 16px !important;
+  padding: 8px !important;
+  height: 32px !important;
+}
+
+#header .tabmenu {
+  background: none;
+  height: 32px;
+
+  li {
+    border: none;
+    border-radius: 16px;
+  }
+}
+
+.tagline .flairselector {
+  box-shadow: none;
+  left: -470px !important;
+}
+// # fuck RES's injected styles
+.res-commentBoxes.res-commentBoxes.res-commentBoxes,
+.res-commentBoxes.res-commentBoxes.res-commentBoxes-rounded {
+  .commentarea>.sitetable>.comment {
+      background: rgba(0, 0, 0, 0.25) !important;
+      margin-top: 16px !important
+  }
+  .comment,
+  .comment .comment .comment,
+  .comment .comment .comment .comment .comment,
+  .comment .comment .comment .comment .comment .comment .comment,
+  .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+  .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+  .comment .comment .comment .comment .comment .comment .comment .comment,
+  .comment .comment .comment .comment .comment .comment,
+  .comment .comment .comment .comment,
+  .comment .comment {
+    background-color: transparent !important;
+    border-width: 0px !important;
+    border-radius: 16px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+#RESStyleSheetTipPane {
+  display: none !important;
+}
+
+/* Layout */
+.midcol .arrow {
+  margin: 0;
+}
+
+// comments-page
+.commentarea, .res .commentarea {
+  .panestack-title {
+    margin: 16px 0 0;
+  }
+
+  .menuarea {
+    margin: 0 0 16px;
+  }
+
+  > .usertext {
+    margin: 0 0 16px;
+  }
+
+  .gold-accent.comment-visits-box {
+    margin: 0px;
+  }
+}
+.comment {
+  position: relative;
+
+  .midcol {
+    margin: 0px;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .expand {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+  }
+
+  .entry {
+    margin-left: 32px;
+    margin-bottom: 8px;
+  }
+
+  &.collapsed {
+    .midcol {
+      z-index: 0;
+    }
+  }
+}
+
+.comment .child, .comment .showreplies {
+  margin: 0 0 0 32px;
+}
+
+#header-img {
+  top: 0;
+  left: 0;
+  margin: 0;
+}
+
+// Content Positioning
+.content .spacer {
+  margin-bottom: 0px;
+}
+
+.search-page .searchpane,
+.search-page .search-result-listing .search-result-group-header {
+  margin: 0;
+}
+.search-page .searchpane {
+  margin-bottom: 16px;
+}
+.content > .reddit-infobar {
+  margin-top: 0;
+}
+
+.content .stylesheet-customize-container {
+  #subreddit_stylesheet,
+  #preview-table,
+  #images {
+    margin-bottom: 16px;
+  }
+}
+
+.res-navTop #header-bottom-right {
+  top: 26px;
+}
+
+#header .tabmenu {
+  margin-left: 16px;
+  margin-top: 75px;
+
+  li {
+    margin: 8px 16px 8px 0;
+  }
+}
+
+:not(.commentarea):not(.sitetable) > .sitetable {
+  @include box-shadow;
+}
+.sitetable .NERPageMarker {
+  margin: 0;
+  @include border-radius(0);
+}
+#progressIndicator.neverEndingReddit {
+  @include border-radius(0);
+}
+
+.sheets {
+  margin-right: 0;
+}
+
+#header .tabmenu {
+  li {
+    margin: 8px 0;
+  }
+  li a {
+    background: #{$gradient-color-0};
+    color: #{$white-color};
+    border: solid #{$gradient-color-1} 0.5px;
+    border-top: none;
+    border-bottom: none;
+
+    &:hover {
+      background: #{$gradient-color-1};
+    }
+  }
+  li:first-of-type a {
+    @include border-radius(16px 0 0 16px);
+    border-left: none;
+    padding-left: 16px;
+  }
+
+  li:last-of-type a {
+    @include border-radius(0 16px 16px 0);
+    border-right: none;
+    padding-right: 16px;
+  }
+}
+
+
+
+// Deal with RES being annoying with its injected stylesheets
+.res-commentBoxes .comment,
+.res-commentBoxes .comment .comment .comment,
+.res-commentBoxes .comment .comment .comment .comment .comment,
+.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes .comment .comment .comment .comment .comment .comment,
+.res-commentBoxes .comment .comment .comment .comment,
+.res-commentBoxes .comment .comment {
+  margin: 0 !important;
+}
