@@ -1,0 +1,9 @@
+dependencies:
+  override:
+  post:
+    - gem install compass
+
+test:
+  override:
+    - compass compile:
+        pwd: YuYuYu
