@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 $commentface-border-color: #BBB;
 
 .md a[href^="#im/"],
@@ -41,85 +40,127 @@ $commentface-border-color: #BBB;
     -webkit-transform: scale(0.5, 0.5);
     width: 64px;
   }
-  &:hover {
-    animation-play-state: running !important;
-  }
 }
 
 $image-macro-animated: (
   itsuki-applause: (
+    id: 'itsuki-applause',
     image: 'url(%%itsuki-applause-frames%%)',
     width: 160px, height: 90px,
-    x: -0px, y: -0px,
-    dx: -0px, dy: -720px,
-    duration: 0.60s, steps: 8,
+    x0: -0px, y0: -0px,
+    x1: -0px, y1: -0px,
+    x2: -0px, y2: -720px,
+    lead-duration: 0s, lead-steps: 1,
+    loop-duration: 0.60s, loop-steps: 8,
   ),
   fuu-fufufu: (
+    id: 'fuu-fufufu',
     image: 'url(%%fuu-fufufu-frames%%)',
     width: 160px, height: 90px,
-    x: -0px, y: -0px,
-    dx: -0px, dy: -1890px,
-    duration: 1.575s, steps: 21,
+    x0: -0px, y0: -0px,
+    x1: -0px, y1: -0px,
+    x2: -0px, y2: -1890px,
+    lead-duration: 0s, lead-steps: 1,
+    loop-duration: 1.575s, loop-steps: 21,
   ),
   mimori-smile: (
+    id: 'mimori-smile',
     image: 'url(%%mimori-smile-frames%%)',
     width: 160px, height: 90px,
-    x: -0px, y: -0px,
-    dx: -0px, dy: -3420px,
-    duration: 2.85s, steps: 38,
+    x0: -0px, y0: -0px,
+    x1: -0px, y1: -0px,
+    x2: -0px, y2: -3420px,
+    lead-duration: 0s, lead-steps: 1,
+    loop-duration: 2.85s, loop-steps: 38,
   ),
   karin-wat: (
+    id: 'karin-wat',
     image: 'url(%%karin-wat-frames%%)',
     width: 160px, height: 90px,
-    x: -0px, y: -0px,
-    dx: -0px, dy: -1620px,
-    duration: 1.35s, steps: 18,
+    x0: -0px, y0: -0px,
+    x1: -0px, y1: -0px,
+    x2: -0px, y2: -1620px,
+    lead-duration: 0s, lead-steps: 1,
+    loop-duration: 1.35s, loop-steps: 18,
+  ),
+  sonoko-surprise: (
+    id: 'sonoko-surprise',
+    image: 'url(%%sonoko-surprise%%)',
+    width: 160px, height: 90px,
+    x0: -0px, y0: -0px,
+    x1: -0px, y1: -720px,
+    x2: -0px, y2: -2160px,
+    duration: 3.5s, steps: 24,
+    lead-duration: 1.0s, lead-steps: 8,
+    loop-duration: 2.0s, loop-steps: 16,
   ),
   yuuna-soexcited: (
+    id: 'yuuna-soexcited',
     image: 'url(%%yuuna-soexcited-frames%%)',
     width: 160px, height: 90px,
-    x: -0px, y: -0px,
-    dx: -0px, dy: -1440px,
-    duration: 1.20s, steps: 16,
+    x0: -0px, y0: -0px,
+    x1: -0px, y1: -0px,
+    x2: -0px, y2: -1440px,
+    lead-duration: 0s, lead-steps: 1,
+    loop-duration: 1.20s, loop-steps: 16,
   ),
   yuuna-victory: (
+    id: 'yuuna-victory',
     image: 'url(%%yuuna-victory-frames%%)',
     width: 160px, height: 90px,
-    x: -0px, y: -0px,
-    dx: -0px, dy: -2070px,
-    duration: 3.225s, steps: 23,
+    x0: -0px, y0: -0px,
+    x1: -0px, y1: -0px,
+    x2: -0px, y2: -2070px,
+    lead-duration: 0s, lead-steps: 1,
+    loop-duration: 3.225s, loop-steps: 23,
   ),
 );
 
 @each $im-id, $value in $image-macro-animated {
-  $im-id: nth($value, 1);
+  $im-id: map-get($value, id);
 
-  .md a[href="#im/#{$im-id}"] {
+  .md a[href="#im/#{$im-id}"], .md a[href="#anim/#{$im-id}"] {
     display: inline-block;
     height: #{map-get($value, height)};
     width: #{map-get($value, width)};
+    background: #{map-get($value, image)} #{map-get($value, width)} #{map-get($value, height)} no-repeat;
+    background-position: #{map-get($value, x0)} #{map-get($value, y0)};
   }
-  @-webkit-keyframes anim/#{$im-id} {
+  /*@-webkit-keyframes anim-#{$im-id} {
     from {
       background-position: #{map-get($value, x)} #{map-get($value, y)};
     }
     to {
       background-position: #{map-get($value, dx)} #{map-get($value, dy)};
     }
-  }
-  @keyframes anim/#{$im-id} {
+  }*/
+  @keyframes anim-#{$im-id}-lead {
     from {
-      background-position: #{map-get($value, x)} #{map-get($value, y)};
+      background-position: #{map-get($value, x0)} #{map-get($value, y0)};
     }
     to {
-      background-position: #{map-get($value, x)} #{map-get($value, y)};
+      background-position: #{map-get($value, x1)} #{map-get($value, y1)};
     }
   }
-  .md a[href="#anim/#{$im-id}"] {
-    background: #{map-get($value, image)} #{map-get($value, width)} #{map-get($value, height)} no-repeat;
-    animation: anim/#{$im-id} #{map-get($value, duration)} steps(#{map-get($value, steps)}, end) infinite paused;
-    -webkit-animation: anim/#{$im-id} #{map-get($value, duration)} steps(#{map-get($value, steps)}, end) infinite paused;
-    animation-fill-mode: forwards;
+  @keyframes anim-#{$im-id}-loop {
+    from {
+      background-position: #{map-get($value, x1)} #{map-get($value, y1)};
+    }
+    to {
+      background-position: #{map-get($value, x2)} #{map-get($value, y2)};
+    }
+  }
+  .md a[href="#anim/#{$im-id}"]:hover {
+    animation-name: anim-#{$im-id}-lead, anim-#{$im-id}-loop;
+    animation-duration: #{map-get($value, lead-duration)}, #{map-get($value, loop-duration)};
+    animation-timing-function: steps(#{map-get($value, lead-steps)}, end), steps(#{map-get($value, loop-steps)}, end);
+    animation-delay: 0s, #{map-get($value, lead-duration)};
+    animation-iteration-count: 1, infinite;
+    animation-play-state: running, running;
+
+    //animation: anim-#{$im-id} #{map-get($value, duration)} steps(#{map-get($value, steps)}, end) infinite paused;
+    //-webkit-animation: anim-#{$im-id} #{map-get($value, duration)} steps(#{map-get($value, steps)}, end) infinite paused;
+    //animation-fill-mode: forwards;
   }
 }
 
