@@ -9,8 +9,9 @@ $flair-discussion-background-color: #6EB0D3; //#23B2FF;
 $flair-artwork-background-color: #006C87;
 $flair-news-background-color: #426369;
 $flair-general-background-color: #444;
-$flair-fan-creation-background-color: #2165A9;
-$flair-yuyuyui-background-color: #ECB9EA;
+$flair-fan-creation-background-color: $color-royal;
+$flair-yuyuyui-background-color: $color-pink;
+$flair-question-background-color: $color-purple;
 
 .link,
 .search-result-link {
@@ -32,6 +33,25 @@ $flair-yuyuyui-background-color: #ECB9EA;
     padding-right: 8px;
   }
 }
+.link,
+.search-result-link {
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    line-height: 32px;
+    font-size: large;
+    display: block;
+    color: #FFF;
+    padding: 0;
+    height: 32px;
+    width: 128px;
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+  }
+}
 
 $post-flairs: (
   ('spoiler', $flair-spoiler-background-color, 'Spoiler'),
@@ -42,7 +62,8 @@ $post-flairs: (
   ('news', $flair-news-background-color, 'News'),
   ('general', $flair-general-background-color, 'General'),
   ('fan-creation', $flair-fan-creation-background-color, 'Fan Creation'),
-  ('yuyuyui', $flair-yuyuyui-background-color, 'YuYuYui')
+  ('yuyuyui', $flair-yuyuyui-background-color, 'YuYuYui'),
+  ('question', $flair-question-background-color, 'Question'),
 );
 
 @each $value in $post-flairs {
@@ -50,23 +71,21 @@ $post-flairs: (
   .linkflair-#{nth($value, 1)} .search-result-header > .linkflairlabel,
   .flairselector .flairoptionpane .linkflair-#{nth($value, 1)} .linkflairlabel,
   .flairselector .flairselection .linkflair-#{nth($value, 1)} .linkflairlabel {
+    @include bgcolor(nth($value, 2));
     @include bgcolor-hover-lighten(nth($value, 2), 10%);
-
-    &::before {
-      content: "#{nth($value, 3)}";
-    }
   }
 
   .link,
   .search-result-link {
-    &.linkflair-#{nth($value, 1)} {
-      background: #{nth($value, 2)};
-    }
-  }
-  .res-nightmode .link,
-  .res-nightmode .search-result-link {
-    &.linkflair-#{nth($value, 1)} {
-      background: #{nth($value, 2)};
+    &,
+    .res-nightmode & {
+      &.linkflair-#{nth($value, 1)} {
+        background: #{nth($value, 2)};
+
+        &::after {
+          content: "#{nth($value, 3)}";
+        }
+      }
     }
   }
 }
