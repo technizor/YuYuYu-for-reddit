@@ -40,6 +40,56 @@
   @include transform(scale(0.5, 0.5));
   vertical-align: middle;
 }
+$user-flairs: (
+  ('yuuki-yuuna',      #EBCCCC, 0, 0, "Yūki Yūna",        $white-color),
+  ('yuuki-yuuna-hero', #EBCCCC, 0, 1, "Yūki Yūna (Hero)", $white-color),
+  ('tougou-mimori',      #636B73, 0, 2, "Tōgō Mimori",        $white-color),
+  ('tougou-mimori-hero', #636B73, 0, 3, "Tōgō Mimori (Hero)", $white-color),
+  ('inubouzaki-fuu',      #EAE96B, 0, 4, "Inubōzaki Fū",        $white-color),
+  ('inubouzaki-fuu-hero', #EAE96B, 0, 5, "Inubōzaki Fū (Hero)", $white-color),
+  ('inubouzaki-itsuki',      #A2D792, 0, 6, "Inubōzaki Itsuki",        $white-color),
+  ('inubouzaki-itsuki-hero', #A2D792, 0, 7, "Inubōzaki Itsuki (Hero)", $white-color),
+  ('miyoshi-karin',      #CC6065, 0, 8, "Miyoshi Karin",        $white-color),
+  ('miyoshi-karin-hero', #CC6065, 0, 9, "Miyoshi Karin (Hero)", $white-color),
+  ('nogi-sonoko',      #90819E, 0, 10, "Nogi Sonoko",        $white-color),
+  ('nogi-sonoko-henshin', #90819E, 0, 11, "Nogi Sonoko (Henshin)", $white-color),
+  ('minowa-gin',      #E07B59, 0, 12, "Minowa Gin",        $white-color),
+  ('minowa-gin-henshin', #E07B59, 0, 13, "Minowa Gin (Henshin)", $white-color),
+  ('washio-sumi',      #636B73, 0, 14, "Washio Sumi",        $white-color),
+  ('washio-sumi-henshin', #636B73, 0, 15, "Washio Sumi (Henshin)", $white-color),
+  ('aki-sensei',        #000, 1, 0, "Aki-Sensei",          $white-color),
+//  ('aki-sensei-taisha', #000, 1, 1, "Aki-Sensei (Taisha)", $white-color),
+  ('nogi-wakaba',      #6FA5ED, 1, 2, "Nogi Wakaba",        $white-color),
+  ('nogi-wakaba-hero', #6FA5ED, 1, 3, "Nogi Wakaba (Hero)", $white-color),
+  ('uesato-hinata',      #C16964, 1, 4, "Uesato Hinata",        $white-color),
+//  ('uesato-hinata-hero', #C16964, 1, 5, "Uesato Hinata (Hero)", $white-color),
+  ('doi-tamako',      #EDAE6A, 1, 6, "Doi Tamako",        $white-color),
+//  ('doi-tamako-hero', #EDAE6A, 1, 7, "Doi Tamako (Hero)", $white-color),
+  ('iyojima-anzu',      #A8BFED, 1, 8, "Iyojima Anzu",        $white-color),
+  ('iyojima-anzu-hero', #A8BFED, 1, 9, "Iyojima Anzu (Hero)", $white-color),
+  ('koori-chikage',      #000, 1, 10, "Koori Chikage",        $white-color),
+  ('koori-chikage-hero', #000, 1, 11, "Koori Chikage (Hero)", $white-color),
+  ('takashima-yuuna',      #000, 1, 12, "Takashima Yūna",        $white-color),
+  ('takashima-yuuna-hero', #000, 1, 13, "Takashima Yūna (Hero)", $white-color),
+//  ('shiratori-utano',      #000, 1, 14, "Shiratori Utano",        $white-color),
+  ('shiratori-utano-hero', #000, 1, 15, "Shiratori Utano (Hero)", $white-color),
+//  ('aki-masuzu',      #000, 2, 0, "Aki Masuzu",        $white-color),
+//  ('aki-masuzu-hero', #000, 2, 1, "Aki Masuzu (Hero)", $white-color),
+  ('kusunoki-mebuki',      #000, 2, 2, "Kusunoki Mebuki",        $white-color),
+  ('kusunoki-mebuki-hero', #000, 2, 3, "Kusunoki Mebuki (Hero)", $white-color),
+  ('kokudo-aya',      #000, 2, 4, "Kokudo Aya",        $white-color),
+//  ('kokudo-aya-hero', #000, 2, 5, "Kokudo Aya (Hero)", $white-color),
+  ('kagajou-suzume',      #000, 2, 6, "Kagajō Suzume",        $white-color),
+//  ('kagajou-suzume-hero', #000, 2, 7, "Kagajō Suzume (Hero)", $white-color),
+  ('yamabushi-shizuku',      #000, 2, 8, "Yamabushi Shikuzu",        $white-color),
+//  ('yamabushi-shizuku-hero', #000, 2, 9, "Yamabushi Shikuzu (Hero)", $white-color),
+  ('miroku-yumiko',      #000, 2, 10, "Miroku Yumiko",        $white-color),
+//  ('miroku-yumiko-hero', #000, 2, 11, "Miroku Yumiko (Hero)", $white-color),
+  ('akihara-sekka',      #000, 2, 12, "Akihara Sekka",        $white-color),
+  ('akihara-sekka-hero', #000, 2, 13, "Akihara Sekka (Hero)", $white-color),
+  ('kohagura-natsume',      #000, 2, 14, "Kohagura Natsume",        $white-color),
+  ('kohagura-natsume-hero', #000, 2, 15, "Kohagura Natsume (Hero)", $white-color),
+);
 
 $graphic-flairs: (
   ('yuna',   #EBCCCC, 0, "Yūki Yūna", $black-color),
@@ -76,5 +126,20 @@ $graphic-flairs: (
   .flairselector .flairoptionpane .flair.flair-#{nth($value, 1)}-0::after,
   .flairselector .flairoptionpane .flair.flair-#{nth($value, 1)}-1::after {
     content: "#{nth($value, 4)}";
+  }
+}
+
+@each $value in $user-flairs {
+  .flair.flair-x#{nth($value, 3)}-y#{nth($value, 4)} {
+    background-color: #{nth($value, 2)};
+    color: #{nth($value, 5)};
+  }
+
+  .flair.flair-x#{nth($value, 3)}-y#{nth($value, 4)}::before {
+    @include bgimage-lookup('userflair', 80px, nth($value, 3), nth($value, 4), 1, 1);
+  }
+
+  .flairselector .flairoptionpane .flair.flair-x#{nth($value, 3)}-y#{nth($value, 4)}::after {
+    content: "#{nth($value, 5)}";
   }
 }
