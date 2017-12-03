@@ -107,6 +107,45 @@ $graphic-flairs: (
   //('', #000000, 12, "Takashima Yūna"),
   //('', #000000, 13, "Shiratori Utano"),
 );
+$dims: (
+  'x': ('0', '1', '2', '3', '4', '5', '6', '7,' '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'),
+  'y': ('0', '1', '2', '3', '4', '5', '6', '7,' '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'),
+  'z': ('userflair'),
+  'c': (
+    (#EBCCCC, $black-color),
+    (#636B73, $white-color),
+    (#EAE96B, $black-color),
+    (#A2D792, $black-color),
+    (#CC6065, $white-color),
+    (#90819E, $black-color),
+    (#E07B59, $black-color),
+    (#6FA5ED, $black-color),
+    (#C16964, $black-color),
+    (#EDAE6A, $black-color),
+    (#A8BFED, $black-color),
+  ),
+)
+@each $xv in map-get($dims, 'x') {
+//  .flair-x#{$xv} {
+//    background-position-x: 
+//  }
+}
+@each $yv in map-get($dims, 'y') {
+//  .flair-y#{$yv} {
+//    background-position-y: 
+//  }
+}
+@each $zv in map-get($dims, 'z') {
+//  .flair-z#{$zv} {
+//    background-image: 
+//  }
+}
+@each $cv in map-get($dims, 'c') {
+//  .flair-x#{$xv} {
+//    background-color: 
+//    color: 
+//  }
+}
 
 @each $value in $graphic-flairs {
   .flair.flair-#{nth($value, 1)}-0,
@@ -132,7 +171,7 @@ $graphic-flairs: (
 @each $value in $user-flairs {
   .flair.flair-x#{nth($value, 3)}-y#{nth($value, 4)} {
     background-color: #{nth($value, 2)};
-    color: #{nth($value, 5)};
+    color: #{nth($value, 6)};
   }
 
   .flair.flair-x#{nth($value, 3)}-y#{nth($value, 4)}::before {
