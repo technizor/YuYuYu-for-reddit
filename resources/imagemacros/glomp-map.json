@@ -1,0 +1,29 @@
+{
+  "input": {
+    "path": "glomp-frames/",
+    "extension": "png"
+  },
+  "output": {
+    "path": "yuuna-glomp.png"
+  },
+  "basis": { "x": 160, "y": 90 },
+  "grid": { "x": 1, "y": 16 },
+  "sprites": [
+    { "y":  0, "x": 0, "src": "lead-00" },
+    { "y":  1, "x": 0, "src": "lead-01" },
+    { "y":  2, "x": 0, "src": "lead-02" },
+    { "y":  3, "x": 0, "src": "lead-03" },
+    { "y":  4, "x": 0, "src": "lead-04" },
+    { "y":  5, "x": 0, "src": "lead-05" },
+    { "y":  6, "x": 0, "src": "lead-06" },
+    { "y":  7, "x": 0, "src": "lead-07" },
+    { "y":  8, "x": 0, "src": "lead-08" },
+    { "y":  9, "x": 0, "src": "lead-09" },
+    { "y": 10, "x": 0, "src": "lead-10" },
+    { "y": 11, "x": 0, "src": "lead-11" },
+    { "y": 12, "x": 0, "src": "lead-12" },
+    { "y": 13, "x": 0, "src": "lead-13" },
+    { "y": 14, "x": 0, "src": "lead-14" },
+    { "y": 15, "x": 0, "src": "lead-15" }
+  ]
+}
