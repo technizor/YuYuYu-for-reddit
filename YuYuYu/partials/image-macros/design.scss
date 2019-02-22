@@ -47,9 +47,8 @@ $image-macro-animated: (
     id: 'itsuki-applause',
     image: 'url(%%image-macros%%)',
     width: 160px, height: 90px,
-    x0: -320px, y0: -1440px,
-    x1: -320px, y1: -1440px,
-    x2: -320px, y2: -2160px,
+    x: -320px,
+    y0: -1440px, y1: -1440px, y2: -2160px,
     lead-duration: 0s, lead-steps: 1,
     loop-duration: 0.90s, loop-steps: 8,
   ),
@@ -57,9 +56,8 @@ $image-macro-animated: (
     id: 'fuu-fufufu',
     image: 'url(%%image-macros%%)',
     width: 160px, height: 90px,
-    x0: -480px, y0: -1440px,
-    x1: -480px, y1: -1440px,
-    x2: -480px, y2: -2160px,
+    x: -480px,
+    y0: -1440px, y1: -1440px, y2: -2160px,
     lead-duration: 0s, lead-steps: 1,
     loop-duration: 0.90s, loop-steps: 8,
   ),
@@ -67,9 +65,8 @@ $image-macro-animated: (
     id: 'mimori-smile',
     image: 'url(%%mimori-smile-frames%%)',
     width: 160px, height: 90px,
-    x0: -0px, y0: -0px,
-    x1: -0px, y1: -0px,
-    x2: -0px, y2: -3420px,
+    x: -0px,
+    y0: -0px, y1: -0px, y2: -3420px,
     lead-duration: 0s, lead-steps: 1,
     loop-duration: 2.85s, loop-steps: 38,
   ),
@@ -77,9 +74,8 @@ $image-macro-animated: (
     id: 'karin-wat',
     image: 'url(%%image-macros%%)',
     width: 160px, height: 90px,
-    x0: -160px, y0: -1440px,
-    x1: -160px, y1: -1440px,
-    x2: -160px, y2: -2160px,
+    x: -160px,
+    y0: -1440px, y1: -1440px, y2: -2160px,
     lead-duration: 0s, lead-steps: 1,
     loop-duration: 0.60s, loop-steps: 8,
   ),
@@ -87,9 +83,8 @@ $image-macro-animated: (
     id: 'sonoko-surprise',
     image: 'url(%%image-macros%%)',
     width: 160px, height: 90px,
-    x0: -0px, y0: -0px,
-    x1: -0px, y1: -720px,
-    x2: -0px, y2: -2160px,
+    x: -0px,
+    y0: -0px, y1: -720px, y2: -2160px,
     duration: 3.5s, steps: 24,
     lead-duration: 1.0s, lead-steps: 8,
     loop-duration: 2.0s, loop-steps: 16,
@@ -98,9 +93,8 @@ $image-macro-animated: (
     id: 'yuuna-glomp',
     image: 'url(%%image-macros%%)',
     width: 160px, height: 90px,
-    x0: -160px, y0: -0px,
-    x1: -160px, y1: -1440px,
-    x2: -160px, y2: -1440px,
+    x: -160px,
+    y0: -0px, y1: -1440px, y2: -1440px,
     duration: 3.5s, steps: 16,
     lead-duration: 1.0s, lead-steps: 16,
     loop-duration: 0s, loop-steps: 1,
@@ -109,9 +103,8 @@ $image-macro-animated: (
     id: 'yuuna-soexcited',
     image: 'url(%%image-macros%%)',
     width: 160px, height: 90px,
-    x0: -320px, y0: -0px,
-    x1: -320px, y1: -0px,
-    x2: -320px, y2: -1440px,
+    x: -320px,
+    y0: -0px, y1: -0px, y2: -1440px,
     lead-duration: 0s, lead-steps: 1,
     loop-duration: 1.20s, loop-steps: 16,
   ),
@@ -119,9 +112,8 @@ $image-macro-animated: (
     id: 'yuuna-victory',
     image: 'url(%%image-macros%%)',
     width: 160px, height: 90px,
-    x0: -480px, y0: -0px,
-    x1: -480px, y1: -0px,
-    x2: -480px, y2: -1440px,
+    x: -480px,
+    y0: -0px, y1: -0px, y2: -1440px,
     lead-duration: 0s, lead-steps: 1,
     loop-duration: 2.25s, loop-steps: 16,
   ),
@@ -135,32 +127,27 @@ $image-macro-animated: (
     height: #{map-get($value, height)};
     width: #{map-get($value, width)};
     background: #{map-get($value, image)} #{map-get($value, width)} #{map-get($value, height)} no-repeat;
-    background-position: #{map-get($value, x0)} #{map-get($value, y0)};
+    background-position: #{map-get($value, x)} #{map-get($value, y0)};
   }
-  /*@-webkit-keyframes anim-#{$im-id} {
-    from {
-      background-position: #{map-get($value, x)} #{map-get($value, y)};
-    }
-    to {
-      background-position: #{map-get($value, dx)} #{map-get($value, dy)};
-    }
-  }*/
+
   @keyframes anim-#{$im-id}-lead {
-    from {
-      background-position: #{map-get($value, x0)} #{map-get($value, y0)};
+    from { // #{map-get($value, x0)} 
+      background-position-y: #{map-get($value, y0)};
     }
-    to {
-      background-position: #{map-get($value, x1)} #{map-get($value, y1)};
+    to { // #{map-get($value, x1)}
+      background-position-y: #{map-get($value, y1)};
     }
   }
+
   @keyframes anim-#{$im-id}-loop {
-    from {
-      background-position: #{map-get($value, x1)} #{map-get($value, y1)};
+    from { // #{map-get($value, x1)}
+      background-position-y: #{map-get($value, y1)};
     }
-    to {
-      background-position: #{map-get($value, x2)} #{map-get($value, y2)};
+    to { // #{map-get($value, x2)}
+      background-position-y: #{map-get($value, y2)};
     }
   }
+  
   .md a[href="#anim/#{$im-id}"]:hover {
     animation-name: anim-#{$im-id}-lead, anim-#{$im-id}-loop;
     animation-duration: #{map-get($value, lead-duration)}, #{map-get($value, loop-duration)};
