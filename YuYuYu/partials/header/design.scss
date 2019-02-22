@@ -22,8 +22,7 @@ body:before {
 }
 
 body {
-  background: repeating-linear-gradient( 45deg, $gradient-color-0 0%, $gradient-color-0 1%, $gradient-color-1 1%, $gradient-color-1 2%);
-  background-size: 256px 256px;
+  @include diagonal-background;
 }
 body.listing-page > .content {
   box-shadow: none;
