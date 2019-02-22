@@ -1,0 +1,21 @@
+{
+  "input": {
+    "path": "imagemacros",
+    "format": "png"
+  },
+  "output": {
+    "path": "image-macros",
+    "format": "jpeg"
+  },
+  "grid": {
+    "basisX": 160, "basisY": 720,
+    "sizeX": 3, "sizeY": 3
+  },
+  "blocks": [
+    { "y":  0, "x": 0, "sizeX": 1, "sizeY": 3, "map": "sonoko-surprise.json" },
+    { "y":  0, "x": 1, "sizeX": 1, "sizeY": 2, "map": "yuuna-glomp.json" },
+    { "y":  2, "x": 1, "sizeX": 1, "sizeY": 1, "map": "karin-wat.json" },
+    { "y":  0, "x": 2, "sizeX": 1, "sizeY": 2, "map": "yuuna-soexcited.json" },
+    { "y":  2, "x": 2, "sizeX": 1, "sizeY": 1, "map": "itsuki-applause.json" }
+  ]
+}
