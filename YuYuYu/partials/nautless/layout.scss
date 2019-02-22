@@ -52,6 +52,10 @@ body {
   }
   &.self .thumbnail {
     @include bgimage-lookup("spritesheet2", 64px, 0, 1, 1, 1);
+    img {
+      /* Text posts suddenly have thumbnails sometimes... */
+      display: none;
+    }
   }
   /* Flair-Based Post Thumbnails */
   &.linkflair-general {

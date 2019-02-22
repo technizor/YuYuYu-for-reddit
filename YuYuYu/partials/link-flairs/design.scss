@@ -3,7 +3,7 @@
 $flair-spoiler-background-color: #AD6B68;
 $spoiler-reveal-background-color: #ECF0F1;
 $spoiler-reveal-text-color: #7D5D8A;
-$flair-meta-background-color: #FFBC5E;
+$flair-meta-background-color: #449A62;//#FFBC5E;
 $flair-merch-background-color: #CE6DFF;
 $flair-discussion-background-color: #6EB0D3; //#23B2FF;
 $flair-artwork-background-color: #006C87;
@@ -126,6 +126,10 @@ $post-flairs: (
     max-width: 64px;
     min-height: 64px;
     min-width: 64px;
+  }
+
+  .score {
+    color: #E3E8EF;
   }
 }
 
