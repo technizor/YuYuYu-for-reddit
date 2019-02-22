@@ -1,15 +1,18 @@
 {
   "input": {
     "path": "im-set/",
-    "extension": "png"
+    "format": "png"
   },
   "output": {
-    "path": "im-frames.png"
+    "path": "im-frames",
+    "format": "png"
   },
-  "basis": { "x": 160, "y": 720 },
-  "grid": { "x": 2, "y": 3 },
-  "sprites": [
-    { "y":  0, "x": 0, "w": 1, "h": 3, "src": "sonoko-surprise" },
-    { "y":  0, "x": 1, "w": 1, "h": 2, "src": "yuuna-glomp" }
+  "grid": {
+    "basisX": 160, "basisY": 720,
+    "sizeX": 2, "sizeY": 3
+  },
+  "blocks": [
+    { "y":  0, "x": 0, "sizeX": 1, "sizeY": 3, "src": "sonoko-surprise" },
+    { "y":  0, "x": 1, "sizeX": 1, "sizeY": 2, "src": "yuuna-glomp" }
   ]
 }

@@ -1,37 +1,46 @@
 {
   "input": {
     "path": "surprise-frames/",
-    "extension": "png"
+    "format": "png"
   },
   "output": {
-    "path": "sonoko-surprise.png"
+    "path": "sonoko-surprise",
+    "format": "png"
   },
-  "basis": { "x": 160, "y": 90 },
-  "grid": { "x": 1, "y": 24 },
-  "sprites": [
-    { "y": 0, "x": 0, "src": "lead-00" },
-    { "y": 1, "x": 0, "src": "lead-01" },
-    { "y": 2, "x": 0, "src": "lead-02" },
-    { "y": 3, "x": 0, "src": "lead-03" },
-    { "y": 4, "x": 0, "src": "lead-04" },
-    { "y": 5, "x": 0, "src": "lead-05" },
-    { "y": 6, "x": 0, "src": "lead-06" },
-    { "y": 7, "x": 0, "src": "lead-07" },
-    { "y": 8, "x": 0, "src": "loop-00" },
-    { "y": 9, "x": 0, "src": "loop-01" },
-    { "y": 10, "x": 0, "src": "loop-02" },
-    { "y": 11, "x": 0, "src": "loop-03" },
-    { "y": 12, "x": 0, "src": "loop-04" },
-    { "y": 13, "x": 0, "src": "loop-05" },
-    { "y": 14, "x": 0, "src": "loop-06" },
-    { "y": 15, "x": 0, "src": "loop-07" },
-    { "y": 16, "x": 0, "src": "loop-08" },
-    { "y": 17, "x": 0, "src": "loop-09" },
-    { "y": 18, "x": 0, "src": "loop-10" },
-    { "y": 19, "x": 0, "src": "loop-11" },
-    { "y": 20, "x": 0, "src": "loop-12" },
-    { "y": 21, "x": 0, "src": "loop-13" },
-    { "y": 22, "x": 0, "src": "loop-14" },
-    { "y": 23, "x": 0, "src": "loop-15" }
+  "grid": {
+    "basisX": 160, "basisY": 90,
+    "sizeX": 1, "sizeY": 24
+  },
+  "blocks": [
+    {
+      "x": 0, "y": 0,
+      "sizeX": 1, "sizeY": 24,
+      "blockSrc": [
+        "lead-00",
+        "lead-01",
+        "lead-02",
+        "lead-03",
+        "lead-04",
+        "lead-05",
+        "lead-06",
+        "lead-07",
+        "loop-00",
+        "loop-01",
+        "loop-02",
+        "loop-03",
+        "loop-04",
+        "loop-05",
+        "loop-06",
+        "loop-07",
+        "loop-08",
+        "loop-09",
+        "loop-10",
+        "loop-11",
+        "loop-12",
+        "loop-13",
+        "loop-14",
+        "loop-15"
+      ]
+    }
   ]
 }

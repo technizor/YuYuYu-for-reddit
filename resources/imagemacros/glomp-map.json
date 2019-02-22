@@ -1,14 +1,19 @@
 {
   "input": {
     "path": "glomp-frames/",
-    "extension": "png"
+    "format": "png"
   },
   "output": {
-    "path": "yuuna-glomp.png"
+    "path": "yuuna-glomp",
+    "format": "png"
   },
-  "basis": { "x": 160, "y": 90 },
-  "grid": { "x": 1, "y": 16 },
-  "sprites": [
+  "grid": { 
+    "basisX": 160,
+    "basisY": 90,
+    "sizeX": 1,
+    "sizeY": 16
+  },
+  "blocks": [
     { "y":  0, "x": 0, "src": "lead-00" },
     { "y":  1, "x": 0, "src": "lead-01" },
     { "y":  2, "x": 0, "src": "lead-02" },
