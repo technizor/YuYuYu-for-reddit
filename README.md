@@ -7,6 +7,9 @@ This theme was originally based on [Axel--/Naut-for-reddit version 3](https://gi
 
 For a preview, please view https://reddit.com/r/YuYuYu.
 
+## Status
+master: [![CircleCI](https://circleci.com/gh/technizor/YuYuYu-for-reddit/tree/master.svg?style=svg)](https://circleci.com/gh/technizor/YuYuYu-for-reddit/tree/master) dev: [![CircleCI](https://circleci.com/gh/technizor/YuYuYu-for-reddit/tree/dev.svg?style=svg)](https://circleci.com/gh/technizor/YuYuYu-for-reddit/tree/dev)
+
 Features
 ========
 
