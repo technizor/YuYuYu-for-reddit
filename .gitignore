@@ -2,3 +2,6 @@
 **/out.css*
 **/out.min.css*
 YuYuYu/out/
+client.json
+oauth2.json
+**/.spritemap-cache/

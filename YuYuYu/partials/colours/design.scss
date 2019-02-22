@@ -75,7 +75,7 @@ body .content .sitetable .link .title a:hover,
 .side {
   background-color: $gradient-color-0;
 }
-#moderation_tools,
+.sidecontentbox,
 .comments-page .side .linkinfo, {
   background-color: $linkinfo-background-color;
 }
@@ -119,11 +119,18 @@ body .content .sitetable .link .title a:hover,
     color: $gray-color;
   }
 }
+// Sidebar gray text
+.sidebox .subtitle,
+.titlebox .bottom,
+.sidecontentbox .title h1,
+.sidecontentbox .more a,
+.titlebox form.toggle, .leavemoderator,
 .res .RESshortcutside,
 .res .RESDashboardToggle,
-.side #moderation_tools .title h1,
-.tabmenu li a {
-  color: gray;
+.side .sidecontentbox .title h1,
+.tabmenu li a,
+.gadget .res-voteEnhancements-highlightScores span.score {
+  color: $gray-color;
 }
 .side {
   .redditname a,
@@ -133,7 +140,12 @@ body .content .sitetable .link .title a:hover,
     color: $title-color;
   }
 }
-
+.sheets .btn.right {
+  background: none;
+}
+.wiki-page > .content {
+  background: $white-color;
+}
 .titlebox form.toggle, .leavemoderator {
   background-color: transparent;
 }

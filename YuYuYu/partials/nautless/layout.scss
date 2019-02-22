@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-/* Design */
+// Design
 *, :before, :after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -52,6 +52,10 @@ body {
   }
   &.self .thumbnail {
     @include bgimage-lookup("spritesheet2", 64px, 0, 1, 1, 1);
+    img {
+      /* Text posts suddenly have thumbnails sometimes... */
+      display: none;
+    }
   }
   /* Flair-Based Post Thumbnails */
   &.linkflair-general {
@@ -91,7 +95,7 @@ body {
 .morelink:after,
 .side .titlebox .md h3 a,
 .side .titlebox blockquote {
-  @include bgcolor-secondary;
+  @include bgcolor($secondary-color);
 }
 // comments-page
 .commentarea, .res .commentarea {
@@ -309,7 +313,6 @@ body {
 
 .tagline .flairselector {
   box-shadow: none;
-  left: -470px !important;
 }
 // # fuck RES's injected styles
 .res-commentBoxes.res-commentBoxes.res-commentBoxes,
@@ -438,9 +441,6 @@ body {
   }
 }
 
-:not(.commentarea):not(.sitetable) > .sitetable {
-  @include box-shadow;
-}
 .sitetable .NERPageMarker {
   margin: 0;
   @include border-radius(0);

@@ -11,5 +11,8 @@ body > .debuginfo,
 body > .footer-parent,
 body.modtools-page > .content,
 .res-commentBoxes body > .content {
-  margin: -16px 0px 16px 0px;
+}
+
+.linefield, .linefield.mobile {
+  width: unset;  
 }

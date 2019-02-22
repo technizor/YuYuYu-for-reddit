@@ -1,0 +1,46 @@
+{
+  "input": {
+    "path": "surprise-frames/",
+    "format": "png"
+  },
+  "output": {
+    "path": "sonoko-surprise",
+    "format": "png"
+  },
+  "grid": {
+    "basisX": 160, "basisY": 90,
+    "sizeX": 1, "sizeY": 24
+  },
+  "blocks": [
+    {
+      "x": 0, "y": 0,
+      "sizeX": 1, "sizeY": 24,
+      "blockSrc": [
+        "lead-00",
+        "lead-01",
+        "lead-02",
+        "lead-03",
+        "lead-04",
+        "lead-05",
+        "lead-06",
+        "lead-07",
+        "loop-00",
+        "loop-01",
+        "loop-02",
+        "loop-03",
+        "loop-04",
+        "loop-05",
+        "loop-06",
+        "loop-07",
+        "loop-08",
+        "loop-09",
+        "loop-10",
+        "loop-11",
+        "loop-12",
+        "loop-13",
+        "loop-14",
+        "loop-15"
+      ]
+    }
+  ]
+}

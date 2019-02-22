@@ -1,29 +1,19 @@
 @charset "UTF-8";
 
-@mixin bgcolor-primary {
-  background-color: $header-color;
+@mixin color($color) {
+  color: #{$color};
 }
-@mixin bgcolor-white {
-  background-color: $white-color;
-}
-@mixin bgcolor-active {
-  background-color: $active-color;
-}
-@mixin bgcolor-secondary {
-  background-color: $secondary-color;
-}
-@mixin bgcolor-tertiary {
-  background-color: $tertiary-color;
+
+@mixin bgcolor($bgcolor) {
+  background: #{$bgcolor};
 }
 
 @mixin bgcolor-hover-lighten($bgcolor, $amount) {
-  background-color: #{$bgcolor};
   &:hover {
     background: #{lighten($bgcolor, $amount)};
   }
 }
 @mixin bgcolor-hover-darken($bgcolor, $amount) {
-  background-color: #{$bgcolor};
   &:hover {
     background: #{darken($bgcolor, $amount)};
   }
@@ -33,6 +23,11 @@
   transform: #{$transform};
   -ms-transform: #{$transform};
   -webkit-transform: #{$transform};
+}
+
+@mixin diagonal-background {
+  background: repeating-linear-gradient( 45deg, $gradient-color-0 0%, $gradient-color-0 1%, $gradient-color-1 1%, $gradient-color-1 2%);
+  background-size: 256px 256px;
 }
 
 @mixin border-radius($radius) {
@@ -55,4 +50,9 @@
 
 @mixin bgimage-sprites($x, $y, $w, $h) {
   @include bgimage-lookup("sprites", 32px, $x, $y, $w, $h);
+}
+
+@mixin no-horizontal-padding($padding) {
+  margin-left: -$padding;
+  margin-right: -$padding;
 }

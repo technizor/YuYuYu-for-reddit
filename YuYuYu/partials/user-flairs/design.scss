@@ -16,6 +16,7 @@
   max-height: 50px;
   min-height: 50px;
   min-width: 50px;
+  text-indent: 50px;
   padding: 5px 10px;
   font-weight: bold;
   /*text-shadow:
@@ -37,6 +38,8 @@
   overflow: hidden;
   padding: 0;
   @include transform(scale(0.5, 0.5));
+  width: 80px;
+  height: 80px;
   vertical-align: middle;
 }
 
@@ -57,23 +60,72 @@ $graphic-flairs: (
   //('', #000000, 13, "Shiratori Utano"),
 );
 
-@each $value in $graphic-flairs {
-  .flair.flair-#{nth($value, 1)}-0,
-  .flair.flair-#{nth($value, 1)}-1 {
-    background-color: #{nth($value, 2)};
-    color: #{nth($value, 5)};
-  }
+$dims: (
+  'x': (
+    ('0', 0), ('1', -80px), ('2', -160px), ('3', -240px),
+    ('4', -320px), ('5', -400px), ('6', -480px), ('7', -560px),
+    ('8', -640px), ('9', -720px), ('A', -800px), ('B', -880px),
+    ('C', -960px), ('D', -1040px), ('E', -1120px), ('F', -1200px),
+  ),
+  'y': (
+    ('0', 0), ('1', -80px), ('2', -160px), ('3', -240px),
+    ('4', -320px), ('5', -400px), ('6', -480px), ('7', -560px),
+    ('8', -640px), ('9', -720px), ('A', -800px), ('B', -880px),
+    ('C', -960px), ('D', -1040px), ('E', -1120px), ('F', -1200px),
+  ),
+  'z': (
+    ('0', 'userflair'),
+  ),
+  'c': (
+    ('0', #EBCCCC, $black-color),
+    ('1', #636B73, $white-color),
+    ('2', #EAE96B, $black-color),
+    ('3', #A2D792, $black-color),
+    ('4', #CC6065, $white-color),
+    ('5', #90819E, $black-color),
+    ('6', #E07B59, $black-color),
+    ('7', #6FA5ED, $black-color),
+    ('8', #C16964, $black-color),
+    ('9', #EDAE6A, $black-color),
+//    ('A', #A8BFED, $black-color),
+//    ('B', #A8BFED, $black-color),
+//    ('C', #A8BFED, $black-color),
+//    ('D', #A8BFED, $black-color),
+//    ('E', #A8BFED, $black-color),
+//    ('F', #A8BFED, $black-color),
+  ),
+);
 
-  .flair.flair-#{nth($value, 1)}-0::before {
-    @include bgimage-lookup('flairsheet-80px', 80px, 0, nth($value, 3), 1, 1);
-  }
+@each $xv in map-get($dims, 'x') {
+  $xi: nth($xv, 1);
+  $xpos: nth($xv, 2);
 
-  .flair.flair-#{nth($value, 1)}-1::before {
-    @include bgimage-lookup('flairsheet-80px', 80px, 1, nth($value, 3), 1, 1);
+  .flair-x#{$xi}::before {
+    background-position-x: $xpos;
   }
+}
+@each $yv in map-get($dims, 'y') {
+  $yi: nth($yv, 1);
+  $ypos: nth($yv, 2);
 
-  .flairselector .flairoptionpane .flair.flair-#{nth($value, 1)}-0::after,
-  .flairselector .flairoptionpane .flair.flair-#{nth($value, 1)}-1::after {
-    content: "#{nth($value, 4)}";
+  .flair-y#{$yi}::before {
+    background-position-y: $ypos;
+  }
+}
+@each $zv in map-get($dims, 'z') {
+  $zi: nth($zv, 1);
+  $zsrc: nth($zv, 2);
+
+  .flair-z#{$zi}::before {
+    background-image: url(%%#{$zsrc}%%);
+  }
+}
+@each $cv in map-get($dims, 'c') {
+  $ci: nth($cv, 1);
+  $cbg: nth($cv, 2);
+  $cct: nth($cv, 3);
+  .flair-c#{$ci} {
+    background-color: $cbg;
+    color: $cct;
   }
 }

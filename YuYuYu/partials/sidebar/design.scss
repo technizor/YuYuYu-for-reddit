@@ -9,17 +9,9 @@
 
   .comments-page & .linkinfo,
   .res .comments-page & .linkinfo {
-    width: 300px;
     border: none;
     text-align: center;
   }
-}
-
-#moderation_tools {
-  @include border-radius(2px);
-  box-shadow: 0 1px 5px $box-shadow-color;
-  padding: 5px;
-  width: 300px;
 }
 
 #ad_main,
@@ -35,7 +27,18 @@
   @include border-radius(16px 16px);
   @include box-shadow;
   padding: 8px 16px;
+  z-index: 2;
 
+
+  .sidecontentbox {
+    @include border-radius(2px);
+    box-shadow: 0 1px 5px $box-shadow-color;
+    padding: 5px;
+  }
+
+  .titlebox .bottom .flair {
+    display: none;
+  }
   .entry,
   .icon-menu a {
       background: transparent;
@@ -52,7 +55,6 @@
       }
     }
     #searchexpando {
-      width: 300px;
       border: none;
       border-radius: 0;
     }
@@ -72,10 +74,10 @@
       display: block;
       overflow: hidden;
       font-size: small;
-      transition: width ease 0.25s 0.125s, right ease 0.5s;
+      transition: width ease 0.25s 0.125s, left ease 0.5s;
       height: 32px;
 
-      width: 284px;
+      width: calc(100% - 16px);
     }
     &:hover:after {
       width: 316px;
