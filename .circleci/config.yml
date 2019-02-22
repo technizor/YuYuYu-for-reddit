@@ -1,9 +1,20 @@
-dependencies:
-  override:
-  post:
-    - gem install compass
-
-test:
-  override:
-    - compass compile:
-        pwd: YuYuYu
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.4-node
+    steps:
+      - checkout
+      - run:
+          name: Install Compass
+          command: |
+            gem install compass
+      - run:
+          name: Compile
+          command: |
+            pushd YuYuYu
+            compass compile
+            popd
+      - store_artifacts:
+          path: YuYuYu/out/Stylesheet.css
+          destiation: stylesheet.css
