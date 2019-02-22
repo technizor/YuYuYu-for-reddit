@@ -60,27 +60,6 @@ $graphic-flairs: (
   //('', #000000, 13, "Shiratori Utano"),
 );
 
-@each $value in $graphic-flairs {
-  .flair.flair-#{nth($value, 1)}-0,
-  .flair.flair-#{nth($value, 1)}-1 {
-    background-color: #{nth($value, 2)};
-    color: #{nth($value, 5)};
-  }
-
-  .flair.flair-#{nth($value, 1)}-0::before {
-    @include bgimage-lookup('flairsheet-80px', 80px, 0, nth($value, 3), 1, 1);
-  }
-
-  .flair.flair-#{nth($value, 1)}-1::before {
-    @include bgimage-lookup('flairsheet-80px', 80px, 1, nth($value, 3), 1, 1);
-  }
-
-  .flairselector .flairoptionpane .flair.flair-#{nth($value, 1)}-0::after,
-  .flairselector .flairoptionpane .flair.flair-#{nth($value, 1)}-1::after {
-    content: "#{nth($value, 4)}";
-  }
-}
-
 $dims: (
   'x': (
     ('0', 0), ('1', -80px), ('2', -160px), ('3', -240px),
