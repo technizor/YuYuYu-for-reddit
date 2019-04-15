@@ -164,20 +164,20 @@ $image-macro-animated: (
 
 $image-macro-simple: (
   everything-is-daijoubu: (
-    image: 'url(%%everything-is-daijoubu%%)',
+    image: 'url(%%image-macros2%%)',
     width: 320px, height: 180px,
-    x: -0px, y: -0px,
+    x: -0px, y: -180px,
     types: (""),
   ),
   itsuki-writing: (
-    image: 'url(%%itsuki-writing%%)',
-    width: 160px, height: 160px,
+    image: 'url(%%image-macros2%%)',
+    width: 320px, height: 180px,
     x: -0px, y: -0px,
   ),
   fuu-contract: (
-    image: 'url(%%fuu-contract%%)',
+    image: 'url(%%image-macros2%%)',
     width: 320px, height: 180px,
-    x: -0px, y: -0px,
+    x: -320px, y: -0px,
     types: ("/accept", "/decline"),
   ),
 );
