@@ -1,19 +1,14 @@
 {
   "input": {
     "path": "",
-    "format": "png"
+    "extension": "png"
   },
   "output": {
-    "path": "userflair",
-    "format": "png"
+    "path": "userflair.png"
   },
-  "grid": {
-    "basisX": 80,
-    "basisY": 80,
-    "sizeX": 16,
-    "sizeY": 3
-  },
-  "blocks": [
+  "basis": { "x": 80, "y": 80 },
+  "grid": { "x": 16, "y": 3 },
+  "sprites": [
     { "y": 0, "x": 0, "src": "yuuki-yuuna/half/normal" },
     { "y": 0, "x": 1, "src": "yuuki-yuuna/half/hero" },
     { "y": 0, "x": 2, "src": "tougou-mimori/half/normal" },
