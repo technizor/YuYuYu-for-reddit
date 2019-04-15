@@ -163,7 +163,7 @@ $image-macro-animated: (
 }
 
 $image-macro-simple: (
-  everything-is-daijoubu: (
+  everything-is: (
     image: 'url(%%image-macros2%%)',
     width: 320px, height: 180px,
     x: -0px, y: -180px,
@@ -216,9 +216,10 @@ $image-macro-simple: (
   color: $black-color !important;
   font-family: "Comic Sans MS", cursive, sans-serif;
   font-size: 10px;
-  padding-left: 34px;
-  padding-right: 31px;
-  padding-top: 90px;
+  padding-left: 98px;
+  padding-right: 110px;
+  padding-top: 102px;
+  padding-bottom: 8px;
   text-shadow: inherit;
 
   > strong {
