@@ -1,0 +1,42 @@
+{
+  "input": {
+    "path": "yuyuyui-icons",
+    "format": "png"
+  },
+  "output": {
+    "path": "userflair2",
+    "format": "png"
+  },
+  "grid": {
+    "basisX": 80,
+    "basisY": 80,
+    "sizeX": 16,
+    "sizeY": 2
+  },
+  "blocks": [
+    { "y": 0, "x": 0, "src": "yuki-yuna" },
+    { "y": 0, "x": 1, "src": "togo-mimori" },
+    { "y": 0, "x": 2, "src": "inubouzaki-fu" },
+    { "y": 0, "x": 3, "src": "inubouzaki-itsuki" },
+    { "y": 0, "x": 4, "src": "miyoshi-karin" },
+    { "y": 0, "x": 5, "src": "nogi-sonoko" },
+    { "y": 0, "x": 6, "src": "nogi-sonoko-wasuyu" },
+    { "y": 0, "x": 7, "src": "minowa-gin" },
+    { "y": 0, "x": 8, "src": "washio-sumi" },
+    { "y": 0, "x": 9, "src": "nogi-wakaba" },
+    { "y": 0, "x": 10, "src": "uesato-hinata" },
+    { "y": 0, "x": 11, "src": "doi-tamako" },
+    { "y": 0, "x": 12, "src": "iyojima-anzu" },
+    { "y": 0, "x": 13, "src": "koori-chikage" },
+    { "y": 0, "x": 14, "src": "takashima-yuna" },
+    { "y": 0, "x": 15, "src": "shiratori-utano" },
+    { "y": 1, "x": 0, "src": "fujimori-mito" },
+    { "y": 1, "x": 1, "src": "kusunoki-mebuki" },
+    { "y": 1, "x": 2, "src": "kokudo-aya" },
+    { "y": 1, "x": 3, "src": "kagajou-suzume" },
+    { "y": 1, "x": 4, "src": "yamabushi-shizuku" },
+    { "y": 1, "x": 5, "src": "miroku-yumiko" },
+    { "y": 1, "x": 6, "src": "akihara-sekka" },
+    { "y": 1, "x": 7, "src": "kohagura-natsume" }
+  ]
+}
