@@ -1,0 +1,42 @@
+{
+  "input": {
+    "path": "yuuna-glomp/",
+    "format": "png"
+  },
+  "output": {
+    "path": "yuuna-glomp",
+    "format": "png"
+  },
+  "grid": {
+    "basisX": 160,
+    "basisY": 90,
+    "sizeX": 1,
+    "sizeY": 16
+  },
+  "blocks": [
+    {
+      "y": 0,
+      "x": 0,
+      "sizeX": 1,
+      "sizeY": 16,
+      "blockSrc": [
+        "lead-00",
+        "lead-01",
+        "lead-02",
+        "lead-03",
+        "lead-04",
+        "lead-05",
+        "lead-06",
+        "lead-07",
+        "lead-08",
+        "lead-09",
+        "lead-10",
+        "lead-11",
+        "lead-12",
+        "lead-13",
+        "lead-14",
+        "lead-15"
+      ]
+    }
+  ]
+}
