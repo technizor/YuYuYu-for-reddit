@@ -63,12 +63,12 @@ $image-macro-animated: (
   ),
   mimori-smile: (
     id: 'mimori-smile',
-    image: 'url(%%mimori-smile-frames%%)',
+    image: 'url(%%image-macros%%)',
     width: 160px, height: 90px,
-    x: -0px,
-    y0: -0px, y1: -0px, y2: -3420px,
+    x: -640px,
+    y0: -0px, y1: -0px, y2: -720px,
     lead-duration: 0s, lead-steps: 1,
-    loop-duration: 2.85s, loop-steps: 38,
+    loop-duration: 0.90s, loop-steps: 8,
   ),
   karin-wat: (
     id: 'karin-wat',
@@ -163,21 +163,21 @@ $image-macro-animated: (
 }
 
 $image-macro-simple: (
-  everything-is-daijoubu: (
-    image: 'url(%%everything-is-daijoubu%%)',
+  everything-is: (
+    image: 'url(%%image-macros2%%)',
     width: 320px, height: 180px,
-    x: -0px, y: -0px,
+    x: -0px, y: -180px,
     types: (""),
   ),
   itsuki-writing: (
-    image: 'url(%%itsuki-writing%%)',
-    width: 160px, height: 160px,
+    image: 'url(%%image-macros2%%)',
+    width: 320px, height: 180px,
     x: -0px, y: -0px,
   ),
   fuu-contract: (
-    image: 'url(%%fuu-contract%%)',
+    image: 'url(%%image-macros2%%)',
     width: 320px, height: 180px,
-    x: -0px, y: -0px,
+    x: -320px, y: -0px,
     types: ("/accept", "/decline"),
   ),
 );
@@ -216,9 +216,10 @@ $image-macro-simple: (
   color: $black-color !important;
   font-family: "Comic Sans MS", cursive, sans-serif;
   font-size: 10px;
-  padding-left: 34px;
-  padding-right: 31px;
-  padding-top: 90px;
+  padding-left: 98px;
+  padding-right: 110px;
+  padding-top: 102px;
+  padding-bottom: 8px;
   text-shadow: inherit;
 
   > strong {
