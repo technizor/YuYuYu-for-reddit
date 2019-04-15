@@ -17,4 +17,4 @@ jobs:
             popd
       - store_artifacts:
           path: YuYuYu/out/Stylesheet.css
-          destiation: stylesheet.css
+          destination: stylesheet.css
