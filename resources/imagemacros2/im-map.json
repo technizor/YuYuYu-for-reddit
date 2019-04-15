@@ -1,0 +1,38 @@
+{
+  "input": {
+    "path": "",
+    "format": "png"
+  },
+  "output": {
+    "path": "image-macros2",
+    "format": "jpeg"
+  },
+  "grid": {
+    "basisX": 320, "basisY": 180,
+    "sizeX": 2, "sizeY": 3
+  },
+  "blocks": [
+    {
+      "y": 0,
+      "x": 0,
+      "sizeX": 1,
+      "sizeY": 3,
+      "blockSrc": [
+        "itsuki-writing/base",
+        "everything-is/daijoubu",
+        "everything-is/fire"
+      ]
+    },
+    {
+      "y": 0,
+      "x": 1,
+      "sizeX": 1,
+      "sizeY": 3,
+      "blockSrc": [
+        "fuu-contract/base",
+        "fuu-contract/accept",
+        "fuu-contract/decline"
+      ]
+    }
+  ]
+}
