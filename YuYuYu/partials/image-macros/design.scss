@@ -63,12 +63,12 @@ $image-macro-animated: (
   ),
   mimori-smile: (
     id: 'mimori-smile',
-    image: 'url(%%mimori-smile-frames%%)',
+    image: 'url(%%image-macros%%)',
     width: 160px, height: 90px,
-    x: -0px,
-    y0: -0px, y1: -0px, y2: -3420px,
+    x: -480px,
+    y0: -0px, y1: -0px, y2: -720px,
     lead-duration: 0s, lead-steps: 1,
-    loop-duration: 2.85s, loop-steps: 38,
+    loop-duration: 0.90s, loop-steps: 8,
   ),
   karin-wat: (
     id: 'karin-wat',

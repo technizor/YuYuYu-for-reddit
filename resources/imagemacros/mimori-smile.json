@@ -1,0 +1,34 @@
+{
+  "input": {
+    "path": "mimori-smile/",
+    "format": "png"
+  },
+  "output": {
+    "path": "mimori-smile",
+    "format": "png"
+  },
+  "grid": {
+    "basisX": 160,
+    "basisY": 90,
+    "sizeX": 1,
+    "sizeY": 8
+  },
+  "blocks": [
+    {
+      "x": 0,
+      "y": 0,
+      "sizeX": 1,
+      "sizeY": 8,
+      "blockSrc": [
+        "loop-00",
+        "loop-01",
+        "loop-02",
+        "loop-03",
+        "loop-04",
+        "loop-05",
+        "loop-06",
+        "loop-07"
+      ]
+    }
+  ]
+}
