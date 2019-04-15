@@ -17,7 +17,9 @@ body:before {
   background: url(%%headerimg%%) fixed no-repeat 50% 0;
   height: #{$initial-header-height};
   display: block;
-  background-size: cover;
+  //background-size: cover;
+  background-size:auto 200px; // temporary
+  background-color:#0B1DBC;
   content: "";
 }
 
