@@ -19,7 +19,7 @@ body:before {
   display: block;
   //background-size: cover;
   background-size:auto 200px; // temporary
-  background-color:#0B1DBC;
+  background-color:getScheme("header");
   content: "";
 }
 

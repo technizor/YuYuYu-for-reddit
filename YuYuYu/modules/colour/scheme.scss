@@ -26,12 +26,10 @@ $colorsDark: (
     "darkGray": #333333,
     "black": #000000,
     "green": #228822,
+    // Theming Colours
+    "header": #0b1dbc,
 );
 
 @function getScheme($name) {
     @return map-get($colorsDark, $name);
 }
-
-$color-nightmode-post-background: #262626;
-$color-nightmode-text: #161616;
-$color-nightmode-input-background: #AAA;

@@ -1,7 +1,5 @@
 @charset "UTF-8";
 
-$color-spoiler-s-active-warning: #B62E2E;
-
 $spoilers: (
   ('a[href="#s"]', getScheme("black"), getScheme("white"), getScheme("black"), getScheme("primary"), getScheme("white")),
   ('a[href="/s"]', getScheme("black"), getScheme("white"), getScheme("black"), getScheme("primary"), getScheme("white")),

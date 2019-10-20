@@ -164,7 +164,7 @@ body .content .sitetable .link .title a:hover,
   .wiki-page .pageactions,
   .wiki-page .wiki-page-content,
   .wiki-page .wikititle {
-    background-color: $color-nightmode-text;
+    background-color: getScheme("on");
   }
   .stylesheet-customize-container textarea,
   .wiki-page .wiki-page-content textarea {
@@ -176,6 +176,6 @@ body .content .sitetable .link .title a:hover,
   }
   input[type="file"],
   input[type="text"] {
-    background-color: $color-nightmode-input-background;
+    background-color: getScheme("surface");
   }
 }
