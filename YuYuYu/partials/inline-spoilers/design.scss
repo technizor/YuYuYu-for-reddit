@@ -1,16 +1,10 @@
 @charset "UTF-8";
 
-$color-spoiler-ln-background: #FF6666;
-$color-spoiler-m-background: #6666FF;
 $color-spoiler-s-active-warning: #B62E2E;
-$color-spoiler-ln-active-warning: #2E2EB6;
-$color-spoiler-m-active-warning: #2EB62E;
 
 $spoilers: (
-  ('a[href="#s"]', $black-color, $white-color, $black-color, $color-spoiler-s-active-warning, $white-color),
-  ('a[href="/s"]', $black-color, $white-color, $black-color, $color-spoiler-s-active-warning, $white-color),
-  //('a[href="#ln"]', $color-spoiler-ln-background, $white-color, $color-spoiler-ln-background, $color-spoiler-ln-active-warning, $white-color),
-  //('a[href="#m"]', $color-spoiler-m-background, $white-color, $color-spoiler-m-background, $color-spoiler-m-active-warning, $white-color)
+  ('a[href="#s"]', getScheme("black"), getScheme("white"), getScheme("black"), getScheme("primary"), getScheme("white")),
+  ('a[href="/s"]', getScheme("black"), getScheme("white"), getScheme("black"), getScheme("primary"), getScheme("white")),
 );
 
 @each $value in $spoilers {

@@ -18,7 +18,7 @@ button,
 .top-page .content .menuarea .dropdown.lightdrop .selected,
 .modtools-page button.subreddit-rule-delete-button,
 .modtools-page button.subreddit-rule-edit-button {
-  background-color: $secondary-color;
+  background-color: getScheme("primary");
 }
 /* Hover color = 10% white overlay color */
 
@@ -32,14 +32,14 @@ button:hover,
 .titlebox .fancy-toggle-button .add:hover,
 .titlebox .fancy-toggle-button .add:hover:after,
 .commentarea .panestack-title {
-  background-color: $white-color;
+  background-color: getScheme("white");
 }
 /* Active color = 10% black overlay color */
 button:active,
 .btn:active,
 .morelink:active,
 .side .titlebox .md h3 a:active {
-  background-color: $active-color;
+  background-color: getScheme("secondary");
 }
 /* --- End Addon --- */
 
@@ -68,16 +68,16 @@ body .content .sitetable .link .title a:hover,
 .side:after,
 .side .titlebox .md h6 a,
 .usertext .bottom-area a.reddiquette {
-  color: $tertiary-color;
+  color: getScheme("secondary");
 }
 /* Colouring */
 .footer-parent .footer,
 .side {
-  background-color: $gradient-color-0;
+  background-color: getScheme("surface");
 }
 .sidecontentbox,
-.comments-page .side .linkinfo, {
-  background-color: $linkinfo-background-color;
+.comments-page .side .linkinfo {
+  background-color: getScheme("gloss");
 }
 .side .md {
   .-blocks,
@@ -88,7 +88,7 @@ body .content .sitetable .link .title a:hover,
   p,
   ul,
   ol {
-    color: $gray-color;
+    color: getScheme("glossOn");
   }
 }
 
@@ -102,21 +102,21 @@ body .content .sitetable .link .title a:hover,
 .side .morelink {
   a,
   &:hover a {
-    color: $sidebar-button-color;
+    color: getScheme("inverseOn");
   }
 }
 .comments-page .side .linkinfo {
   .date,
   .score,
   .views {
-    color: $linkinfo-color;
+    color: getScheme("glossOn");
   }
 
   .score .point,
   .score .word,
   .totalvotes,
   .shortlink {
-    color: $gray-color;
+    color: getScheme("glossOn");
   }
 }
 // Sidebar gray text
@@ -130,21 +130,21 @@ body .content .sitetable .link .title a:hover,
 .side .sidecontentbox .title h1,
 .tabmenu li a,
 .gadget .res-voteEnhancements-highlightScores span.score {
-  color: $gray-color;
+  color: getScheme("glossOn");
 }
 .side {
   .redditname a,
   h1, h2, h3, h4, h5, h6,
   .usertext-body ol,
   .usertext-body .md blockquote p {
-    color: $title-color;
+    color: getScheme("glossOn");
   }
 }
 .sheets .btn.right {
   background: none;
 }
 .wiki-page > .content {
-  background: $white-color;
+  background: getScheme("white");
 }
 .titlebox form.toggle, .leavemoderator {
   background-color: transparent;
@@ -153,7 +153,7 @@ body .content .sitetable .link .title a:hover,
   background-color: rgba(0, 0, 0, 0.05);
 }
 .titlebox .fancy-toggle-button .remove:hover {
-  background-color: $white-color;
+  background-color: getScheme("white");
 }
 
 .res-nightmode {
@@ -164,18 +164,18 @@ body .content .sitetable .link .title a:hover,
   .wiki-page .pageactions,
   .wiki-page .wiki-page-content,
   .wiki-page .wikititle {
-    background-color: $nightmode-text-color;
+    background-color: $color-nightmode-text;
   }
   .stylesheet-customize-container textarea,
   .wiki-page .wiki-page-content textarea {
-    color: $content-editor-text-color;
-    background-color: $content-back-color;
+    color: getScheme("on");
+    background-color: getScheme("surface");
   }
   .comments-page .side .linkinfo {
-    background-color: $content-back-color;
+    background-color: getScheme("surface");
   }
   input[type="file"],
   input[type="text"] {
-    background-color: $nightmode-input-background-color;
+    background-color: $color-nightmode-input-background;
   }
 }

@@ -24,7 +24,8 @@ body:before {
 }
 
 body {
-  @include diagonal-background;
+  //@include diagonal-background;
+  background: getScheme("background");
 }
 body.listing-page > .content {
   box-shadow: none;
