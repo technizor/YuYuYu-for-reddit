@@ -9,10 +9,11 @@
 .linkflairlabel,
 .combined-search-page .linkflairlabel {
   border: none;
-  @include border-radius(0 16px 16px 0);
-  padding: 4px 16px;
-  line-height: 20px;
-  font-size: large;
+  @include border-radius(8px);
+  padding: 4px;
+  line-height: 16px;
+  font-size: medium;
+  text-align: center;
   color: getScheme("white");
 
   &::before {
@@ -20,6 +21,7 @@
     padding-right: 8px;
   }
 }
+/*
 .link,
 .search-result-link {
   &::after {
@@ -38,6 +40,7 @@
     overflow: hidden;
   }
 }
+*/
 
 $post-flairs: (
   ('meta', getScheme("golden"), 'Meta'),
@@ -65,11 +68,15 @@ $post-flairs: (
     &,
     .res-nightmode & {
       &.linkflair-#{nth($value, 1)} {
-        background: #{nth($value, 2)};
+        & .entry {
+          border-right: 16px solid #{nth($value, 2)};
+        }
 
+        /*
         &::after {
           content: "#{nth($value, 3)}";
         }
+        */
       }
     }
   }
@@ -77,18 +84,19 @@ $post-flairs: (
 
 .linkflairlabel,
 .linkflairlabel.res-flairSearch {
-  height: 32px;
+  height: 24px;
+  width: 96px;
 }
 
 .link .entry,
-.search-result-link > div {
-  background: getScheme("white");
+.search-result-link>div {
+  background: getScheme("surface");
 }
 
 .link,
 .search-result-link {
   padding-left: 0px;
-  background: getScheme("white");
+  background: getScheme("surface");
 
   &.last-clicked {
     border: none;
@@ -96,14 +104,6 @@ $post-flairs: (
   }
   .rank {
     display: none;
-  }
-
-  .midcol .score {
-    width: 64px;
-    height: 24px;
-    padding: 4px 0;
-    text-align: center;
-    font-size: large;
   }
 
   .thumbnail {
