@@ -47,10 +47,10 @@ body {
 .link,
 .search-result-link {
   /* Standard Post Thumbnails */
-  &.spoiler .thumbnail {
+  & .spoiler.thumbnail {
     @include bgimage-lookup("spritesheet2", 64px, 1, 1, 1, 1);
   }
-  &.self .thumbnail {
+  & .self.thumbnail {
     @include bgimage-lookup("spritesheet2", 64px, 0, 1, 1, 1);
     img {
       /* Text posts suddenly have thumbnails sometimes... */
