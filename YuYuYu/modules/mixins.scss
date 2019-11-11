@@ -25,6 +25,15 @@
   -webkit-transform: #{$transform};
 }
 
+@mixin v-gradient-background($color-0: rgba(255, 255, 255, 0), $color-1: rgba(255, 255, 255, 0)) {
+  background: $color-0;
+  background: -moz-linear-gradient(top, $color-0 0%, $color-1 100%);
+  background: -webkit-linear-gradient(top, $color-0 0%, $color-1 100%);
+  background: -o-linear-gradient(top, $color-0 0%, $color-1 100%);
+  background: -ms-linear-gradient(top, $color-0 0%, $color-1 100%);
+  background: linear-gradient(to bottom, $color-0 0%, $color-1 100%)
+}
+
 @mixin diagonal-background($color-0: #444444, $color-1: #4c4c4c) {
   background: repeating-linear-gradient(45deg, $color-0 0%, $color-0 1%, $color-1 1%, $color-1 2%);
   background-size: 256px 256px;

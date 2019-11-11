@@ -37,9 +37,10 @@ ul#image-preview-list li {
 }
 
 // Comments Page Adjustments
-.comments-page .link .md {
-  background: url(%%yuuna-flower-3600%%) 0 0 no-repeat;
-  background-size: 100% auto;
+.link .usertext-body .md {
+  //background: getScheme("gloss");
+  border: none;
+  @include border-radius(8px);
 }
 .commentarea .panestack-title,
 .res .commentarea .panestack-title {

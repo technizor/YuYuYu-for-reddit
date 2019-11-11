@@ -256,8 +256,11 @@ body {
 // Content Positioning
 .search-page .searchpane,
 .search-page .search-result-listing .search-result-group-header {
-  background: getScheme("white");
+  background: getScheme("surface");
   padding: 4px 16px;
+}
+.search-expando.collapsed:before {
+  @include v-gradient-background(rgba(255, 255, 255, 0), getScheme("surface"));
 }
 .search-page .searchpane,
 .search-page .search-result-listing {
