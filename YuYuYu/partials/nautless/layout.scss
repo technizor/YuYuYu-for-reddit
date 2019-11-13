@@ -447,10 +447,17 @@ body {
 
 .sitetable .NERPageMarker {
   margin: 0;
-  @include border-radius(0);
 }
+
+.sitetable .NERPageMarker,
 #progressIndicator.neverEndingReddit {
   @include border-radius(0);
+  background: #645b5b;
+  border: none;
+}
+
+#progressIndicator.neverEndingReddit h2 {
+  color: getScheme("secondary");
 }
 
 .sheets {
