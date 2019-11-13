@@ -64,6 +64,8 @@ body .content .sitetable .link .title a:hover,
 .link .entry .tagline a:hover,
 .tagline .submitter,
 .tagline .submitter,
+.tagline a,
+.search-result-meta a,
 .side:after,
 .side .titlebox .md h6 a,
 .usertext .bottom-area a.reddiquette {
@@ -128,7 +130,9 @@ body .content .sitetable .link .title a:hover,
 .res .RESDashboardToggle,
 .side .sidecontentbox .title h1,
 .tabmenu li a,
-.gadget .res-voteEnhancements-highlightScores span.score {
+.gadget .res-voteEnhancements-highlightScores span.score,
+.side .subscribers, 
+.side .users-online {
   color: getScheme("glossOn");
 }
 .side {
@@ -136,7 +140,7 @@ body .content .sitetable .link .title a:hover,
   h1, h2, h3, h4, h5, h6,
   .usertext-body ol,
   .usertext-body .md blockquote p {
-    color: getScheme("glossOn");
+    color: getScheme("on");
   }
 }
 .sheets .btn.right {
@@ -177,4 +181,16 @@ body .content .sitetable .link .title a:hover,
   input[type="text"] {
     background-color: getScheme("surface");
   }
+}
+
+.tagline,
+.search-result-meta,
+.domain,
+.domain a,
+.entry .buttons li a {
+  color: getScheme("glossOn");
+}
+
+.buttons .give-gold.gold-give-gold {
+  color: getScheme("golden");
 }
