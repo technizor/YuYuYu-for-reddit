@@ -19,16 +19,13 @@
   text-indent: 50px;
   padding: 5px 10px;
   font-weight: bold;
-  /*text-shadow:
-     0.1px  0.1px 0px getScheme("black"),
-     0.1px -0.1px 0px getScheme("black"),
-    -0.1px  0.1px 0px getScheme("black"),
-    -0.1px -0.1px 0px getScheme("black"),
-     0.1px  0.1px 0.2px getScheme("black"),
-     0.1px -0.1px 0.2px getScheme("black"),
-    -0.1px  0.1px 0.2px getScheme("black"),
-    -0.1px -0.1px 0.2px getScheme("black");*/
-  transition: text-indent 0.25s ease;
+  font-size: 0; // Fix text showing up under collapsed flair
+}
+
+.flair.flair-graphic:hover,
+.side .flair.flair-graphic,
+.flairselector .flair.flair-graphic {
+  font-size: x-small; // Unfix text when it should show up
 }
 
 .flair.flair-graphic::before {
