@@ -142,6 +142,10 @@ body {
     background: getScheme("white");
   }
 
+  .midcol {
+    top: 0 !important; // Counteract top -> 16px from the Reddit javascript
+  }
+
   .expand {
     background: transparent;
     font-size: 0;
