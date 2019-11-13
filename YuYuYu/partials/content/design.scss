@@ -14,6 +14,6 @@ body.modtools-page > .content {
 }
 
 .submit-page .roundfield .title {
-    color: #4D5763;
-    text-transform: none;
+  color: getScheme("inverseOn");
+  text-transform: none;
 }

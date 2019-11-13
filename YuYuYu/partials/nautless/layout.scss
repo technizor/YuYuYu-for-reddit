@@ -47,10 +47,10 @@ body {
 .link,
 .search-result-link {
   /* Standard Post Thumbnails */
-  &.spoiler .thumbnail {
+  & .spoiler.thumbnail {
     @include bgimage-lookup("spritesheet2", 64px, 1, 1, 1, 1);
   }
-  &.self .thumbnail {
+  & .self.thumbnail {
     @include bgimage-lookup("spritesheet2", 64px, 0, 1, 1, 1);
     img {
       /* Text posts suddenly have thumbnails sometimes... */
@@ -95,7 +95,7 @@ body {
 .morelink:after,
 .side .titlebox .md h3 a,
 .side .titlebox blockquote {
-  @include bgcolor($secondary-color);
+  @include bgcolor(getScheme("primary"));
 }
 // comments-page
 .commentarea, .res .commentarea {
@@ -113,7 +113,7 @@ body {
 
   > .usertext {
     overflow: auto;
-    background: $white-color;
+    background: getScheme("white");
     padding: 12px 22px 4px 22px;
     @include border-radius(16px);
     @include box-shadow;
@@ -139,7 +139,11 @@ body {
     width: 32px;
     height: 64px;
     @include border-radius(16px 0 0 16px);
-    background: $white-color;
+    background: getScheme("white");
+  }
+
+  .midcol {
+    top: 0 !important; // Counteract top -> 16px from the Reddit javascript
   }
 
   .expand {
@@ -179,11 +183,11 @@ body {
   .entry {
     padding: 0;
     @include border-radius(0 16px 16px 16px);
-    box-shadow: 1px 1px 4px $black-color;
-    background: $white-color;
+    box-shadow: 1px 1px 4px getScheme("black");
+    background: getScheme("white");
 
     .tagline {
-      background: $white-color;
+      background: getScheme("white");
       height: 64px;
       padding: 8px 8px;
       line-height: 48px;
@@ -227,6 +231,7 @@ body {
 
 #header .pagename {
   font-size: 0;
+  vertical-align: initial;
 }
 
 #header .pagename a {
@@ -256,8 +261,11 @@ body {
 // Content Positioning
 .search-page .searchpane,
 .search-page .search-result-listing .search-result-group-header {
-  background: $white-color;
+  background: getScheme("surface");
   padding: 4px 16px;
+}
+.search-expando.collapsed:before {
+  @include v-gradient-background(rgba(255, 255, 255, 0), getScheme("surface"));
 }
 .search-page .searchpane,
 .search-page .search-result-listing {
@@ -434,7 +442,6 @@ body {
 }
 
 #header .tabmenu {
-  margin-left: 16px;
   margin-top: 75px;
 
   li {
@@ -444,10 +451,17 @@ body {
 
 .sitetable .NERPageMarker {
   margin: 0;
-  @include border-radius(0);
 }
+
+.sitetable .NERPageMarker,
 #progressIndicator.neverEndingReddit {
   @include border-radius(0);
+  background: #645b5b;
+  border: none;
+}
+
+#progressIndicator.neverEndingReddit h2 {
+  color: getScheme("secondary");
 }
 
 .sheets {
@@ -459,26 +473,26 @@ body {
     margin: 8px 0;
   }
   li a {
-    background: #{$gradient-color-0};
-    color: #{$white-color};
-    border: solid #{$gradient-color-1} 0.5px;
+    background: #{getScheme("background")};
+    color: #{getScheme("white")};
+    border: solid #{getScheme("surface")} 0.5px;
     border-top: none;
     border-bottom: none;
 
     &:hover {
-      background: #{$gradient-color-1};
+      background: #{getScheme("surface")};
     }
   }
   li:first-of-type a {
-    @include border-radius(16px 0 0 16px);
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
     border-left: none;
-    padding-left: 16px;
   }
 
   li:last-of-type a {
-    @include border-radius(0 16px 16px 0);
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
     border-right: none;
-    padding-right: 16px;
   }
 }
 
@@ -496,4 +510,9 @@ body {
 .res-commentBoxes .comment .comment .comment .comment,
 .res-commentBoxes .comment .comment {
   margin: 0 !important;
+}
+
+// Deal with RES mucking up small widths with its static shortcuts being abominably phat
+#RESStaticShortcuts {
+  max-width: calc(100vw - 32px);
 }

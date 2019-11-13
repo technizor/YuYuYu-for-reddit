@@ -19,12 +19,13 @@ body:before {
   display: block;
   //background-size: cover;
   background-size:auto 200px; // temporary
-  background-color:#0B1DBC;
+  background-color:getScheme("header");
   content: "";
 }
 
 body {
-  @include diagonal-background;
+  //@include diagonal-background;
+  background: getScheme("background");
 }
 body.listing-page > .content {
   box-shadow: none;
@@ -82,10 +83,10 @@ body.listing-page > .content {
   display: block;
 }
 #header .tabmenu li a {
-  padding: 8px;
+  padding: 8px 6px;
 }
 #header .tabmenu li.selected a {
-  padding: 8px 8px 6px;
+  padding: 8px 6px 6px;
 }
 #header .tabmenu li a,
 .pagename a {
