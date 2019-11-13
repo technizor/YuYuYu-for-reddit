@@ -36,6 +36,13 @@ ul#image-preview-list li {
   max-width: 100%;
 }
 
+.usertext-edit,
+.usertext-edit textarea,
+.usertext-edit input[type=text],
+.markdownEditor-wrapper {
+  width: calc(100vw - 64px);
+}
+
 // Comments Page Adjustments
 .link .usertext-body .md {
   //background: getScheme("gloss");

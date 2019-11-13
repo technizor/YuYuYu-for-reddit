@@ -227,6 +227,7 @@ body {
 
 #header .pagename {
   font-size: 0;
+  vertical-align: initial;
 }
 
 #header .pagename a {
@@ -437,7 +438,6 @@ body {
 }
 
 #header .tabmenu {
-  margin-left: 16px;
   margin-top: 75px;
 
   li {
@@ -473,15 +473,15 @@ body {
     }
   }
   li:first-of-type a {
-    @include border-radius(16px 0 0 16px);
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
     border-left: none;
-    padding-left: 16px;
   }
 
   li:last-of-type a {
-    @include border-radius(0 16px 16px 0);
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
     border-right: none;
-    padding-right: 16px;
   }
 }
 
@@ -499,4 +499,9 @@ body {
 .res-commentBoxes .comment .comment .comment .comment,
 .res-commentBoxes .comment .comment {
   margin: 0 !important;
+}
+
+// Deal with RES mucking up small widths with its static shortcuts being abominably phat
+#RESStaticShortcuts {
+  max-width: calc(100vw - 32px);
 }
