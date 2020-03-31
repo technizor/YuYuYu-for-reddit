@@ -1,15 +1,6 @@
 @charset "UTF-8";
 
-$navmenu-color: #555;
-$navmenu-border-color: #C9A9A7;
-$navmenu-hover-color: #333;
-$navmenu-text-color: #4D5763;
-$navmenu-shadow-color: rgba(0,0,0,0.24);
-$navmenu-link-color: rgba(20, 150, 220, 0.8);
-
-
-/* --- Addon: Floating Navigation Bar --- */
-/* Menu Colors */
+/* --- Addon: Inline Navigation Bar --- */
 .side .titlebox .usertext-body > .md > blockquote {
   @include border-radius(16px);
   border-left: none;
@@ -34,24 +25,17 @@ $navmenu-link-color: rgba(20, 150, 220, 0.8);
     font-weight: bold;
   }
 
-  &::after {
-    color: $navmenu-color;
-  }
-  > p:first-child,
-  > ul {
-    border-color: $navmenu-border-color;
-  }
   > ul {
     padding: 0;
   }
   :hover > a:hover {
-    background-color: $white-color;
-    color: $navmenu-link-color;
+    background-color: getScheme("white");
+    color: getScheme("inverseOn");
   }
   a,
   p:first-child,
   ul li {
     display: block;
-    color: $sidebar-button-color;
+    color: getScheme("inverseOn");
   }
 }

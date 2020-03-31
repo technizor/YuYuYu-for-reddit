@@ -1,0 +1,72 @@
+@charset "UTF-8";
+// Dark / Light mode control
+// TODO: Have both available based on lang domain trickery
+$useDarkMode: false;
+
+// Colour Schemes
+$colorsDark: (
+    "primary": getColour("primary", 200),
+    "secondary": getColour("secondary", 200),
+    "on": getColour("on", 0),
+    "background": getColour("background", 900),
+    "surface": getColour("background", 800),
+    "gloss": getColour("background", 700),
+    "glossOn": getColour("on", 200),
+    "inverseOn": getColour("on", 1000),
+    // Flair Colours
+    "crimson": getColour("crimson", 400),
+    "aqua": getColour("aqua", 400),
+    "teal": getColour("teal", 400),
+    "pink": getColour("pink", 400),
+    "royal": getColour("royal", 400),
+    "golden": getColour("golden", 400),
+    "orange": getColour("orange", 400),
+    "fuschia": getColour("fuschia", 400),
+    "purple": getColour("purple", 400),
+    // Constants
+    "white": #ffffff,
+    "lightGray": #bbbbbb,
+    "gray": #777777,
+    "darkGray": #333333,
+    "black": #000000,
+    "green": #228822,
+    // Theming Colours
+    "header": #0b1dbc,
+);
+
+$colorsLight: (
+    "primary": getColour("primary", 200),
+    "secondary": getColour("secondary", 200),
+    "on": getColour("on", 0),
+    "background": getColour("background", 900),
+    "surface": getColour("background", 800),
+    "gloss": getColour("background", 700),
+    "glossOn": getColour("on", 300),
+    "inverseOn": getColour("on", 1000),
+    // Flair Colours
+    "crimson": getColour("crimson", 400),
+    "aqua": getColour("aqua", 400),
+    "teal": getColour("teal", 400),
+    "pink": getColour("pink", 400),
+    "royal": getColour("royal", 400),
+    "golden": getColour("golden", 400),
+    "orange": getColour("orange", 400),
+    "fuschia": getColour("fuschia", 400),
+    "purple": getColour("purple", 400),
+    // Constants
+    "white": #ffffff,
+    "lightGray": #bbbbbb,
+    "gray": #777777,
+    "darkGray": #333333,
+    "black": #000000,
+    "green": #228822,
+    // Theming Colours
+    "header": #fbe6e9,//#0b1dbc,
+);
+
+@function getScheme($name) {
+    @if $useDarkMode {
+        @return map-get($colorsDark, $name);
+    }
+    @return map-get($colorsLight, $name);
+}

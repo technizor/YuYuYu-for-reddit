@@ -1,11 +1,10 @@
 @charset "UTF-8";
-$commentface-border-color: #BBB;
 
 .md a[href^="#im/"],
 .md a[href^="#anim/"] {
   background-origin: border-box;
-  border: 2px outset $commentface-border-color;
-  color: $white-color !important;
+  border: 2px outset getScheme("lightGray");
+  color: getScheme("white") !important;
   cursor: default;
   display: inline-block;
   font-family: verdana,sans-serif;
@@ -13,14 +12,14 @@ $commentface-border-color: #BBB;
   overflow: hidden;
   text-align: center;
   text-shadow:
-     0.5px  0.5px 0px $black-color,
-     0.5px -0.5px 0px $black-color,
-    -0.5px  0.5px 0px $black-color,
-    -0.5px -0.5px 0px $black-color,
-     0.5px  0.5px 1px $black-color,
-     0.5px -0.5px 1px $black-color,
-    -0.5px  0.5px 1px $black-color,
-    -0.5px -0.5px 1px $black-color;
+     0.5px  0.5px 0px getScheme("black"),
+     0.5px -0.5px 0px getScheme("black"),
+    -0.5px  0.5px 0px getScheme("black"),
+    -0.5px -0.5px 0px getScheme("black"),
+     0.5px  0.5px 1px getScheme("black"),
+     0.5px -0.5px 1px getScheme("black"),
+    -0.5px  0.5px 1px getScheme("black"),
+    -0.5px -0.5px 1px getScheme("black");
 
   > strong {
     display: block;
@@ -213,7 +212,7 @@ $image-macro-simple: (
 }
 
 .md a[href="#im/itsuki-writing"] {
-  color: $black-color !important;
+  color: getScheme("black") !important;
   font-family: "Comic Sans MS", cursive, sans-serif;
   font-size: 10px;
   padding-left: 98px;
